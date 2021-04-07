@@ -1,0 +1,46 @@
+.cover-intro-container {
+    height: 60vh;
+    box-sizing: border-box;
+    background-color: #efefef;
+    
+    .cover, .content {
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .cover {
+        background-image: url("http://images.ctfassets.net/ljpkryr3szrz/6ukUbbNrYh7lucemUINfg1/78cc2303edd398f9ee82b3c1c88c81f2/frontpage_1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+        height: inherit;
+        margin-top: 1.5em;
+    }
+
+    .content {
+        padding: 10% 5% 2em 15%;
+        h4 {
+            font-family: "Space Mono", monospace;
+            font-weight: 300;
+            line-height: 1.6rem;
+        }
+    }
+  @media screen and (max-width:768px) {
+        margin-top: 4em;
+      height: initial;
+    .cover, .content {
+        width: 100%;
+    }
+    .content {
+        padding: 2em;
+        margin-top:160px;
+    }
+    .cover {
+        position: absolute;
+        top:0;
+        left:0;
+        height: 200px;
+    }
+    }
+}
