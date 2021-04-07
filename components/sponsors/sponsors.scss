@@ -4,10 +4,21 @@ section.sponsors {
   flex-direction: column;
   padding: 1rem 4rem 3rem 4rem;
   max-width: 900px;
+  text-align: center;
   margin: 0 auto;
 
+  h2 {
+    margin-bottom: 1em;
+  }
+
   img {
-    width: 100%;
+    width: 70%;
+    margin: 0 auto;
     max-width: 700px;
+  }
+  @media screen and (max-width:768px) {
+    img {
+      width: 100%;
+    }
   }
 }
