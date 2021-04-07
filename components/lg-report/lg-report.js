@@ -45,7 +45,7 @@ export default function LGReport(props) {
             <a href="/static/lg-insight/Evalueringsrapport_HYF_LG Insight_22_03_21.pdf" target="_blank">Read the report</a>
             <hr />
             <p>English summary</p>
-            <a href="/static/lg-insight/EN_HYF_LG Insight_07042021.pdf" target="_blank">Read the report</a>
+            <a href="/static/lg-insight/EN_HYF_LG Insight_07042021.pdf" target="_blank">Read the summary</a>
             </div>
         
         </div>
