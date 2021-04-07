@@ -1,0 +1,45 @@
+.stats-boxes-container {
+    max-width: 85%;
+    margin: 6em auto 4em auto;
+
+    > div {
+        width: calc(25% - 4em);
+        margin: 0 2em;
+        display: inline-block;
+        vertical-align: top;
+        background: #293A7D;
+        text-align: center;
+        padding: 4.2em 0 3.8em 0;
+        border-bottom: 8px solid #eee;
+        border-right: 8px solid #eee;
+
+        > * {
+            color: #fff;
+            margin: 0;
+        }
+        > h1 {
+            font-size: 3.5rem;
+        }
+        > h2 {
+            font-weight: 300;
+        }
+    }
+  @media screen and (max-width:768px) {
+      max-width: 100%;
+      padding: 0 1em;
+      margin: 2em auto;
+    > div {
+        width: 50%;
+        margin: 0;
+        border:none;
+        transform: scale(0.85);
+
+        > h1 {
+            font-size: 2.5rem;
+        }
+        > h2 {
+            font-size: 1rem;
+        }
+    }
+    }
+}
