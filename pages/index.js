@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import {useEffect} from 'react'
 import Layout from '../components/layouts/layout'
 import Content from '../components/layouts/content/content'
 import Hero from '../components/hero/hero'
@@ -9,6 +10,10 @@ import { Graduates } from '../components/team/team'
 import { fetchPageContent } from '../contentful/contentful'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import getEntryData from './../utils/utils'
+import SplashQuote from '../components/layouts/content/SplashQuote'
+import Classes from '../components/classes/Classes'
+import Testimonials from '../components/testimonials/Testimonials'
+
 
 export default ({ title, content, successStories }) => {
   return (
@@ -21,8 +26,11 @@ export default ({ title, content, successStories }) => {
         <title>{title}</title>
       </Head>
       <Hero />
-      <Content>{documentToReactComponents(content)}</Content>
+      <Content inContextOf="frontpage">{documentToReactComponents(content)}</Content>
+      <SplashQuote />
+      <Classes />
       <Graduates />
+      <Testimonials />
       <Partners />
       <VideoHighlight
         title={successStories.title}
@@ -37,7 +45,6 @@ export async function getStaticProps() {
 
   const successStoriesId = '40NNt3OuP7s2tPGTg50BF5'
   const successStories = getEntryData(pageContent, successStoriesId)
-
   return {
     props: {
       title: pageContent.headline,

@@ -153,7 +153,7 @@ export default ({ children }) => {
           display: none;
         }
         /*# sourceMappingURL=normalize.min.css.map */
-        @import url('https://fonts.googleapis.com/css?family=Space+Mono|Work+Sans');
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;700&display=swap')
 
         body {
           font-size: 1.2rem;

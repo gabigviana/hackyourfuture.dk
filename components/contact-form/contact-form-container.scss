@@ -1,0 +1,21 @@
+.contact-form-container {
+    > * {
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    > article {
+        padding: 2em;
+        background-color: #e1e1e1;
+    }
+
+    @media screen and (max-width:768px) {
+    background-size: 100%;
+        > * {
+            width: 100%;
+        }
+        > div {
+            height: 30vh;
+        }
+    }
+}

@@ -1,11 +1,28 @@
 section.video-highlight {
   padding: 1rem 4rem 3rem 4rem;
   margin: 2rem auto;
-  max-width: 900px;
+  max-width: 80%;
+  // max-width: 900px;
   font-size: 1.4rem;
   line-height: 2.2rem;
-  background-color: #efefef;
   position: relative;
+
+  @media screen and (max-width: 800px) {
+    max-width: 100%;
+    text-align: center;
+
+    p {
+      padding:0!important;
+    }
+  }
+
+  > div {
+    background-color: #efefef;
+  }
+  > div > iframe {
+    margin-top: -2em;
+    margin-right: -1em;
+    }
 
   @media (max-width: 768px) {
     padding: 1rem 5vw;
@@ -43,8 +60,13 @@ section.video-highlight {
     }
 
     p {
-      padding: 1rem 1rem 1rem 0;
+      // padding: 1rem 1rem 1rem 0;
+      padding: 2em;
       flex-shrink: 1;
+      font-family: "Space Mono", monospace;
     }
   }
+
+ 
+
 }
