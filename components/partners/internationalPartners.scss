@@ -1,0 +1,58 @@
+.international-partners {
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: right center;
+
+    h2 {
+        text-align: center;
+    }
+
+    .partner-list {
+        max-width: 30%;
+        background-color: #fff;
+        margin-left: 20%;
+        padding: 2.5% 0 5% 0;
+
+        > div {
+            background-color: #eee;
+            margin-bottom: 1em;
+            article, img {
+                display: inline-block;
+                vertical-align: top;
+                
+            }
+            article {
+                width: 70%;
+                text-align: right;
+                padding: 1em 0;
+
+                > h3 {
+                    margin: 0;
+                    padding: 0;
+                }
+                > a {
+                    font-size: 0.8rem;
+                    font-family: "Space Mono", monospace;
+                }
+            }
+            img {
+                width: 30%;
+                margin: -1em 0 0 -1em;
+            }
+        }
+    }
+    @media screen and (max-width:768px) {
+        background-position: center bottom;
+        .partner-list {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 0.5em;
+        }
+        img {
+            margin: 0!important;
+        }
+        article {
+            padding-right: 1em!important;
+        }
+    }
+}
