@@ -2,6 +2,19 @@ import React from 'react'
 import styles from './partners.scss'
 import { useContentfulEntryId } from '../../contentful/contentful-hooks'
 
+function FixedLogoSize(props) {
+  return (
+    <div style={{
+      backgroundImage:`url("${props.src}")`,
+      backgroundPosition:"center center",
+      backgroundSize:"contain",
+      backgroundRepeat:"no-repeat",
+      height: props.maxWidth || "26px",
+      margin:"0 1em",
+    }}> </div>
+  )
+}
+
 export default () => {
   const partnersEntryId = '01vaQwhCtWAhCpI24OScSq'
   const partners = useContentfulEntryId(partnersEntryId).content
@@ -23,7 +36,8 @@ export default () => {
       {partners && (
         <section className='partners'>
           <h2>{partners.title}</h2>
-          <ul>
+          <ul className="gold-partners">
+           
             {goldPartners.map(partner => (
               <li className={partner.fields.type}>
                 <a target='_blank' href={partner.fields.link}>
@@ -34,27 +48,36 @@ export default () => {
                 </a>
               </li>
             ))}
+          {/* <li className="become-partner"><h3>Become a partner</h3><p>We're always happy for more help and smart partnerships.</p></li> */}
           </ul>
-          <ul>
+          <ul className="silver-partners">
+
             {silverPartners.map(partner => (
               <li className={partner.fields.type}>
                 <a target='_blank' href={partner.fields.link}>
-                  <img
+                  <FixedLogoSize
+                    maxWidth={"68px"}
+                    src={partner.fields.logo.fields.file.url}
+                  />
+                  {/* <img
                     src={partner.fields.logo.fields.file.url}
                     alt={partner.fields.logo.title}
-                  />
+                  /> */}
                 </a>
               </li>
             ))}
           </ul>
-          <ul>
+          <ul className="bronze-partners">
             {bronzePartners.map(partner => (
               <li className={partner.fields.type}>
                 <a target='_blank' href={partner.fields.link}>
-                  <img
+                  <FixedLogoSize
+                    src={partner.fields.logo.fields.file.url}
+                  />
+                  {/* <img
                     src={partner.fields.logo.fields.file.url}
                     alt={partner.fields.logo.title}
-                  />
+                  /> */}
                 </a>
               </li>
             ))}
