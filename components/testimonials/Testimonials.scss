@@ -1,36 +1,38 @@
 .testimonials-container {
     text-align: center;
     max-width: 100%;
+    overflow: hidden;
+    height: 60vh;
+    position: relative;
 
-    > section {
-        border-top: 1px solid blue;
-        border-bottom: 1px solid blue;
+    > section > div.testimonials-slides {
+        width: calc(10 * 60%);
         height: 60vh;
+        column-count: 10;
+        position: absolute;
+        left: 0%;
+        transition: 225ms;
     }
 
-    > section > article {
+    > section > div.testimonials-slides > article {
         display: inline-block;
-        width: 70%;
+        width: 100%;
         vertical-align: top;
         box-sizing: border-box;
+        opacity: 0.1;
+        transition: 225ms;
 
-        &:last-child,
-        &:first-child {
-            // padding: 9% 0;
-            width: 15%;
-            // border: 1px solid blue;
-            vertical-align: middle;
-            height: inherit;
+        &:hover {
+            opacity: 0.4;
         }
-
-        &:first-child {
-            text-align: right;
+        &.active {
+            opacity: 1 !important;
         }
 
         > div {
             padding: 3em 3em;
         }
-        
+
         div.testimonial-content {
             border: 1px solid blue;
             margin: 0 2em;
@@ -45,6 +47,9 @@
         }
     }
     .arrow {
+        position: absolute;
+        top: 50%;
+        z-index: 9999;
         opacity: 0.5;
         transition: 175ms;
         width: 25px;
@@ -53,13 +58,36 @@
         &.arrow-left {
             border-left: 4px solid #000;
             border-bottom: 4px solid #000;
+            left: 10%;
         }
         &.arrow-right {
             border-right: 4px solid #000;
             border-top: 4px solid #000;
+            right: 10%;
         }
         &:hover {
             opacity: 1;
+        }
+    }
+    @media (max-width: 768px) {
+        height: 100vh;
+        > section > div.testimonials-slides {
+            width: calc(10 * 80%);
+        }
+        > section > div.testimonials-slides > article {
+            div.testimonial-content {
+                padding: 1em;
+                border: 1px solid blue;
+                margin: 0 0!important;
+                h4 {
+                    font-weight: 300;
+                }
+                p {
+                    font-family: "Mono Space", monospace;
+                    margin: 1em 0;
+                    font-size: 1rem;
+                }
+            }
         }
     }
 }
