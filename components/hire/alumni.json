@@ -129,7 +129,7 @@
     "skills": ["JS", "Express.js", "MySQL", "React", "HTML", "CSS", "Node.js"],
     "status": "looking for jobs",
     "graduationDate": "02-06-2019",
-    "lastUpdateDate": "01-09-2020"
+    "lastUpdateDate": "07-04-2021"
   },
   {
     "id": 8,
@@ -750,7 +750,10 @@
       "Heroku",
       "Figma",
       "PLC Programming",
-      "Swagger"
+      "Swagger",
+      "JQuery",
+      "Bootstrap",
+      "Wordpress"
     ],
     "status": "looking for jobs",
     "graduationDate": "08-07-2020",
@@ -1009,7 +1012,7 @@
     "github": "https://github.com/AnilMula",
     "linkedin": "https://www.linkedin.com/in/anil-kumar-mula-56729475/",
     "skills": [
-      "JavaScript",
+      "JS",
       "React",
       "React Native",
       "Node.js",
