@@ -23,7 +23,13 @@ export default ({ inContextOf, children, id = '' }) => {
           <PictureContentContainer contentBoxesId={"UUqAW92t1ZX5bQwWGg7Dp"} />
         )
       }
-      {children}
+      {
+        inContextOf === "volunteer"
+        && (
+          <PictureContentContainer contentBoxesId={"5cd4lNgsvWNRjSjBP6mIBS"} />
+        )
+      }
+      {inContextOf !== "volunteer" && children}
     </div>
   )
 }

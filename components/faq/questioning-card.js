@@ -45,7 +45,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Questioning(props) {
   const classes = useStyles()
-  const [expanded, setExpanded] = React.useState(false)
+  const [expanded, setExpanded] = React.useState(true)
 
   const handleExpandClick = () => {
     setExpanded(!expanded)
