@@ -14,6 +14,7 @@
     "@material-ui/icons": "^4.5.1",
     "@mdi/js": "^3.5.95",
     "@mdi/react": "^1.1.0",
+    "@stripe/stripe-js": "^1.13.2",
     "compression-webpack-plugin": "^3.1.0",
     "contentful": "^7.14.6",
     "cypress": "^5.0.0",
@@ -35,6 +36,7 @@
     "react-reveal": "^1.2.2",
     "react-wufoo-embed": "^1.0.0",
     "sass-loader": "^7.1.0",
+    "stripe": "^8.142.0",
     "swr": "^0.1.16",
     "uuid": "^3.3.2"
   },
