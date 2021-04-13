@@ -6,10 +6,7 @@ const donationLabels = {
   "monthly": "Monthly donation to HackYourFuture",
 }
 
-const donationSubscriptionProduct = "prod_JIM68NDlwH0QTZ"
-
 async function createSubscriptionDonation(dontationDetails) {
-  console.log("got details", dontationDetails)
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
     line_items: [
@@ -23,8 +20,6 @@ async function createSubscriptionDonation(dontationDetails) {
           },
           unit_amount: dontationDetails.amount * 100,
         },
-        // price: donationSubscriptionProduct,
-        // amount:dontationDetails.amount,
         quantity: 1,
       },
     ],
@@ -36,7 +31,6 @@ async function createSubscriptionDonation(dontationDetails) {
   return ({ id: session.id })
 }
 async function createOneTimeDonation(dontationDetails) {
-  console.log("got details", dontationDetails)
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
     line_items: [
