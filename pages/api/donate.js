@@ -6,7 +6,36 @@ const donationLabels = {
   "monthly": "Monthly donation to HackYourFuture",
 }
 
-async function createDonation(dontationDetails) {
+const donationSubscriptionProduct = "prod_JIM68NDlwH0QTZ"
+
+async function createSubscriptionDonation(dontationDetails) {
+  console.log("got details", dontationDetails)
+  const session = await stripe.checkout.sessions.create({
+    payment_method_types: ['card'],
+    line_items: [
+      {
+        price_data: {
+          currency: 'dkk',
+          recurring:{interval:"month"},
+          product_data: {
+            name: donationLabels[dontationDetails.type],
+            images: ["https://hackyourfuture.dk/static/logo-dark.svg"],
+          },
+          unit_amount: dontationDetails.amount * 100,
+        },
+        // price: donationSubscriptionProduct,
+        // amount:dontationDetails.amount,
+        quantity: 1,
+      },
+    ],
+    mode: 'subscription',
+    success_url: `${SITE_DOMAIN}/donation-success`,
+    cancel_url: `${SITE_DOMAIN}/donation-cancel`,
+  });
+
+  return ({ id: session.id })
+}
+async function createOneTimeDonation(dontationDetails) {
   console.log("got details", dontationDetails)
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
@@ -24,8 +53,8 @@ async function createDonation(dontationDetails) {
       },
     ],
     mode: 'payment',
-    success_url: `${SITE_DOMAIN}/donation/success`,
-    cancel_url: `${SITE_DOMAIN}/donation/cancel`,
+    success_url: `${SITE_DOMAIN}/donation-success`,
+    cancel_url: `${SITE_DOMAIN}/donation-cancel`,
   });
 
   return ({ id: session.id })
@@ -33,7 +62,13 @@ async function createDonation(dontationDetails) {
 
 export default async (req, res) => {
     try {
-      const donation = await createDonation(req.body) 
+      let donation = false
+      if (req.body.type === "one-time") {
+        donation = await createOneTimeDonation(req.body) 
+      }
+      else if (req.body.type === "monthly") {
+        donation = await createSubscriptionDonation(req.body) 
+      }
       res.setHeader('Content-Type', 'application/json')
       res.statusCode = 200
       res.end(JSON.stringify(donation))
