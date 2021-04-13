@@ -45,7 +45,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Questioning(props) {
   const classes = useStyles()
-  const [expanded, setExpanded] = React.useState(true)
+  const [expanded, setExpanded] = React.useState(false)
 
   const handleExpandClick = () => {
     setExpanded(!expanded)
@@ -54,7 +54,7 @@ export default function Questioning(props) {
   return (
     <Card className={classes.card}>
       <CardContent>
-        <Box display='flex'>
+        <Box display='flex' onClick={handleExpandClick}>
           <Box flexGrow={1} className={classes.box}>
             <Typography className={classes.question}>
               {props.question}
