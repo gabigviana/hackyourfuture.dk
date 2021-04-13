@@ -8,6 +8,8 @@ import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
 
+import styles from './deadline.scss'
+
 // styling
 const useStyles = makeStyles({
   deadline: {
@@ -116,6 +118,16 @@ export default function Deadline() {
   if (!applicationDeadline) {
     return null
   } else {
+    return (
+      <div className="next-class-deadline">
+        <style jsx>{styles}</style>
+        <div className="class-details">
+        <div className="class-number"> Class {newClassNumber}</div>
+        <div> Application Deadline:  {applicationEndDate}</div>
+        </div>
+        <Timer date={applicationEndDate} />
+      </div>
+    )
     return (
       <Content>
         <Box className={classes.deadline}>

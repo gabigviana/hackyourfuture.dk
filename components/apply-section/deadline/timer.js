@@ -10,17 +10,20 @@ import ListItemText from '@material-ui/core/ListItemText'
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    display: 'flex',
+    // display: 'inline-block',
+    float:"right",
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'center',
     margin: 0,
-    padding: 0
+    marginRight:"2em",
+    padding: 0,
+    paddingTop:"0.25em"
   },
   list: {
     display: 'flex',
     flexDirection: 'row',
-    padding: '2rem',
+    padding: '0rem',
     margin: '0 auto',
     alignSelf: 'center',
     alignItems: 'center',
@@ -39,9 +42,9 @@ const useStyles = makeStyles(theme => ({
     }
   },
   primaryText: {
-    color: '#293a7d',
+    color: '#fff',
     fontFamily: "'Space Mono', 'monospace'",
-    fontSize: '3rem',
+    fontSize: '1.5rem',
     fontWeight: 'bold',
     textAlign: 'left',
     '@media (max-width:325px)': {
@@ -51,6 +54,7 @@ const useStyles = makeStyles(theme => ({
   secondaryText: {
     fontFamily: "'Space Mono', 'monospace'",
     fontSize: '1rem',
+    color: "#fff",
     textAlign: 'center',
     '@media (max-width:325px)': {
       fontSize: '0.7rem'

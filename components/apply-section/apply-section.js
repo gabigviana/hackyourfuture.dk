@@ -53,9 +53,9 @@ export default function applySection({ content, applyChecks, pointingImage }) {
           `}
         </style> */}
         {documentToReactComponents(content)}
-        <aside className="checkbox-image" style={{backgroundImage:`url("${pointingImage.src}")`}}>
+        {/* <aside className="checkbox-image" style={{backgroundImage:`url("${pointingImage.src}")`}}>
           
-        </aside>
+        </aside> */}
         {/* <img className="checkbox-image" alt={pointingImage.alt} src={pointingImage.src} /> */}
         <ul className="checkbox-container">
           {applyChecks.map((check, i) => (
@@ -80,7 +80,7 @@ export default function applySection({ content, applyChecks, pointingImage }) {
       }
       .checkbox-container {
         width: 66.66%;
-        padding: 2em;
+        padding: 0em;
         box-sizing:border-box;
         display:inline-block;
       }
