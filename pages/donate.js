@@ -5,7 +5,7 @@ import Content from '../components/layouts/content/content'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { fetchPageContent } from '../contentful/contentful'
 import DonateBox from '../components/donate/DonateBox'
-import Partnerships from '../components/partnerships/Partnerships.js'
+import DonationGoal from '../components/donate/DonationGoal'
 import CoverContent from '../components/layouts/cover-content/CoverContent'
 import SplashQuote from '../components/layouts/content/SplashQuote'
 
@@ -38,15 +38,17 @@ export default ({ title, supportOurWork, becomeCompanyMember }) => (
         </DonateBox>
 
       </div>
-
       </section>
+
+      <DonationGoal />
+
       <CoverContent id="association-member" background={"/static/images/donate_cover.jpg"}>
       <Content inContextOf="donate">
       {documentToReactComponents({...supportOurWork, content:supportOurWork.content.slice(supportOurWork.content.length - 3,supportOurWork.content.length)})}
       </Content>
       {/* <div>{documentToReactComponents(content)}</div> */}
       </CoverContent>
-      <SplashQuote heading={"Become a Company Partner of HackYourFuture!"} content={"Does your company want to support diversity and inclusion in the tech industry? Would you want to get access to a unique pool of talented tech professionals now or in the future?"} />
+      <SplashQuote link="/partnerships" heading={"Become a Company Partner of HackYourFuture!"} content={"Does your company want to support diversity and inclusion in the tech industry? Would you want to get access to a unique pool of talented tech professionals now or in the future?"} />
 
       {/* <Partnerships>{becomeCompanyMember}</Partnerships> */}
       

@@ -5,18 +5,19 @@ import Partners from '../partners/partners'
 import Supporters from '../supporters/supporters'
 const partnershipContent = {
     gold:"1fsazQdv9ylQGwpqeSyHll",
-    silver:"1fsazQdv9ylQGwpqeSyHll",
-    bronze:"1fsazQdv9ylQGwpqeSyHll",
+    silver:"3HeH4yz4x41ERoEdwymjFg",
+    bronze:"2ajWDtvb2znFaZjtngXtfK",
 }
 
 const PartnershipContainer = (props) => {
     const partnership = useContentfulEntryId(props.id).content
     if ( ! partnership) return null
+    console.log(partnership.icon.fields.file.url)
     return (
         <div className="partnership-model">
         <style jsx>{styles}</style>
 
-            <div className="partnership-icon">
+            <div className="partnership-icon" style={{backgroundImage:`url("${partnership.icon.fields.file.url}")`}}>
                 <h2>
                 {partnership.title}
                 </h2>
@@ -28,6 +29,7 @@ const PartnershipContainer = (props) => {
                         <li key={i}>{perk.fields.title}</li>
                     ))}
                 </ul>
+                <button>Sign up</button>
             </section>
         </div>
     )

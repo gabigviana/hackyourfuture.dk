@@ -23,8 +23,8 @@ export default ({ title, supportOurWork, becomeCompanyMember }) => (
             display: inline-block;
           }
           #partnership-content > article {
-            height: 40vh;
-            padding: 4em;
+            height: 60vh;
+            padding: 4em 20em 6em 2em;
           }
         `}
       </style>
