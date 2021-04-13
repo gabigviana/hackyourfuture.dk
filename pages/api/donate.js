@@ -25,7 +25,7 @@ async function createSubscriptionDonation(dontationDetails) {
     ],
     mode: 'subscription',
     success_url: `${SITE_DOMAIN}/donation-success`,
-    cancel_url: `${SITE_DOMAIN}/donation-cancel`,
+    cancel_url: `${SITE_DOMAIN}/donate`,
   });
 
   return ({ id: session.id })
@@ -48,7 +48,7 @@ async function createOneTimeDonation(dontationDetails) {
     ],
     mode: 'payment',
     success_url: `${SITE_DOMAIN}/donation-success`,
-    cancel_url: `${SITE_DOMAIN}/donation-cancel`,
+    cancel_url: `${SITE_DOMAIN}/donate`,
   });
 
   return ({ id: session.id })
