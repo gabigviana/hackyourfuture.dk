@@ -1,0 +1,64 @@
+.donate-box {
+    background-color: #f1f1f1;
+    max-width: 80%;
+    margin: 0 auto 0 auto;
+
+    > header > * {
+        display: inline-block;
+        vertical-align: top;
+        padding: 1em;
+        box-sizing: border-box;
+    }
+    > header > aside {
+        background-color: #293A7D;
+        width: 33.33%;
+        color: #fff!important;
+    }
+    > header > section {
+        width: 66.66%;
+        padding: 2em;
+    }
+}
+ul.donation-amount {
+    border: 1px solid #ccc;
+    margin: 1em 0;
+    max-width: 80%;
+    font-family: "Space Mono", monospace;
+    > li {
+        display: inline-block;
+        width: 25%;
+        padding: 1em;
+        box-sizing: border-box;
+
+        &.input-amount {
+            background-color: #fff;
+            border-left: 1px solid #ccc;
+        }
+
+        > input {
+            max-width: 100%;
+        }
+    }
+}
+div.donation-message {
+    > label {
+        display: block;
+    }
+    > textarea {
+        border: none;
+        border-bottom: 1px solid #ccc;
+        width: 100%;
+        background-color: red;
+    }
+}
+form.donation-type {
+    padding: 1em 0;
+    > div {
+        width: 25%;
+        display: inline-block;
+        > input {
+            transform: scale(1.5);
+            margin-right: 1em;
+        }
+    }
+}

@@ -1,7 +1,39 @@
-section.hire {
-  padding: 1rem 4rem 3rem 4rem;
-  margin: 2rem auto;
-  max-width: 900px;
+section.hire-container {
+    // padding: 1rem 4rem 3rem 4rem;
+    // margin: 2rem auto;
+    // max-width: 900px;
+    max-width: 100%;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    position: relative;
+
+    .hire-cover {
+      background-image: url("/static/images/IMG_4538.JPG");
+      height: 40vh;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 100%;
+    }
+  
+    .hire-header {
+      margin-top: -2em;
+
+      .hire-header-content {
+        display: inline-block;
+        padding: 2em;
+        box-sizing: border-box;
+        vertical-align: top;
+        width:33.33%;
+        background: #f4f4f4;
+      }
+    }
+}
+section > div {
+  // padding: 1rem 4rem 3rem 4rem;
+  // margin: 2rem auto;
+  // max-width: 900px;
+  max-width: 100%;
   font-size: 1.4rem;
   line-height: 2.2rem;
   position: relative;
@@ -30,16 +62,16 @@ section.hire {
   }
 
   button.filter {
-    margin: 0.6rem 1.2rem 0.6rem 0;
+    margin: 0.2em;
     border: none;
-    padding: 12px 24px;
+    padding: 8px 12px;
     background-color: white;
     box-shadow: 0 2px 4px 0 rgba(29, 22, 24, 0.2);
-    border-radius: 8px;
+    border-radius: 6px;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-
+    font-family: "Space Mono", monospace;
     &:first-letter {
       text-transform: capitalize;
     }
@@ -67,6 +99,9 @@ section.hire {
     background-color: #f4f4f4;
     padding: 1rem 4rem 3rem 4rem;
     margin: 24px 0 24px;
+    width:66.66%;
+    display: inline-block;
+    vertical-align: top;
 
     @media screen and (max-width: 800px) {
       padding: 1rem 5vw;

@@ -223,6 +223,7 @@ export default ({ children }) => {
           font-size: 18px;
           line-height: 1.8rem;
           margin: 0;
+          white-space: pre-wrap;
         }
 
         .hyf-title {

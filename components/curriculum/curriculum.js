@@ -10,7 +10,7 @@ const Curriculum = () => {
   return (
     <div className='curriculum'>
       <style jsx>{styles}</style>
-
+    <h2>Our curriculum</h2>
       {modules && (
         <ul>
           {modules.curriculum.map(module => (

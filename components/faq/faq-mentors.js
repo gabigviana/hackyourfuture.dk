@@ -24,7 +24,7 @@ export default function faq() {
 
   return (
     <React.Fragment>
-      <h2>Frequently Asked Questions</h2>
+      <h2 style={{textAlign:"center"}}>Frequently Asked Questions</h2>
       {questions &&
         <Container>
           {questions.map(faq => (

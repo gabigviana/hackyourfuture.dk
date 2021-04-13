@@ -26,6 +26,8 @@ module.exports = {
   },
   env: {
     CTF_SPACE_ID: process.env.CTF_SPACE_ID,
-    CTF_ACCESS_TOKEN: process.env.CTF_ACCESS_TOKEN
+    CTF_ACCESS_TOKEN: process.env.CTF_ACCESS_TOKEN,
+    NEXT_PUBLIC_STRIPE_KEY:process.env.NEXT_PUBLIC_STRIPE_KEY,
+    STRIPE_SECRET_KEY:process.env.STRIPE_SECRET_KEY
   },
 }

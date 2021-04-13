@@ -100,7 +100,7 @@ class Hire extends React.Component {
       selectedStatus
     } = this.state
     return (
-      <section className='hire'>
+      <>
         <style jsx>{styles}</style>
         <div className='filters'>
           {/*FILTER BY SKILLS ---------------- */}
@@ -161,7 +161,7 @@ class Hire extends React.Component {
             </div>
           )}
         </div>
-      </section>
+      </>
     )
   }
 }

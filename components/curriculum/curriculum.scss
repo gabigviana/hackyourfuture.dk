@@ -1,3 +1,7 @@
+h2 {
+  text-align: center;
+}
+
 ul {
   // IE fallback
   display: flex;
@@ -16,19 +20,19 @@ ul {
 
   li {
     color: white;
-    padding: 8px;
+    padding: 62px 8px;
 
     @media (max-width: 700px) {
       margin-bottom: 12px;
     }
+    text-align: center;
 
     h3 {
       font-size: bold;
-      text-align: center;
       color: white;
     }
     span {
-      float: right;
+      // float: right;
       color: white;
     }
   }

@@ -1,6 +1,8 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import Layout from '../components/layouts/layout'
 import Content from '../components/layouts/content/content'
+import CoverContent from '../components/layouts/cover-content/CoverContent'
 import WufooForm from 'react-wufoo-embed'
 import FAQ from '../components/faq/faq'
 import ApplySection from '../components/apply-section/apply-section'
@@ -10,6 +12,9 @@ import ApplicationDeadline from '../components/apply-section/deadline/deadline'
 import { fetchPageContent } from '../contentful/contentful'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import getEntryData from './../utils/utils'
+
+import ApplyIntro from '../components/cover-intro/ApplyIntro'
+
 
 export default ({
   applyChecks,
@@ -23,22 +28,43 @@ export default ({
     <Head>
       <title>{title}</title>
     </Head>
-    <ApplicationDeadline />
-    <Content id='apply'>
-      <ApplySection
+    <style global jsx>{`
+      #learning {background-color:#eee;}
+      #final-apply > article {padding: 2em;}
+      button.apply-now {
+        background: #293a7d;
+        color: #fff;
+        padding: 0.75em;
+        font-size: 1.25rem;
+        border:none;
+        font-family:"Space Mono";
+      }
+      #apply-cover > article {
+        padding: 6em 2em 2em 2em;
+      }
+    `}</style>
+    <CoverContent id="apply-cover" background={"/static/images/apply_cover.jpg"}>
+   
+    <ApplySection
         applyChecks={applyChecks}
         content={content}
         pointingImage={pointingImage}
       />
-    </Content>
-    <Content>
+      <Link href="/application"><button className="apply-now">Apply now</button></Link>
+   </CoverContent>
+    <ApplicationDeadline />
+
+    {/* <Content id='apply'>
+      
+    </Content> */}
+    <Content id="learning">
       <Learning
         title={whatYouWillLearn.title}
         content={whatYouWillLearn.content}
         skills={whatYouWillLearn.skills}
       />
     </Content>
-    <Content id='apply-for-class'>
+    {/* <Content id='apply-for-class'>
       <h2>Application Form</h2>
       <p>
         We are recruiting for the next class of HackYourFuture Copenhagen.
@@ -51,14 +77,27 @@ export default ({
         formHash='m1d0ru6z1qxggcq'
         header='hide'
       />
-    </Content>
-    <Content id='learn'>
+    </Content> */}
+      {/* <Content inContextOf="apply">{documentToReactComponents(getAHeadStart)}</Content> */}
+      <CoverContent background={"/static/images/hyf_volunteer.jpg"}>
       <div>{documentToReactComponents(getAHeadStart.getAHeadstart)}</div>
-    </Content>
+    </CoverContent>
+    {/* <Content id='learn'>
+      <div>{documentToReactComponents(getAHeadStart.getAHeadstart)}</div>
+    </Content> */}
     <Content>
       <FAQ />
     </Content>
-  </Layout>
+    <CoverContent id="final-apply" background={"/static/images/donate_cover.jpg"}>
+    <ApplySection
+        applyChecks={applyChecks}
+        // content={content}
+        // pointingImage={pointingImage}
+      />
+      <Link href="/application"><button className="apply-now">Apply now</button></Link>
+    </CoverContent>
+
+ </Layout>
 )
 
 export async function getStaticProps() {

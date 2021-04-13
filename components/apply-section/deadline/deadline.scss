@@ -1,0 +1,12 @@
+.next-class-deadline {
+    background-color: #293a7d;
+    font-family:"Space Mono";
+    > div.class-details > div,
+    > * {
+        display: inline-block;
+        vertical-align: top;
+        color: #fff;
+        padding: 1em;
+        box-sizing: border-box;
+    }
+}

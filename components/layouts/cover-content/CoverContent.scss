@@ -1,0 +1,16 @@
+.cover-content-container {
+    height: initial;
+    background-image: url("/static/images/hyf_2019-02-17-02398.jpg");
+    background-size: auto 120%;
+    background-repeat: no-repeat;
+    background-color: #f1f1f1;
+    .content {
+        width: 66.66%;
+        margin-left:33.33%;
+        display: inline-block;
+        vertical-align: top;
+        background-color: #f1f1f1;
+        padding-left: 2em;
+        box-sizing: border-box;
+    }
+}
