@@ -17,10 +17,15 @@
     > div.partnership-icon {
         width: 25%;
         height: 240px;
-        background-color: blue;
         border-radius: 1em;
         text-align: center;
         margin: -1em 0 0 -1em;
+        background-size: cover;
+        > * {
+            color: #fff;
+            font-size: 2.5rem;
+            margin-top: 2.2em;
+        }
     }
     > section {
         width: 75%;
