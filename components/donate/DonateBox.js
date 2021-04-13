@@ -9,7 +9,6 @@ import React from 'react';
 const suggestions = [250,500,1000]
 
 function createStripeDonation(stripe, donationDetails) {
-    console.log(Stripe)
     return fetch("/api/donate", {
         method:"POST",
         headers:{"Content-type":"application/json"},
@@ -24,7 +23,6 @@ function ResolveStripe(props) {
     useEffect(() => {
        loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY).then((s) => setSession(s))
     },[])
-    console.log(loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY).then((s) => console.log(s)))
     if ( ! stripeSession) return null
     if (stripeSession) {
         return React.cloneElement(props.children, {...props, stripe:stripeSession})
