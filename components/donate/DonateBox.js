@@ -31,8 +31,31 @@ function ResolveStripe(props) {
 
 function StripeDonation(props) {
     const [donationType, setDonationType] = useState(false)
-    const [donationAmount, setDonationAmount] = useState(false)
+    const [donationAmount, setDonationAmount] = useState(250)
     const [donationMessage, setDonationMessage] = useState(false)
+
+    const [isSubmitting, setSubmitting] = useState(false)
+    const [submitError, setSubmitError] = useState(false)
+
+    const createDonation = () => {
+        setSubmitError(false)
+        setSubmitting(true)
+        if ( ! donationType || ! donationAmount) {
+            setSubmitting(false)
+            const error = []
+            if ( ! donationType) error.push("donation type")
+            if ( ! donationAmount) error.push("amount")
+            return setSubmitError("Please select a " + error.join(" and "))
+        }
+        createStripeDonation(props.stripe,{
+            type:donationType,
+            amount: donationAmount,
+            message:donationMessage || ""
+        }).then((rsp) => {
+            setTimeout(() => setSubmitting(false),500)
+        })
+    }
+
     return (
         <div className="stripe-donation">
             <style jsx>{styles}</style>
@@ -50,7 +73,7 @@ function StripeDonation(props) {
             
             <ul className="donation-amount">
                 {suggestions.map((amount, i) => (
-                    <li key={i} onClick={() => setDonationAmount(amount)}><label>{amount} dkk</label></li>
+                    <li key={i} className={donationAmount == amount ? "selected-amount" : ""} onClick={() => setDonationAmount(amount)}><label>{amount} dkk</label></li>
                 ))}
             <li className="input-amount">
                 <input type="number" onChange={(e) => setDonationAmount(e.target.value)} placeholder="Other amount" name="donation-type" value={donationAmount || ""} />
@@ -59,14 +82,26 @@ function StripeDonation(props) {
         
             <div className="donation-message">
                 <label>Message</label>
-                <textarea value={donationMessage || ""} onChange={(e) => setDonationMessage(e.target.value)} placeholder="Write a message"></textarea>
+                <textarea id="donation-message-text" value={donationMessage || ""} onChange={(e) => setDonationMessage(e.target.value)} placeholder="Write a message"></textarea>
             </div>
 
-            <button onClick={() => createStripeDonation(props.stripe,{
-                type:donationType,
-                amount: donationAmount,
-                message:donationMessage
-            })}>Donate</button>
+            {
+                submitError && (
+                    <div className="donate-error"><p>{submitError}</p></div>
+                )
+            }
+
+            {
+                isSubmitting
+                ? (
+                    <button className="donation-button">One moment...</button>
+                )
+                : (
+                    <button className="donation-button" onClick={createDonation}>Donate</button>
+                )
+            }
+
+           
         
         </div>
     )
@@ -77,14 +112,19 @@ export default function DonateBox(props) {
         <div className="donate-box">
             <style jsx>{styles}</style>
 
-            <style global jsx>{`.donate-box > aside > * {
+            <style global jsx>{`aside#donate-copy {
                 color: #fff;
+                padding: 2em!important;
+            }
+            #heading {
+                margin:0;
             }`}</style>
             <header>
-            <aside>
-                {documentToReactComponents({...props.children, content:props.children.content.slice(0,2)})}
+            <aside id="donate-copy">
+                {documentToReactComponents({...props.children, content:props.children.content.slice(1,2)})}
             </aside>
             <section>
+                <h2 id="heading">Support our work</h2>
                 <ResolveStripe>
                 <StripeDonation />
                 </ResolveStripe>
