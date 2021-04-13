@@ -4,7 +4,6 @@
 // ./pages/_document.js
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheets } from '@material-ui/styles'
-import styles from './document.scss'
 
 
 class MyDocument extends Document {
