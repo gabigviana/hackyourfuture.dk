@@ -27,6 +27,12 @@ export default ({ title, supportOurWork, becomeCompanyMember }) => (
             max-width: 80%;
             margin: 2em auto;
           }
+          @media screen and (max-width: 768px) {
+            #association-member {
+              max-width: 100%;
+              margin: 2em auto;
+            }
+          }
           #association-member > article {
             padding: 3em;
           }
