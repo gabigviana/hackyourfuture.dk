@@ -21,7 +21,7 @@ function createStripeDonation(stripe, donationDetails) {
 function ResolveStripe(props) {
     const [stripeSession, setSession] = useState(true)
     useEffect(() => {
-       loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY).then((s) => setSession(s))
+       loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY).then(setSession)
     },[])
     if ( ! stripeSession) return null
     if (stripeSession) {
@@ -29,8 +29,17 @@ function ResolveStripe(props) {
     }
 }
 
+function donationAmountDescription(amount) {
+    if (amount > 1000) return `supports the whole school for ${Math.abs(amount / 350).toFixed(1)} weeks`
+    if (amount === 1000) return "supports the whole school for two weeks"
+    if (amount === 500) return "supports two student for one week"
+    if (amount > 350) return "supports the whole school for a week"
+    if (amount < 250) return `buys ${Math.abs(amount / 10).toFixed(0)} pots of cofee and tea for the students`
+    return "supports one student for one week"
+}
+
 function StripeDonation(props) {
-    const [donationType, setDonationType] = useState(false)
+    const [donationType, setDonationType] = useState("one-time")
     const [donationAmount, setDonationAmount] = useState(250)
     const [donationMessage, setDonationMessage] = useState(false)
 
@@ -62,7 +71,7 @@ function StripeDonation(props) {
 
             <form className="donation-type">
             <div>
-                <input type="radio" name="donation-type" value="one-time" onClick={() => setDonationType("one-time")} />
+                <input type="radio" name="donation-type" checked={donationType === "one-time" ? true : false} value="one-time" onClick={() => setDonationType("one-time")} />
                 <label>One time</label>
             </div>
             <div>
@@ -79,6 +88,17 @@ function StripeDonation(props) {
                 <input type="number" onChange={(e) => setDonationAmount(e.target.value)} placeholder="Other amount" name="donation-type" value={donationAmount || ""} />
             </li>
             </ul>
+
+            <div className="amount-description">
+                <h3><span>{donationAmount} dkk</span> {donationAmountDescription(donationAmount)} {donationType === "monthly" && (" every month")}</h3>
+            </div>
+            {
+                donationAmount >= 250 && (
+                    <div className="amount-description auto-member">
+                        <h3>When you donate, you automatically become a member of the HackYourFuture association</h3>
+                    </div>
+                )
+            }
         
             <div className="donation-message">
                 <label>Message</label>

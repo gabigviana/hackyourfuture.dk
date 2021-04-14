@@ -1,8 +1,8 @@
 .donate-box {
-    background-color: #f1f1f1;
     max-width: 80%;
     margin: 0 auto 0 auto;
     font-family: "Space Mono", monospace;
+    background-color: #293A7D;
 
     > header > * {
         display: inline-block;
@@ -11,11 +11,12 @@
         box-sizing: border-box;
     }
     > header > aside {
-        background-color: #293A7D;
         width: 33.33%;
         color: #fff!important;
     }
     > header > section {
+    background-color: #f1f1f1;
+
         width: 66.66%;
         padding: 2em;
     }
@@ -37,6 +38,26 @@
         border:none;
         font-family:"Space Mono";
         margin-top: 0.5rem;
+    }
+    .amount-description {
+        background-color: #293a7d49;
+        padding: 1em;
+        margin-bottom: 1em;
+        > h3 {
+            font-weight: 300;
+            font-size: 1rem;
+            > span {
+                font-weight: 800;
+            }
+        }
+
+        &.auto-member {
+            > h3 {
+                font-size: 0.8rem;
+            }
+            margin-top: -1em;
+            background-color: #293a7d17;
+        }
     }
 }
 ul.donation-amount {
@@ -60,11 +81,25 @@ ul.donation-amount {
             background-color: #fff;
             border-left: 1px solid #293a7d;
             padding: 0.77em 0.8em;
+
+           
         }
 
         > input {
             max-width: 100%;
             border: none;
+
+             /* Chrome, Safari, Edge, Opera */
+             &::-webkit-outer-spin-button,
+             &::-webkit-inner-spin-button {
+             -webkit-appearance: none;
+             margin: 0;
+             }
+ 
+             /* Firefox */
+             &[type=number] {
+             -moz-appearance: textfield;
+             }
         }
     }
 }
@@ -75,6 +110,7 @@ div.donation-message {
 }
 form.donation-type {
     padding: 0 0;
+    margin-top: 1em;
     > div {
         width: 25%;
         display: inline-block;
