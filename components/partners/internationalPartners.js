@@ -8,7 +8,6 @@ export default function InternationalPartners(props) {
     if (!partnerContent) return null
     const mapCover = partnerContent && partnerContent.mapCover.fields.file.url
     const partners = partnerContent && partnerContent.intlPartner
-    console.log(partners)
 
     return (
         <div className="international-partners" style={{backgroundImage:`url("${mapCover}")`}}>

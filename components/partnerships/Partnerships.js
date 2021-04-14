@@ -12,7 +12,6 @@ const partnershipContent = {
 const PartnershipContainer = (props) => {
     const partnership = useContentfulEntryId(props.id).content
     if ( ! partnership) return null
-    console.log(partnership.icon.fields.file.url)
     return (
         <div className="partnership-model">
         <style jsx>{styles}</style>

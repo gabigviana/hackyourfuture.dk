@@ -11,7 +11,6 @@ export function ContactformContainer(props) {
   const contactTitle = contactFormDetails && contactFormDetails.title
   const contactBody = contactFormDetails && contactFormDetails.bodyText
   const contactCover = contactFormDetails && contactFormDetails.media.fields.file.url
-  console.log(contactCover)
   return (
     <div className="contact-form-container" style={{backgroundImage:`url("${contactCover}")`}}>
       <style jsx>{containerStyles}</style>

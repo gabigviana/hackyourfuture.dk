@@ -5,7 +5,6 @@ const GOAL = 200
 
 export default function DonationGoal(props) {
     const goalReached = Math.abs(parseInt(((currently)/GOAL) * 100))
-    console.log(goalReached)
     return (
         <div className="donation-goal">
             <style jsx>{styles}</style>
