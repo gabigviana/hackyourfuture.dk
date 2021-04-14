@@ -5,4 +5,8 @@
     background-position: center center;
     padding-top: 20%;
     width: 100%;
+    @media screen and (max-width:768px) {
+        background-size: 100%;
+        background-position: top center;
+    }
 }

@@ -18,3 +18,8 @@
 .title {
   text-align: center;
 }
+@media screen and (max-width:768px) {
+ .title {
+   margin: 3em 0 1.5em 0;
+ }
+}

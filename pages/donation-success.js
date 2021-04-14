@@ -27,12 +27,6 @@ export default ({ title, supportOurWork, becomeCompanyMember }) => (
             max-width: 80%;
             margin: 2em auto;
           }
-          @media screen and (max-width: 768px) {
-            #association-member {
-              max-width: 100%;
-              margin: 2em auto;
-            }
-          }
           #association-member > article {
             padding: 3em;
           }
@@ -47,29 +41,14 @@ export default ({ title, supportOurWork, becomeCompanyMember }) => (
       <section className="donate-header">
         <div className="donate-cover">
       
-        <DonateBox>
-        {supportOurWork}
-        </DonateBox>
+        <article>
+        </article>
 
       </div>
       </section>
 
-      <DonationGoal />
+      <DonationGoal label={"Thank you for helping us become a chertiable association"} />
 
-      <CoverContent id="association-member" background={"/static/images/donate_assoc_cover.jpg"}>
-      <div>
-      {documentToReactComponents({...supportOurWork, content:supportOurWork.content.slice(supportOurWork.content.length - 3,supportOurWork.content.length)})}
-      </div>
-      {/* <div>{documentToReactComponents(content)}</div> */}
-      </CoverContent>
-      {/* <SplashQuote link="/partnerships" heading={"Become a Company Partner of HackYourFuture!"} content={"Does your company want to support diversity and inclusion in the tech industry? Would you want to get access to a unique pool of talented tech professionals now or in the future?"} /> */}
-
-      <Partnerships>{becomeCompanyMember}</Partnerships>
-      
-      {/* <div className='donate'>{documentToReactComponents(supportOurWork)}</div> */}
-      {/* <div className='donate'>
-        {documentToReactComponents(becomeCompanyMember)}
-      </div> */}
   </Layout>
 )
 

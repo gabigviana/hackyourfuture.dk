@@ -45,18 +45,21 @@
         font-family: "Space Mono", monospace;
         color: #293a7d;
         font-weight: 300;
-        font-size: 1rem;
-        line-height: 1.5rem;
+        font-size: 1.25rem;
+        line-height: 2rem;
       }
     }
   }
 
   @media (max-width: 768px) {
-    height: 100vh;
-    margin-bottom: 10.5em;
+    margin-bottom: 13em;
+    // background-size: 150%;
+    background-size: 250%;
+    background-position: 60% 0%;
     h1 {
-      font-size: 2rem;
+      font-size: 2.66rem;
       line-height: 2.6rem;
+      margin-top: 8.5em;
     }
     h3 {
       padding: 2.5em!important;
@@ -64,11 +67,15 @@
     section.hero-copy-container {
       padding: 2.5em 0;
       box-sizing: border-box;
-      position: absolute;
-      bottom: -210px;
+      position: initial;
+      // bottom: -210px;
       left: 0;
       > div {
         width: 100%;
+        > h3 {
+          font-size: 1rem!important;
+          line-height: 1.5rem!important;
+        }
       }
     }
   }

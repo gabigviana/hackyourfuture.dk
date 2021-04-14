@@ -13,7 +13,7 @@ import getEntryData from './../utils/utils'
 import SplashQuote from '../components/layouts/content/SplashQuote'
 import Classes from '../components/classes/Classes'
 import Testimonials from '../components/testimonials/Testimonials'
-
+import ThreePictureCard from '../components/layouts/content/ThreePictureCard'
 
 export default ({ title, content, successStories }) => {
   return (
@@ -26,7 +26,8 @@ export default ({ title, content, successStories }) => {
         <title>{title}</title>
       </Head>
       <Hero />
-      <Content inContextOf="frontpage">{documentToReactComponents(content)}</Content>
+      <ThreePictureCard contentBoxesId={"2LWO5HsnPh6I2infa9AvvR"} />
+      {/* <Content inContextOf="frontpage">{documentToReactComponents(content)}</Content> */}
       <SplashQuote />
       <Classes />
       <Graduates />

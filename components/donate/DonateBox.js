@@ -29,7 +29,13 @@ function ResolveStripe(props) {
     }
 }
 
+const mxonthlyBudget = 214400
+const monthlyBudget = 200000
 function donationAmountDescription(amount) {
+    const pert = Math.abs((((amount)/monthlyBudget) * 100))
+    return `supports ${pert.toFixed(2)} % of our ideal monthly budget`
+    return null
+
     if (amount > 1000) return `supports the whole school for ${Math.abs(amount / 350).toFixed(1)} weeks`
     if (amount === 1000) return "supports the whole school for two weeks"
     if (amount === 500) return "supports two student for one week"
@@ -82,7 +88,7 @@ function StripeDonation(props) {
             
             <ul className="donation-amount">
                 {suggestions.map((amount, i) => (
-                    <li key={i} className={donationAmount == amount ? "selected-amount" : ""} onClick={() => setDonationAmount(amount)}><label>{amount} dkk</label></li>
+                    <li key={i} className={donationAmount == amount ? "selected-amount" : ""} onClick={() => setDonationAmount(amount)}><label>{amount} <span>dkk</span></label></li>
                 ))}
             <li className="input-amount">
                 <input type="number" onChange={(e) => setDonationAmount(e.target.value)} placeholder="Other amount" name="donation-type" value={donationAmount || ""} />
@@ -95,7 +101,7 @@ function StripeDonation(props) {
             {
                 donationAmount >= 250 && (
                     <div className="amount-description auto-member">
-                        <h3>When you donate, you automatically become a member of the HackYourFuture association</h3>
+                        <h3>When you donate, you automatically become a member of the HackYourFuture association and can attend the General Assembly</h3>
                     </div>
                 )
             }

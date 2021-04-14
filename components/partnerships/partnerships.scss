@@ -5,6 +5,11 @@
         max-width: 66.66%;
         margin: 2em auto;
     }
+    @media screen and (max-width: 768px) {
+    .partnership-header {
+        max-width: 100%;
+    }
+    }
 }
 .partnership-model {
     max-width: 66.66%;
@@ -22,8 +27,9 @@
         margin: -1em 0 0 -1em;
         background-size: cover;
         > * {
+            font-family: "Space Mono";
             color: #fff;
-            font-size: 2.5rem;
+            font-size: 2.7rem;
             margin-top: 2.2em;
         }
     }
@@ -36,6 +42,7 @@
             margin-top: 1em;
             font-family: "Space Mono";
             font-size: 0.8rem;
+            line-height: 1.5rem;
             > li {
                 background-color: #fff;
                 border-radius: 2px;
@@ -45,5 +52,30 @@
                 display: inline-block;
             }
         }
+    }
+    .partnership-cta-btn {
+        background-color: #293a7d;
+        color: #fff;
+        margin-top: 0.66em;
+        padding: 0.66em 1em;
+        font-family: "Space Mono";
+        border:none;
+    }
+    @media screen and (max-width:768px) {
+        max-width: 100%;
+        margin: 0;
+
+    > div.partnership-icon {
+        width: 80%;
+    }
+    > section {
+        width: 100%;
+        margin-bottom: 2em;
+
+        > ul {
+            max-width: 100%;
+            margin-top:0;
+        }
+    }
     }
 }

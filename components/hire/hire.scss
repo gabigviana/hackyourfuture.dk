@@ -28,6 +28,14 @@ section.hire-container {
         background: #f4f4f4;
       }
     }
+
+    @media screen and (max-width:768px) {
+      .hire-header {
+        .hire-header-content {
+          width: 100%;
+        }
+      }
+    }
 }
 section > div {
   // padding: 1rem 4rem 3rem 4rem;
@@ -103,12 +111,19 @@ section > div {
     display: inline-block;
     vertical-align: top;
 
-    @media screen and (max-width: 800px) {
-      padding: 1rem 5vw;
-    }
+    
 
     p {
       margin-top: 12px;
+    }
+
+    @media screen and (max-width: 800px) {
+      padding: 1rem 5vw;
+      width: 100%;
+
+      button {
+        font-size: 0.8rem;
+      }
     }
   }
 }

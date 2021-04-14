@@ -215,6 +215,8 @@ export default ({ children }) => {
           h1,
           h2 {
             font-size: 24px;
+            line-height: 34px;
+            margin-bottom: 0.5em;
           }
         }
 
