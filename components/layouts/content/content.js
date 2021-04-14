@@ -12,12 +12,6 @@ export default ({ inContextOf, children, id = '' }) => {
       `}</style>
       <style jsx>{styles}</style>
       {
-        inContextOf === "frontpage"
-        && (
-          <PictureContentContainer contentBoxesId={"2LWO5HsnPh6I2infa9AvvR"} />
-        )
-      }
-      {
         inContextOf === "about"
         && (
           <PictureContentContainer contentBoxesId={"UUqAW92t1ZX5bQwWGg7Dp"} />
