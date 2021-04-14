@@ -24,7 +24,7 @@
 
         > h1 {
             font-size: 1.75rem;
-            margin: 0;
+            margin: 0 0 1em 0;
         }
     }
     .content-container > div {
@@ -32,6 +32,39 @@
     }
     .content-container > div > img {
         margin: -0.5em 0 0 -0.5em;
+    }
+}
+.container.three-cards {
+    max-width: 90%;
+    padding-left: 2em;
+    margin-bottom: 2em;
+    > section {
+        background-color: #efefef;
+        margin: 0 2em 0 0;
+        width: calc(33.33% - 2em);
+        display: inline-block;
+        box-sizing: border-box;
+        vertical-align: top;
+        // padding: 0 1em;
+    }
+    .content-container > article,
+    .content-container > div {
+        width: 100%;
+    }
+    .content-container > article {
+        padding: 2em;
+        padding-top: 1em;
+    }
+}
+@media (max-width: 768px) {
+    .container.three-cards {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        > section {
+            width: 100%;
+            margin:0;
+        }
     }
 }
 @media (max-width: 768px) {
@@ -46,7 +79,7 @@
             margin: 0!important;
         }
         .content-container > article > h1 {
-            margin-bottom: initial!important;
+            // margin-bottom: initial!important;
         }
     }
 }
