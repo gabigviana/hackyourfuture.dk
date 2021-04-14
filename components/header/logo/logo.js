@@ -7,7 +7,7 @@ export default () => (
     <style jsx>{styles}</style>
     <Link href='/'>
       <a aria-label="Link to home" rel="noopener">
-        <img src='/static/logo-dark.svg' alt='HackYourFuture Copenhagen' />
+        <img src='/static/logo-white.svg' alt='HackYourFuture Copenhagen' />
       </a>
     </Link>
   </div>
