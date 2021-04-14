@@ -17,7 +17,11 @@ const useStyles = makeStyles(theme => ({
     backgroundColor:"#efefef",
     margin: "10px",
     padding: "20px",
-    minHeight: "220px"
+    minHeight: "220px",
+    '@media (max-width:780px)':{
+      minHeight:"initial",
+      marginBottom:"2em"
+    }
   },
   callToActionLabel: {
       color: "#fff",
