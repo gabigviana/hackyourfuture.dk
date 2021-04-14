@@ -38,19 +38,19 @@ const PartnershipContainer = (props) => {
 export default function Partnerships(props) {
 
     return (
-        <div className="partnerships-container">
+        <div className="partnerships-container" id="partnerships">
 
             <style jsx>{styles}</style>
 
             <style global jsx>{`
-                header > * {
+                header.partnership-header > * {
                     width: 50%;
                     display: inline-block;
                     vertical-align: top;
                     text-align: left;
                     margin: 0;
                 }
-                header > p {
+                header.partnership-header > p {
                     margin-top: 2em;
                 }
             `}</style>
