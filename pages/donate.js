@@ -8,7 +8,7 @@ import DonateBox from '../components/donate/DonateBox'
 import DonationGoal from '../components/donate/DonationGoal'
 import CoverContent from '../components/layouts/cover-content/CoverContent'
 import SplashQuote from '../components/layouts/content/SplashQuote'
-
+import Partnerships from '../components/partnerships/Partnerships'
 export default ({ title, supportOurWork, becomeCompanyMember }) => (
   <Layout>
     <Head>
@@ -27,6 +27,14 @@ export default ({ title, supportOurWork, becomeCompanyMember }) => (
             max-width: 80%;
             margin: 2em auto;
           }
+          #association-member > article {
+            padding: 3em;
+          }
+          #association-member > article > div > h3 {
+            margin-bottom: 1em;
+            font-size: 1.75rem;
+            line-height: 2rem;
+          }
         `}
       </style>
       <style jsx>{styles}</style>
@@ -42,15 +50,15 @@ export default ({ title, supportOurWork, becomeCompanyMember }) => (
 
       <DonationGoal />
 
-      <CoverContent id="association-member" background={"/static/images/donate_cover.jpg"}>
-      <Content inContextOf="donate">
+      <CoverContent id="association-member" background={"/static/images/donate_assoc_cover.jpg"}>
+      <div>
       {documentToReactComponents({...supportOurWork, content:supportOurWork.content.slice(supportOurWork.content.length - 3,supportOurWork.content.length)})}
-      </Content>
+      </div>
       {/* <div>{documentToReactComponents(content)}</div> */}
       </CoverContent>
-      <SplashQuote link="/partnerships" heading={"Become a Company Partner of HackYourFuture!"} content={"Does your company want to support diversity and inclusion in the tech industry? Would you want to get access to a unique pool of talented tech professionals now or in the future?"} />
+      {/* <SplashQuote link="/partnerships" heading={"Become a Company Partner of HackYourFuture!"} content={"Does your company want to support diversity and inclusion in the tech industry? Would you want to get access to a unique pool of talented tech professionals now or in the future?"} /> */}
 
-      {/* <Partnerships>{becomeCompanyMember}</Partnerships> */}
+      <Partnerships>{becomeCompanyMember}</Partnerships>
       
       {/* <div className='donate'>{documentToReactComponents(supportOurWork)}</div> */}
       {/* <div className='donate'>
