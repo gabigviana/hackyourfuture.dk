@@ -1,8 +1,10 @@
+import {useState} from 'react'
 import styles from './partnerships.scss'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { useContentfulEntryId } from '../../contentful/contentful-hooks'
 import Partners from '../partners/partners'
 import Supporters from '../supporters/supporters'
+import PartnershipContactForm from './PartnershipContactForm'
 const partnershipContent = {
     gold:"1fsazQdv9ylQGwpqeSyHll",
     silver:"3HeH4yz4x41ERoEdwymjFg",
@@ -10,6 +12,7 @@ const partnershipContent = {
 }
 
 const PartnershipContainer = (props) => {
+    const [showContactForm, setShowContactform] = useState(false)
     const partnership = useContentfulEntryId(props.id).content
     if ( ! partnership) return null
     return (
@@ -28,7 +31,13 @@ const PartnershipContainer = (props) => {
                         <li key={i}>{perk.fields.title}</li>
                     ))}
                 </ul>
-                <button>Sign up</button>
+                
+                <button onClick={() => setShowContactform( ! showContactForm)} className="partnership-cta-btn">{showContactForm ? "Close" : "Contact"}</button>
+                {
+                    showContactForm && (
+                        <PartnershipContactForm />
+                    )
+                }
             </section>
         </div>
     )
@@ -51,6 +60,15 @@ export default function Partnerships(props) {
                 }
                 header.partnership-header > p {
                     margin-top: 2em;
+                }
+                @media screen and (max-width: 768px) {
+                    header.partnership-header {
+                        padding: 2em;
+                        margin-top: 0!important;
+                    }
+                    header.partnership-header > * {
+                        width: 100%;
+                    }
                 }
             `}</style>
             {
