@@ -63,7 +63,7 @@ export default function Partnerships(props) {
         
             {
                 Object.keys(partnershipContent).map((partnershipType, i) => (
-                    <PartnershipContainer id={partnershipContent[partnershipType]} />
+                    <PartnershipContainer key={i} id={partnershipContent[partnershipType]} />
                 ))
             }
         <Partners />
