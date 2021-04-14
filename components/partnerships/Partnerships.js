@@ -12,7 +12,6 @@ const partnershipContent = {
 const PartnershipContainer = (props) => {
     const partnership = useContentfulEntryId(props.id).content
     if ( ! partnership) return null
-    console.log(partnership.icon.fields.file.url)
     return (
         <div className="partnership-model">
         <style jsx>{styles}</style>
@@ -38,19 +37,19 @@ const PartnershipContainer = (props) => {
 export default function Partnerships(props) {
 
     return (
-        <div className="partnerships-container">
+        <div className="partnerships-container" id="partnerships">
 
             <style jsx>{styles}</style>
 
             <style global jsx>{`
-                header > * {
+                header.partnership-header > * {
                     width: 50%;
                     display: inline-block;
                     vertical-align: top;
                     text-align: left;
                     margin: 0;
                 }
-                header > p {
+                header.partnership-header > p {
                     margin-top: 2em;
                 }
             `}</style>
@@ -64,7 +63,7 @@ export default function Partnerships(props) {
         
             {
                 Object.keys(partnershipContent).map((partnershipType, i) => (
-                    <PartnershipContainer id={partnershipContent[partnershipType]} />
+                    <PartnershipContainer key={i} id={partnershipContent[partnershipType]} />
                 ))
             }
         <Partners />

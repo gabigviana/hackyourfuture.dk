@@ -5,7 +5,6 @@ import { useContentfulEntryId } from '../../contentful/contentful-hooks'
 export default () => {
   const valuesEntryId = 'FDxG0apeGQvjsl4SkD1Gh'
   const values = useContentfulEntryId(valuesEntryId).content
-  console.log(values)
 
   return (
     <>

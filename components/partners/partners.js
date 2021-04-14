@@ -18,7 +18,6 @@ function FixedLogoSize(props) {
 export default () => {
   const partnersEntryId = '01vaQwhCtWAhCpI24OScSq'
   const partners = useContentfulEntryId(partnersEntryId).content
-  // console.log(partners)
 
   const goldPartners =
     partners &&
