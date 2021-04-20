@@ -13,7 +13,7 @@ $primary-color: #293a7d;
   position: relative;
 
   .member-name {
-    font-family: Space Mono, monospace;
+    font-family: "Space Mono", monospace;
     line-height: 2rem;
     font-size: 1.2rem;
   }
@@ -52,6 +52,7 @@ $primary-color: #293a7d;
     &::after {
       content: 'Hired';
       position: absolute;
+      font-family: "Space Mono", monospace;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
