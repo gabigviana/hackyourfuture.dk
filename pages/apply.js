@@ -49,8 +49,9 @@ export default ({
         applyChecks={applyChecks}
         content={content}
         pointingImage={pointingImage}
-      />
+      >
       <Link href="/application"><button className="apply-now">Apply now</button></Link>
+      </ApplySection>
    </CoverContent>
     <ApplicationDeadline />
 
@@ -91,10 +92,12 @@ export default ({
     <CoverContent id="final-apply" background={"/static/images/donate_cover.jpg"}>
     <ApplySection
         applyChecks={applyChecks}
+        heading="Apply now"
         // content={content}
         // pointingImage={pointingImage}
-      />
+      >
       <Link href="/application"><button className="apply-now">Apply now</button></Link>
+    </ApplySection>
     </CoverContent>
 
  </Layout>
