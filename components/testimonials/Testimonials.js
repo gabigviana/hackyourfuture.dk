@@ -32,20 +32,20 @@ export default function Testimonials(props) {
 
     const slideCount = mockTest.length
     const slideWidth = typeof window !== "undefined" && window.innerWidth
-    const slideDistance = slideWidth / 1.66
+    const slideDistance = slideWidth / 1.67
 
     const [showSlide, setShowSlide] = useState(1)
 
     const [slideOffset, setSlideOffset] = useState(0)
 
     useEffect(() => {
-        setSlideOffset(-Math.abs((slideWidth / 2.5)))
+        setSlideOffset(-Math.abs((slideWidth / 2.6)))
     }, [])
 
     const slideIt = (direction) => {
         // If next slide is the last
         if (showSlide === (slideCount - 1) && direction === "right") {
-            setTimeout(() => setSlideOffset(slideDistance * 0.4), 1)
+            setTimeout(() => setSlideOffset(slideDistance * 0.43), 1)
             return setShowSlide(0)
         } // if next slide is before the first
         else if (showSlide === 0 && direction === "left") {

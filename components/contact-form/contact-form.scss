@@ -61,14 +61,23 @@ button {
   border: none;
   cursor: pointer;
   color: white;
-  padding: 10px 30px;
+  padding: 8px 15px;
   border-radius: 2px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   background: #283a7d;
 
-  svg {
-    vertical-align: bottom;
+  // svg {
+  //   vertical-align: top;
+  //   width: 1.5rem;
+  //   transform: scale(0.8);
+  //   vertical-align: bottom;
+  //   margin-bottom: -2px;
+  // }
+  > span {
+    vertical-align: top;
+    margin-top: 4px;
+    display: inline-block;
   }
 }
 

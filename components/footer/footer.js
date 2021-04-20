@@ -74,7 +74,7 @@ const mockCallToAction = [
   },
   {
     label:"Partnership",
-    url:"/partnerships",
+    url:"/donate#partnerships",
     description:"We're always happy for more help and smart partnerships."
   },
 ]

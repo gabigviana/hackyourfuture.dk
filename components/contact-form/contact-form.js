@@ -61,7 +61,7 @@ export default ({ email }) => {
       </label>
 
       <button aria-label="Contact us" type='submit'>
-        <Icon color='white' size={1} path={mdiSend} /> SEND
+        <Icon color='white' size={1} path={mdiSend} /> <span>SEND</span>
       </button>
     </form>
   )

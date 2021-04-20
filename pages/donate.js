@@ -24,22 +24,46 @@ export default ({ title, supportOurWork, becomeCompanyMember }) => (
             display: inline-block;
           }
           #association-member {
-            max-width: 80%;
+            max-width: 66.66%;
             margin: 2em auto;
-          }
-          @media screen and (max-width: 768px) {
-            #association-member {
-              max-width: 100%;
-              margin: 2em auto;
-            }
+            background-size: contain;
+            padding: 13em 0 10em 0;
+            background-color: none;
           }
           #association-member > article {
             padding: 3em;
+            margin: 0 auto;
+            background: none;
+            display: block;
           }
           #association-member > article > div > h3 {
             margin-bottom: 1em;
             font-size: 1.75rem;
             line-height: 2rem;
+          }
+          @media screen and (min-width: 769px) and (max-width: 1099px) {
+            #association-member {
+              max-width: 100%;
+            padding: 8em 0 8em 0;
+            }
+          }
+          @media screen and (min-width: 1100px) and (max-width: 1350px) {
+            #association-member {
+              max-width: 80%;
+            }
+          }
+          @media screen and (max-width: 768px) {
+            #association-member {
+              max-width: 100%;
+              background-size: 220%;
+              background-position: center center;
+              margin: 2em 0;
+              // padding: 9em 3em;
+              box-shadow: none;
+            }
+            #association-member > article {
+              transform: scale(1);
+            }
           }
         `}
       </style>
@@ -56,7 +80,7 @@ export default ({ title, supportOurWork, becomeCompanyMember }) => (
 
       <DonationGoal />
 
-      <CoverContent id="association-member" background={"/static/images/donate_assoc_cover.jpg"}>
+      <CoverContent id="association-member" background={"/static/images/private_memberships.png"}>
       <div>
       {documentToReactComponents({...supportOurWork, content:supportOurWork.content.slice(supportOurWork.content.length - 3,supportOurWork.content.length)})}
       </div>
