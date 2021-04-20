@@ -30,7 +30,7 @@ class Hire extends React.Component {
     let skills = []
     let statuses = []
 
-    alumniList.forEach(alumni => {
+    filteredByDateAlumni.forEach(alumni => {
       skills = [...skills, ...alumni.skills]
       statuses = [...statuses, alumni.status]
     })
