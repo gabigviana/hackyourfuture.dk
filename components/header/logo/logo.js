@@ -7,7 +7,7 @@ export default () => (
     <style jsx>{styles}</style>
     <Link href='/'>
       <a aria-label="Link to home" rel="noopener">
-        <img style={{transform:"scale(2.5) translate(31%, 30%)"}} src='/static/logo-dark.svg' alt='HackYourFuture Copenhagen' />
+        <img style={{transform:"scale(1.8) translate(31%, 30%)"}} src='/static/logo-dark.svg' alt='HackYourFuture Copenhagen' />
       </a>
     </Link>
   </div>
