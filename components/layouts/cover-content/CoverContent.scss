@@ -14,6 +14,22 @@
         box-sizing: border-box;
     }
 }
+#headstart {
+    padding: 0em 0;
+    background-size: auto 200%;
+    background-position: right top;
+    > article {
+        background-color: #293a7d;
+        padding: 2em;
+        padding-left: 10%;
+        margin-left:initial;
+        color: #fff;
+
+    }
+    a {
+        color: #fff!important;
+    }
+}
 @media screen and (max-width:768px) {
     .cover-content-container {
         padding-top: 25em;
