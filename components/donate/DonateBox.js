@@ -98,13 +98,7 @@ function StripeDonation(props) {
             <div className="amount-description">
                 <h3><span>{donationAmount} dkk</span> {donationAmountDescription(donationAmount)} {donationType === "monthly" && (" every month")}</h3>
             </div>
-            {
-                donationAmount >= 250 && (
-                    <div className="amount-description auto-member">
-                        <h3>When you donate, you automatically become a member of the HackYourFuture association and can attend the General Assembly</h3>
-                    </div>
-                )
-            }
+            
         
             <div className="donation-message">
                 <label>Message</label>
@@ -151,6 +145,9 @@ export default function DonateBox(props) {
             </aside>
             <section>
                 <h2 id="heading">Support our work</h2>
+                <div className="amount-description auto-member">
+                    <p>When you donate 250 dkk or more, you automatically become a member of the HackYourFuture association for one year and you will be invited to the annual General Assembly</p>
+                </div>
                 <ResolveStripe>
                 <StripeDonation />
                 </ResolveStripe>
