@@ -31,8 +31,12 @@ const PartnershipContainer = (props) => {
                         <li key={i}>{perk.fields.title}</li>
                     ))}
                 </ul>
-                
-                <button onClick={() => setShowContactform( ! showContactForm)} className="partnership-cta-btn">{showContactForm ? "Close" : "Contact"}</button>
+                        <div className="partnership-price">
+                        <h4>Starting from</h4>
+                        <h2>{partnership.priceStarts}</h2>
+                        </div>
+                <button onClick={() => setShowContactform( ! showContactForm)} className="partnership-cta-btn">{showContactForm ? "Close" : "Contact our staff"}</button>
+               
                 {
                     showContactForm && (
                         <PartnershipContactForm />
