@@ -4,6 +4,11 @@
     font-family: "Space mono";
     border: 1px solid #293a7d;
     padding: 3em;
+
+    p {
+        max-width: 80%;
+     }
+
     .donation-bar {
         margin: 2em 0;
         position: relative;
