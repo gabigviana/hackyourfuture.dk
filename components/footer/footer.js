@@ -17,10 +17,13 @@ const useStyles = makeStyles(theme => ({
     backgroundColor:"#efefef",
     margin: "10px",
     padding: "20px",
-    minHeight: "220px",
+    minHeight: "215px",
     '@media (max-width:780px)':{
       minHeight:"initial",
       marginBottom:"2em"
+    },
+    '@media (min-width:1100px)':{
+      minHeight: "160px",
     }
   },
   callToActionLabel: {
@@ -65,17 +68,17 @@ const mockCallToAction = [
   {
     label:"Donate",
     url:"/donate",
-    description:"HackYourFuture is a not-for-profit organization and our services are entirely free for the students."
+    description:"HackYourFuture is a non-profit organization and our course is entirely free for the students. Become a supporting member of the HackYourFuture association"
   },
   {
     label:"Volunteer",
     url:"/volunteer",
-    description:"Our teachers and mentors are professional web-developers that take share their knowledge and passion for technology with people who need it the most."
+    description:"Our teachers and mentors are professional web-developers with a passion for technology and a wish to share their knowledge with our students"
   },
   {
     label:"Partnership",
     url:"/donate#partnerships",
-    description:"We're always happy for more help and smart partnerships."
+    description:"Does your company want to support diversity and inclusion in the tech industry? Consider becoming a partner and find out more here."
   },
 ]
 
