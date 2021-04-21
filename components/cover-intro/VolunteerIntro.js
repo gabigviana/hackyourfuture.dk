@@ -15,7 +15,7 @@ export default function VolunteerIntro(props) {
           <style jsx>{styles}</style>
         <article className="content">
         <h1>Volunteer</h1>
-        <h4>HackYourFuture is getting a lot of help from awesome volunteer mentors that want to help new people with an interest in programming.</h4>
+        <h4>Our teachers and mentors are all volunteers. They play a vital role in supporting and preparing the students as well as possible for landing their first developer job.</h4>
         {props.children}
         </article>
       </div>
