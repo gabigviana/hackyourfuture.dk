@@ -225,6 +225,7 @@ export default ({ children }) => {
           font-size: 18px;
           line-height: 1.8rem;
           margin: 0;
+          margin-bottom: 0.5em;
           white-space: pre-wrap;
         }
 

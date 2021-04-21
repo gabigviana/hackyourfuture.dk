@@ -20,7 +20,7 @@ export default ({ content, title }) => (
     <style jsx>{styles}</style>
 
       <VolunteerIntro>
-      <h2 id='becoming-mentor'>Would you like to help?</h2>
+      <h3 id='becoming-mentor'>Would you like to help?</h3>
       <Contactform email={'cph@hackyourfuture.dk'} />
       </VolunteerIntro>
       <Content inContextOf="volunteer">{documentToReactComponents(content)}</Content>

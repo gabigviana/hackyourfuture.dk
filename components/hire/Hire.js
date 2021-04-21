@@ -143,7 +143,7 @@ class Hire extends React.Component {
           })}
         </div>
 
-        <div className='team-members'>
+        <div className='team-members hire-section-profiles'>
           {alumniList.length > 0 ? (
             alumniList
               .sort((a, b) => a.name.localeCompare(b.name))

@@ -97,7 +97,7 @@ export default function applySection({ heading, children, content, applyChecks, 
         background-repeat: no-repeat;
       }
       .checkbox-container {
-        width: 66.66%;
+        width: 80%;
         padding: 0em;
         box-sizing:border-box;
         display:inline-block;

@@ -2,7 +2,7 @@ import { createClient } from 'contentful'
 
 export const client = createClient({
     space: process.env.CTF_SPACE_ID,
-    // environment:"develop",
+    environment:"develop",
     accessToken: process.env.CTF_ACCESS_TOKEN
 })
 
