@@ -36,6 +36,11 @@ export default ({ title, supportOurWork, becomeCompanyMember }) => (
             margin: -2em 0 0 -2em;
             vertical-align: top;
           }
+          .private-membership-icon::before {
+            content:"Private member";
+            display: block;
+            color:#fff;
+          }
           #association-member > article {
             padding: 2em;
             box-sizing: border-box;
@@ -49,7 +54,11 @@ export default ({ title, supportOurWork, becomeCompanyMember }) => (
             font-size: 1.75rem;
             line-height: 2.25rem;
           }
-
+          .private-membership-icon-label {
+            margin-bottom: 0;
+            color: #fff;
+            z-index: 9999;
+          }
           // @media screen and (min-width: 769px) and (max-width: 1099px) {
           //   #association-member {
           //     max-width: 100%;
@@ -92,6 +101,7 @@ export default ({ title, supportOurWork, becomeCompanyMember }) => (
       <div id="association-member">
         {/* <div className="association-member-icon"> */}
           {/* <img src="/static/logo-white.svg" className="private-membership-overlay-logo" /> */}
+          {/* <h2 className="private-membership-icon-label">Private Member</h2> */}
           <img src="/static/images/private_memberships.png" className="private-membership-icon" />
         {/* </div> */}
       <article>
