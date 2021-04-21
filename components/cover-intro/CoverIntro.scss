@@ -19,12 +19,13 @@
     }
 
     .content {
-        padding: 10% 5% 2em 5%;
+        padding: 10% 10% 2em 5%;
         h4 {
             font-family: "Space Mono", monospace;
             font-weight: 300;
-            line-height: 1.5rem;
+            line-height: 1.75rem;
             font-size: 1rem;
+            margin-bottom: 1em;
         }
     }
   @media screen and (max-width:768px) {
