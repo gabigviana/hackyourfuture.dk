@@ -4,10 +4,15 @@
     font-family: "Space mono";
     border: 1px solid #293a7d;
     padding: 3em;
+
+    p {
+        max-width: 80%;
+     }
+
     .donation-bar {
         margin: 2em 0;
         position: relative;
-        background-color: powderblue;
+        background-color: #F2F2F2;
         > h2 {
             position: absolute;
             right: 0;

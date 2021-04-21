@@ -24,34 +24,52 @@ export default ({ title, supportOurWork, becomeCompanyMember }) => (
             display: inline-block;
           }
           #association-member {
-            max-width: 66.66%;
-            margin: 2em auto;
+            max-width: 80%;
+            margin: 4em auto 2em auto;
             background-size: contain;
-            padding: 13em 0 10em 0;
-            background-color: none;
+            background-color: #F2F2F2;
+          }
+          .private-membership-icon {
+            border-radius: 20px;
+            width: 25%;
+            height: auto;
+            margin: -2em 0 0 -2em;
+            vertical-align: top;
+          }
+          .private-membership-icon::before {
+            content:"Private member";
+            display: block;
+            color:#fff;
           }
           #association-member > article {
-            padding: 3em;
-            margin: 0 auto;
+            padding: 2em;
+            box-sizing: border-box;
+            margin: 0;
             background: none;
-            display: block;
+            display: inline-block;
+            max-width:75%;
           }
-          #association-member > article > div > h3 {
+          #association-member > article > h3 {
             margin-bottom: 1em;
             font-size: 1.75rem;
-            line-height: 2rem;
+            line-height: 2.25rem;
           }
-          @media screen and (min-width: 769px) and (max-width: 1099px) {
-            #association-member {
-              max-width: 100%;
-            padding: 8em 0 8em 0;
-            }
+          .private-membership-icon-label {
+            margin-bottom: 0;
+            color: #fff;
+            z-index: 9999;
           }
-          @media screen and (min-width: 1100px) and (max-width: 1350px) {
-            #association-member {
-              max-width: 80%;
-            }
-          }
+          // @media screen and (min-width: 769px) and (max-width: 1099px) {
+          //   #association-member {
+          //     max-width: 100%;
+          //   padding: 8em 0 8em 0;
+          //   }
+          // }
+          // @media screen and (min-width: 1100px) and (max-width: 1350px) {
+          //   #association-member {
+          //     max-width: 80%;
+          //   }
+          // }
           @media screen and (max-width: 768px) {
             #association-member {
               max-width: 100%;
@@ -80,12 +98,21 @@ export default ({ title, supportOurWork, becomeCompanyMember }) => (
 
       <DonationGoal />
 
-      <CoverContent id="association-member" background={"/static/images/private_memberships.png"}>
-      <div>
-      {documentToReactComponents({...supportOurWork, content:supportOurWork.content.slice(supportOurWork.content.length - 3,supportOurWork.content.length)})}
+      <div id="association-member">
+        {/* <div className="association-member-icon"> */}
+          {/* <img src="/static/logo-white.svg" className="private-membership-overlay-logo" /> */}
+          {/* <h2 className="private-membership-icon-label">Private Member</h2> */}
+          <img src="/static/images/private_memberships.png" className="private-membership-icon" />
+        {/* </div> */}
+      <article>
+      {documentToReactComponents({...supportOurWork, content:supportOurWork.content.slice(supportOurWork.content.length - 2,supportOurWork.content.length)})}
+      </article>
       </div>
+
+      {/* <CoverContent id="association-member" background={"/static/images/private_memberships.png"}> */}
+     
       {/* <div>{documentToReactComponents(content)}</div> */}
-      </CoverContent>
+      {/* </CoverContent> */}
       {/* <SplashQuote link="/partnerships" heading={"Become a Company Partner of HackYourFuture!"} content={"Does your company want to support diversity and inclusion in the tech industry? Would you want to get access to a unique pool of talented tech professionals now or in the future?"} /> */}
 
       <Partnerships>{becomeCompanyMember}</Partnerships>

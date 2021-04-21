@@ -19,36 +19,38 @@ h2 {
 .curriculum {
 clear: both;
 overflow: hidden;
-margin-bottom: 4em;
-transform: scale(0.95);
-
+padding-top: 2em;
+margin-top: 2em!important;
+// margin-bottom: 4em;
+// transform: scale(0.95);
+border-top: 3px solid #efefef;
 ul {
   position: relative;
   margin-right: 17%;
   > li {
-    background-color: #293a7d31;
-    border: 2px solid #293a7d;
+    background-color: #293a7d;
+    // border: 2px solid #293a7d;
     display: inline-block;
     vertical-align: top;
     width: calc(20% - 0.5em);
     text-align: center;
     padding: 1.25em 0 3em 0;
-    border-top: 2px solid #293a7d;
-    border-left: 2px solid #293a7d;
+    // border-top: 2px solid #293a7d;
+    // border-left: 2px solid #293a7d;
     margin: 0.25em;
-    transition: 175ms;
+    transition: 375ms;
     cursor: pointer;
     &:hover {
-      transform: scale(1.05);
+      transform: scale(0.9);
     }
 
     &:last-child {
       position: absolute;
       top:0;
-      height: 500px;
+      height: 430px;
       padding-top: 6em;
-      border-left: 2px solid #293a7d;
-      border-right: 2px solid #293a7d;
+      // border-left: 2px solid #293a7d;
+      // border-right: 2px solid #293a7d;
     }
 
     > h2 {
@@ -56,13 +58,16 @@ ul {
       font-size: 9rem;
       line-height: 9rem;
       margin-bottom: -0.7em;
+      color:#fff;
     }
     > h3 {
       font-size: 1.25rem;
+      color:#fff;
     }
     > h4 {
       font-size: 1rem;
       font-weight: 100;
+      color:#fff;
     }
   }
   // // IE fallback

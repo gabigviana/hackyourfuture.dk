@@ -8,6 +8,8 @@ import FAQ from '../components/faq/faq'
 import ApplySection from '../components/apply-section/apply-section'
 import Learning from '../components/learning-section/learning'
 import ApplicationDeadline from '../components/apply-section/deadline/deadline'
+import Curriculum from '../components/curriculum/curriculum'
+import VolunteerIntro from '../components/cover-intro/VolunteerIntro'
 
 import { fetchPageContent } from '../contentful/contentful'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
@@ -79,17 +81,23 @@ export default ({
         header='hide'
       />
     </Content> */}
+
       {/* <Content inContextOf="apply">{documentToReactComponents(getAHeadStart)}</Content> */}
-      <CoverContent background={"/static/images/hyf_volunteer.jpg"}>
+      <CoverContent id="headstart" background={"/static/images/hyf_volunteer.jpg"}>
       <div>{documentToReactComponents(getAHeadStart.getAHeadstart)}</div>
     </CoverContent>
     {/* <Content id='learn'>
       <div>{documentToReactComponents(getAHeadStart.getAHeadstart)}</div>
     </Content> */}
-    <Content>
+    {/* <Content> */}
+    <VolunteerIntro inContextOf="faq">
       <FAQ />
-    </Content>
-    <CoverContent id="final-apply" background={"/static/images/donate_cover.jpg"}>
+    </VolunteerIntro>
+      
+    {/* </Content> */}
+    <Curriculum />
+
+    <CoverContent id="final-apply" background={"/static/images/apply_cover_1.jpg"}>
     <ApplySection
         applyChecks={applyChecks}
         heading="Apply now"

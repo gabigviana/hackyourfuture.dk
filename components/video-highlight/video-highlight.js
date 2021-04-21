@@ -16,7 +16,7 @@ export default ({ title, content }) => (
         <p>{content}</p>
 
         <Iframe
-          src='https://player.vimeo.com/video/390957830'
+          src={`https://player.vimeo.com/video/390957830?color=293a7d&title=0&byline=0&portrait=0`}
           width='640'
           height='337'
         />

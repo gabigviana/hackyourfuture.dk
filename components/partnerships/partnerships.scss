@@ -20,8 +20,8 @@
         vertical-align: top;
     }
     > div.partnership-icon {
-        width: 25%;
-        height: 240px;
+        width: 30%;
+        height: 260px;
         border-radius: 1em;
         text-align: center;
         margin: -1em 0 0 -1em;
@@ -30,11 +30,12 @@
             font-family: "Space Mono";
             color: #fff;
             font-size: 2.7rem;
-            margin-top: 2.2em;
+            margin-top: 2.3em;
+            margin-bottom: 0;
         }
     }
     > section {
-        width: 75%;
+        width: 70%;
         padding: 2em 2em 1em 2em;
 
         > ul {
@@ -60,6 +61,16 @@
         padding: 0.66em 1em;
         font-family: "Space Mono";
         border:none;
+    }
+    .partnership-price {
+        margin-top: 1em;
+        > h4 {
+            color: #000;
+            opacity: 0.5;
+        }
+        > h2 {
+            margin: 0;
+        }
     }
     @media screen and (max-width:768px) {
         max-width: 100%;

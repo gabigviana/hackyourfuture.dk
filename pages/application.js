@@ -27,6 +27,7 @@ export default ({
       <title>{title}</title>
     </Head>
     <Content id='apply-for-class'>
+      <div style={{height:"50px"}}></div>
       <h2>Application Form</h2>
       <p>
         We are recruiting for the next class of HackYourFuture Copenhagen.
