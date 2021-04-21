@@ -6,24 +6,30 @@ import Markdown from 'react-markdown'
 const gfm = require('remark-gfm')
 
 // 'https://api.github.com/repos/HackYourFuture-CPH/HTML-CSS/contents/readme.md'
-function ShowGitRepo(props) {
-  const [repo, setRepo] = useState(false)
-  useEffect(() => {
-    fetch(props.gitReadme)
-        .then(function(response) {
-            return response.json();
-        }).then(function(data) {
-          setRepo(atob(data['content']))
-        });
-  },[props.gitReadme])
-  if (repo) {
-    return (
-      <>
-      <Markdown remarkPlugins={[gfm]}>{repo}</Markdown>
-      </>
-    )
-  }
-  return null
+// function ShowGitRepo(props) {
+//   const [repo, setRepo] = useState(false)
+//   useEffect(() => {
+//     fetch(props.gitReadme)
+//         .then(function(response) {
+//             return response.json();
+//         }).then(function(data) {
+//           setRepo(atob(data['content']))
+//         });
+//   },[props.gitReadme])
+//   if (repo) {
+//     return (
+//       <>
+//       <Markdown remarkPlugins={[gfm]}>{repo}</Markdown>
+//       </>
+//     )
+//   }
+//   return null
+// }
+function redirect_blank(url) {
+  var a = document.createElement('a');
+  a.target="_blank";
+  a.href=url;
+  a.click();
 }
 
 const Curriculum = () => {
@@ -51,7 +57,7 @@ const Curriculum = () => {
       {modules && (
         <ul>
           {modules.curriculum.map((classModule,i) => (
-            <li key={classModule.id} onClick={() => doShowModule(classModule, i)}>
+            <li key={classModule.id} onClick={() => redirect_blank(classModule.gitUrl)}>
               <h2>{i + 1}</h2>
               <h3>{classModule.title}</h3>
               <h4>{classModule.duration}</h4>
@@ -59,11 +65,12 @@ const Curriculum = () => {
           ))}
         </ul>
       )}
-    <div className="modal" ref={ref}>
+      <div ref={ref} style={{height:"30px"}}></div>
+    <div className="modal" >
       {
         showModule && (
       <div>
-        <ShowGitRepo gitReadme={showModule} />
+        {/* <ShowGitRepo gitReadme={showModule} /> */}
         {
           nextModule && (
             <div className="next-module" onClick={() => doShowModule(nextModule, modules.curriculum.findIndex((m) => m.id === nextModule.id))}>
