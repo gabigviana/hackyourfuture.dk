@@ -51,13 +51,13 @@ export default ({ email }) => {
           required='required'
           name="email"
         />
-        <span>email</span>
+        <span>Email</span>
       </label>
 
       {/*message*/}
       <label>
         <input type='text' name="message" required='required' />
-        <span>message</span>
+        <span>Message</span>
       </label>
 
       <button aria-label="Contact us" type='submit'>
