@@ -71,10 +71,10 @@ export default ({
         <Partners />
       </SponsorSplit>
 
-      <SplashQuote heading={"Become a Company Partner of HackYourFuture!"} content={"Does your company want to support diversity and inclusion in the tech industry? Would you want to get access to a unique pool of talented tech professionals now or in the future?"} />
+      <SplashQuote link="/donate#partnerships" heading={"Become a Company Partner of HackYourFuture!"} content={"Does your company want to support diversity and inclusion in the tech industry? Would you want to get access to a unique pool of talented tech professionals now or in the future?"} />
 
-      <Supporters />
       <InternationalPartners />
+      <Supporters />
 
       
       <LGReport />
