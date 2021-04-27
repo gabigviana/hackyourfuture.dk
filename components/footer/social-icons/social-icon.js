@@ -3,6 +3,7 @@ import Icon from '@mdi/react'
 import {
   mdiFacebook,
   mdiGithubCircle,
+  mdiInstagram,
   mdiLinkedin,
   mdiTwitter,
   mdiYoutube
@@ -13,6 +14,16 @@ import styles from './social-icon.scss'
 const SocialIcons = () => (
   <div className='social-icons'>
     <style jsx>{styles}</style>
+    
+    <a
+      href='https://www.instagram.com/hackyourfuture.dk/'
+      title='instagram'
+      target='_blank'
+      rel='noopener'
+      aria-label='Hackyourfuture-cph Instagram link'
+    >
+      <Icon color='#fff' size={1} path={mdiInstagram} />
+    </a>
     <a
       href='https://www.youtube.com/channel/UCgWEvuTAyg7qbWcq0M8w4EQ'
       title='youtube'
