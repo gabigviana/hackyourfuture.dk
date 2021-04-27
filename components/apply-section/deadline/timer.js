@@ -18,7 +18,12 @@ const useStyles = makeStyles(theme => ({
     margin: 0,
     marginRight:"2em",
     padding: 0,
-    paddingTop:"0.25em"
+    paddingTop:"0.25em",
+    '@media (max-width:769px)': {
+      float: 'none',
+      marginBottom:"2em",
+      marginRight:"0"
+    }
   },
   list: {
     display: 'flex',

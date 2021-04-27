@@ -46,16 +46,9 @@ export default function applySection({ heading, children, content, applyChecks, 
   return (
     <React.Fragment>
       <div>
-        {/* <style jsx global>
-          {`
-            #apply p {
-              font-size: 1rem;
-            }
-          `}
-        </style> */}
         {documentToReactComponents(content)}
         {heading && (
-          <h2>{heading}</h2>
+          <h2 className="apply-heading">{heading}</h2>
         )}
         {/* <aside className="checkbox-image" style={{backgroundImage:`url("${pointingImage.src}")`}}>
           
@@ -75,12 +68,19 @@ export default function applySection({ heading, children, content, applyChecks, 
           )
         }
       <style jsx>{`
+       h2.apply-heading {
+        margin:0 0 1em 0;
+      }
       .needs-checked {
         border: 1px solid #ccc;
         border-radius: 3px;
         display: inline-block;
         padding: 0.5em 1em;
         background: #fff;
+      }
+      .needs-checked > p {
+        font-size: 0.8rem;
+        margin-bottom: 0;
       }
       #apply p {
         font-size: 1rem;

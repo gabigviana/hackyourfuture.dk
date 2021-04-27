@@ -31,7 +31,8 @@ export default ({
       <title>{title}</title>
     </Head>
     <style global jsx>{`
-      #learning {background-color:#eee;}
+      #learning {
+        background-color:#eee;}
       #final-apply > article {padding: 2em;}
       button.apply-now {
         background: #293a7d;
@@ -43,6 +44,28 @@ export default ({
       }
       #apply-cover > article {
         padding: 6em 2em 2em 2em;
+      }
+      p > b {
+        font-family:"Space Mono";
+      }
+      #headstart > article {
+        width: 50%;
+      }
+      #headstart > article {
+        width: 50%;
+      }
+      #headstart > article > div > p > a,
+      #headstart > article > div > h2 {
+        color: #fff!important;
+      }
+      #headstart > article > div > p {
+        max-width: 100%;
+      }
+      @media screen and (max-width: 768px) {
+        #learning {
+          padding: 1em!important;
+          padding-top:0.1em!important;
+        }
       }
     `}</style>
     <CoverContent id="apply-cover" background={"/static/images/apply_cover.jpg"}>
