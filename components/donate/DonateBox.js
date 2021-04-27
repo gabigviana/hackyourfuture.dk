@@ -138,6 +138,7 @@ export default function DonateBox(props) {
             }
             #heading {
                 margin:0;
+                margin-bottom: 0.5em;
             }`}</style>
             <header>
             <aside id="donate-copy">
