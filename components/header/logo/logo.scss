@@ -1,7 +1,8 @@
 .logo {
-  margin-left: 1rem;
+  // margin-left: 1rem;
   padding: 12px;
-  margin-top: -0.2em;
+  margin-top: -0.5em;
+  transform: scale(2) translate(25%, 27%);
 
   a {
     transition: opacity 0.3s;
@@ -15,7 +16,9 @@
     }
   }
 
-  @media (min-width: 769px) {
+  @media (max-width: 769px) {
     margin-left: 0;
+    transform: initial!important;
+    margin-top:-0.2em;
   }
 }
