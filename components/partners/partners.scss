@@ -2,10 +2,10 @@
   // display: flex;
   // align-items: center;
   // flex-direction: column;
-  padding: 1rem 4rem 3rem 4rem;
-  max-width: 80%;
+  padding: 0;
+  max-width: 100%;
   margin: 0 auto;
-
+  
   h2 {
     text-align: center;
   }
@@ -53,12 +53,12 @@
     &.gold-partners {
 
       li {
-        width: 33.33%;
+        width: 20%;
       }
     }
 
     &.silver-partners {
-      max-width: 66.66%;
+      max-width: 80%;
       margin: 0 auto;
 
       &::before {
@@ -78,8 +78,9 @@
     //   }
     // }
     &.bronze-partners {
-      max-width: 50%;
-      margin: 0 auto;
+      max-width: 70%;
+      margin: 0 auto 0 auto;
+      padding-bottom: 4em;
 
       &::before {
         content:"Bronze partners";
@@ -118,6 +119,7 @@
   .partners {
     padding: 1em;
     max-width: 100%;
+    background: #f3f3f3;
   }
 }
 @media screen and (max-width:668px) {
@@ -140,7 +142,7 @@
       &.silver-partners,
       &.bronze-partners {
         > li {
-          width: 50%;
+          width: 66.66%;
           display: inline-block;
           vertical-align: top;
           &:nth-child(odd) {
