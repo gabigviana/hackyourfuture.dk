@@ -36,13 +36,15 @@
     }
     .content {
         padding: 2em;
-        margin-top:14em;
+        margin-top:16em;
+        margin-left:0;
     }
     .cover {
         position: absolute;
         top:0;
         left:0;
         height: 200px;
+        margin-top:4em;
     }
     }
 }
@@ -70,6 +72,8 @@
     }
 }
 }
+
+
 .cover-intro-container.volunteer-intro.volunteer-faq {
     background-image: url("/static/images/hyf_volunteer_faq.jpg");
     background-size: auto 140%;
@@ -91,6 +95,7 @@
         background-size: contain;
         background-position: top center;
         padding-top: 12em;
+        margin-bottom: 2em!important;
         .content {
             width:100%!important;
             padding: 1em;
@@ -98,4 +103,41 @@
             background: #fff;
         }
     }
+}
+.cover-intro-container.volunteer-intro.apply-faq {
+    background-image: url("/static/images/faq_apply.jpg");
+    background-size: auto 140%;
+    background-position: left center;
+    background-repeat: no-repeat;
+    margin-bottom: 6em;
+    overflow: hidden;
+    .content {
+        width: 68%;
+        margin-left:35%;
+        padding: 0 4em 3em 2em;
+        box-sizing: border-box;
+        background-color: #efefef;
     }
+    
+}
+@media screen and (max-width:768px) {
+    .cover-intro-container.volunteer-intro.apply-faq {
+        background-image: url("/static/images/faq_apply.jpg");
+        background-size: contain;
+        background-position: top center;
+        background-repeat: no-repeat;
+        margin-bottom: 6em;
+        overflow: hidden;
+        .content {
+            width: 100%;
+            margin-left:0%;
+            padding: 0 0 1em 0em;
+            box-sizing: border-box;
+            background-color: #efefef;
+            > h2 {
+                text-align: center;
+            }
+        }
+        
+    }
+}

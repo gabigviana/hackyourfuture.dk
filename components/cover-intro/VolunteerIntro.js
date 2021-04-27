@@ -2,7 +2,7 @@ import styles from './CoverIntro.scss'
 export default function VolunteerIntro(props) {
   if (props.inContextOf === "faq") {
     return (
-      <div className="cover-intro-container volunteer-intro volunteer-faq">
+      <div className="cover-intro-container volunteer-intro volunteer-faq apply-faq">
           <style jsx>{styles}</style>
         <article className="content">
         {props.children}

@@ -36,8 +36,9 @@ export default ({ content, title }) => (
                 }
                 @media screen and (max-width: 768px) {
                     header.curriculum-header {
-                        padding: 2em;
+                        padding: 1em;
                         margin-top: 0!important;
+                        max-width: 100%;
                     }
                     header.curriculum-header > * {
                         width: 100%;
