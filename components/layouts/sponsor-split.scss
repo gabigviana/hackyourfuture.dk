@@ -6,13 +6,28 @@
     // background-position: -50vw center;
     background-size: 40%;
     background-repeat: no-repeat; 
-    padding-left: 33.33%;
+    padding-left: 40%;
     background-color: #f3f3f3;
+
+    > section {
+        background: #f3f3f3;
+
+        &.partners {
+            padding: 0;
+            max-width: 100%;
+            > ul {
+                max-width: 100%;
+            }
+        }
+    }
+
+    @media screen and (min-width:769px) and (max-width:880px) {
+        background-size: 80%;
+    }
 
     @media screen and (max-width:768px) {
         padding: 18em 0 0 0;
         background-size: 100%;
         background-position: center top;
-        
     }
 }

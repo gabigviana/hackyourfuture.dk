@@ -72,6 +72,20 @@
             margin: 0;
         }
     }
+    .join-companies {
+        div.company-item > * {
+            display: inline-block;
+            width: calc(25% - 1em);
+            margin-right: 1em;
+            min-height: 70px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 80%;
+            > img {
+                opacity: 0;
+            }
+        }
+    }
     @media screen and (max-width:768px) {
         max-width: 100%;
         margin: 0;
@@ -82,6 +96,7 @@
     > section {
         width: 100%;
         margin-bottom: 2em;
+        padding: 1em;
 
         > ul {
             max-width: 100%;

@@ -123,7 +123,7 @@ export default function Deadline() {
         <style jsx>{styles}</style>
         <div className="class-details">
         <div className="class-number"> Class {newClassNumber}</div>
-        <div> Application Deadline:  {applicationEndDate}</div>
+        <div className="class-deadline"> Application Deadline:  <span>{applicationEndDate}</span></div>
         </div>
         <Timer date={applicationEndDate} />
       </div>

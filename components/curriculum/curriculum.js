@@ -65,24 +65,7 @@ const Curriculum = () => {
           ))}
         </ul>
       )}
-      <div ref={ref} style={{height:"30px"}}></div>
-    <div className="modal" >
-      {
-        showModule && (
-      <div>
-        {/* <ShowGitRepo gitReadme={showModule} /> */}
-        {
-          nextModule && (
-            <div className="next-module" onClick={() => doShowModule(nextModule, modules.curriculum.findIndex((m) => m.id === nextModule.id))}>
-              <h4>Next module</h4>
-              <h3>{nextModule.title}</h3>
-            </div>
-          )
-        }
-      </div>
-        )
-      }
-    </div>
+    
     </div>
     </>
   )

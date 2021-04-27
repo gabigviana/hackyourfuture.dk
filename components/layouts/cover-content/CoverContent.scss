@@ -16,11 +16,11 @@
 }
 #headstart {
     padding: 0em 0;
-    background-size: auto 200%;
+    background-size: auto 240%;
     background-position: right top;
     > article {
         background-color: #293a7d;
-        padding: 2em;
+        padding: 2em 2em 4em 2em;
         padding-left: 10%;
         margin-left:initial;
         color: #fff;
@@ -29,6 +29,17 @@
     a {
         color: #fff!important;
     }
+}
+@media screen and (max-width:768px) {
+#headstart {
+    background-position: center center;
+    padding-top: 20em;
+    text-align: center;
+    background-size: cover;
+    > article {
+        width: 100%;
+    }
+}
 }
 @media screen and (max-width:768px) {
     .cover-content-container {

@@ -2,7 +2,6 @@
     max-width: 80%;
     margin: 2em auto;
     font-family: "Space mono";
-    border: 1px solid #293a7d;
     padding: 3em;
 
     p {
@@ -20,7 +19,7 @@
             margin: 0.66em;
         }
         > .donation-indicator {
-            background-color: blue;
+            background-color: #fd9240;
             text-align: right;
             color: #fff;
             padding: 2em;
@@ -34,8 +33,12 @@
         margin-top: 0.5em;
     }
     @media screen and (max-width: 768px) {
-        padding: 2em;
+        padding: 0em;
         max-width: 90%;
+
+        > p {
+            max-width: 100%;
+        }
 
         .donation-bar {
             > h2 {

@@ -59,6 +59,9 @@ export default ({ title, supportOurWork, becomeCompanyMember }) => (
             color: #fff;
             z-index: 9999;
           }
+          .donate-cover-end {
+            margin-top: 3em;
+          }
           // @media screen and (min-width: 769px) and (max-width: 1099px) {
           //   #association-member {
           //     max-width: 100%;
@@ -96,26 +99,21 @@ export default ({ title, supportOurWork, becomeCompanyMember }) => (
       </div>
       </section>
 
-      <DonationGoal />
 
-      <div id="association-member">
-        {/* <div className="association-member-icon"> */}
-          {/* <img src="/static/logo-white.svg" className="private-membership-overlay-logo" /> */}
-          {/* <h2 className="private-membership-icon-label">Private Member</h2> */}
-          <img src="/static/images/private_memberships.png" className="private-membership-icon" />
-        {/* </div> */}
-      <article>
-      {documentToReactComponents({...supportOurWork, content:supportOurWork.content.slice(supportOurWork.content.length - 2,supportOurWork.content.length)})}
-      </article>
-      </div>
+    
+
+      <DonationGoal />
 
       {/* <CoverContent id="association-member" background={"/static/images/private_memberships.png"}> */}
      
       {/* <div>{documentToReactComponents(content)}</div> */}
       {/* </CoverContent> */}
       {/* <SplashQuote link="/partnerships" heading={"Become a Company Partner of HackYourFuture!"} content={"Does your company want to support diversity and inclusion in the tech industry? Would you want to get access to a unique pool of talented tech professionals now or in the future?"} /> */}
+        <img src="/static/images/donate_splitter.jpg" />
 
       <Partnerships>{becomeCompanyMember}</Partnerships>
+      
+      <img src="/static/images/donate_endcover.jpg" className="donate-cover-end" />
       
       {/* <div className='donate'>{documentToReactComponents(supportOurWork)}</div> */}
       {/* <div className='donate'>

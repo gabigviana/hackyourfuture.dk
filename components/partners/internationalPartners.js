@@ -12,7 +12,7 @@ export default function InternationalPartners(props) {
     return (
         <div className="international-partners" style={{backgroundImage:`url("${mapCover}")`}}>
             <style jsx>{styles}</style>
-            <h2>International partners</h2>
+            <h2>HackYourFuture family</h2>
             <div className="partner-list">
                 {
                     partners.map((partner,i) => (

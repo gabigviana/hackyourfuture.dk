@@ -57,7 +57,8 @@ const useStyles = makeStyles(theme => ({
   info: {
     fontSize: '0.8rem',
     color: '#fff',
-    margin: '0.5rem 0.4rem'
+    margin: '0.5rem 0.4rem',
+    fontFamily: '"Space Mono", monospace',
   },
   link: {
     color: '#fff'
@@ -68,12 +69,12 @@ const mockCallToAction = [
   {
     label:"Donate",
     url:"/donate",
-    description:"HackYourFuture is a non-profit organization and our course is entirely free for the students. Become a supporting member of the HackYourFuture association"
+    description:"HackYourFuture is a non-profit organization and our course is entirely free for the students. Support our work with a donation."
   },
   {
     label:"Volunteer",
     url:"/volunteer",
-    description:"Our teachers and mentors are professional web-developers with a passion for technology and a wish to share their knowledge with our students"
+    description:"Our teachers and mentors are professional web-developers with a passion for technology and a wish to share their knowledge and skill."
   },
   {
     label:"Partnership",
