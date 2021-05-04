@@ -1,0 +1,10 @@
+<div id="association-member">
+{/* <div className="association-member-icon"> */}
+  {/* <img src="/static/logo-white.svg" className="private-membership-overlay-logo" /> */}
+  {/* <h2 className="private-membership-icon-label">Private Member</h2> */}
+  <img src="/static/images/private_memberships.png" className="private-membership-icon" />
+{/* </div> */}
+<article>
+{documentToReactComponents({...supportOurWork, content:supportOurWork.content.slice(supportOurWork.content.length - 2,supportOurWork.content.length)})}
+</article>
+</div>
