@@ -20,6 +20,7 @@ export default ({ content, title }) => (
       <div className="hire-header">
       <div className="hire-header-content">{documentToReactComponents(content)}</div>
       <Hire />
+      <div style={{height:"2em"}}></div>
       <Testimonials />
       <ContactformContainer>
         <Contactform email={'cph@hackyourfuture.dk'} />
