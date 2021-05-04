@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import styles from './HozSlider.scss'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-import { useSwipeable } from 'react-swipeable'
+// import { useSwipeable } from 'react-swipeable'
 import React from 'react';
 
 function detectTouch(event) {
