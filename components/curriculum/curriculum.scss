@@ -19,11 +19,13 @@ h2 {
 .curriculum {
 clear: both;
 overflow: hidden;
-padding-top: 2em;
-margin-top: 2em;
+line-height: initial;
+// margin-bottom: 2em;
+// padding-top: 2em;
+// margin-top: 2em;
 // margin-bottom: 4em;
 // transform: scale(0.95);
-border-top: 3px solid #efefef;
+// border-top: 3px solid #efefef;
 ul {
   position: relative;
   margin-right: 17%;
@@ -34,12 +36,14 @@ ul {
     vertical-align: top;
     width: calc(20% - 0.10em);
     text-align: center;
-    padding: 1.25em 0 3em 0;
+    padding: 1.5em 0 5em 0;
     // border-top: 2px solid #293a7d;
     // border-left: 2px solid #293a7d;
-    margin: 0.05em;
+    // margin: 0.05em;
     transition: 375ms;
     cursor: pointer;
+    overflow: hidden;
+height: 31vh;
 
     $base-color: #293a7d;
 
@@ -48,37 +52,65 @@ ul {
         background-color: darken($base-color, $i * 1.5%);
       }
     }
+    &:nth-child(11n+9) {
+      > h2 {
+        margin-bottom: -1.2em;
+      }
+    }
 
 
     &:hover {
-      transform: scale(0.96);
+    > h2 {
+      transform: scale(1.5);
+    }
+    > h3 {
+      transform: scale(1.1);
+    }
+    > h4 {
+      transform: translateY(30%);
+    }
     }
 
     &:last-child {
       position: absolute;
       top:0;
-      height: 420px;
-      padding-top: 6em;
+      height: 62vh;
+      padding-top: 8em;
       // border-left: 2px solid #293a7d;
       // border-right: 2px solid #293a7d;
+    }
+    @media screen and (max-width: 900px) {
+      &:last-child {
+        padding-bottom: 8em;
+        height: 35vh;
+        // border-left: 2px solid #293a7d;
+        // border-right: 2px solid #293a7d;
+      }
     }
 
     > h2 {
       opacity: 0.09;
-      font-size: 9rem;
+      font-size: 6rem;
       line-height: 9rem;
-      margin-bottom: -0.7em;
+      margin-bottom: -1em;
       color:#fff;
+    transition: 375ms;
+
     }
     > h3 {
       font-size: 1.25rem;
       color:#fff;
+    transition: 375ms;
+
     }
     > h4 {
       font-size: 1rem;
       font-weight: 100;
       color:#fff;
+    transition: 375ms;
+
     }
+   
     @media screen and (max-width: 900px) {
       > h3 {
         font-size: 1rem;

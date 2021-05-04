@@ -31,7 +31,7 @@
     left: 0;
     > div {
       border: 1px solid #fff;
-      width: 66.66%;
+      width: 70%;
       margin: 0 auto 0 auto;
       background-color: #efefef;
       > * {
@@ -41,25 +41,38 @@
 
       > h3 {
         width: 100%;
-        padding: 2em 4em;
+        padding: 2em 3em;
         font-family: "Space Mono", monospace;
         color: #293a7d;
         font-weight: 300;
-        font-size: 1.25rem;
-        line-height: 2rem;
+        font-size: 1.15rem;
+        line-height: 1.66rem;
+        text-align: center;
       }
     }
   }
 
+  @media (min-width: 769px) and (max-width:1000px) {
+    section.hero-copy-container {
+      > div {
+        width: 100%;
+      }
+    }
+    h1 {
+      font-size: 4rem;
+      line-height: 4.5rem;
+    }
+  }
+
   @media (max-width: 768px) {
-    margin-bottom: 13em;
+    margin-bottom: 0;
     // background-size: 150%;
-    background-size: 250%;
+    background-size: 150%;
     background-position: 60% 0%;
     h1 {
       font-size: 2.66rem;
       line-height: 2.6rem;
-      margin-top: 8.5em;
+      margin-top: 4.5em;
     }
     h3 {
       padding: 2.5em!important;
