@@ -34,6 +34,13 @@ export default ({ content, title }) => (
                 header.curriculum-header > p {
                     margin-top: 2em;
                 }
+                header.curriculum-header > h1 {
+                  text-decoration: underline;
+                  text-decoration-thickness: 4px;
+                  font-family: "Work Sans";
+                  font-size: 2.66rem;
+                  line-height: 3.5rem;
+              }
                 @media screen and (max-width: 768px) {
                     header.curriculum-header {
                         padding: 1em;
@@ -43,6 +50,7 @@ export default ({ content, title }) => (
                     header.curriculum-header > * {
                         width: 100%;
                     }
+                    
                 }
             `}</style>
 

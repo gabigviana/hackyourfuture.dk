@@ -103,8 +103,13 @@ export default function applySection({ heading, children, content, applyChecks, 
         display:inline-block;
       }
       .checkbox-container > li {
-        margin-bottom: 1em;
-    }
+        margin-bottom: 1em; 
+        transition:175ms;
+        cursor:pointer; 
+      }
+      .checkbox-container > li:hover {
+        transform:scale(1.025);
+      }
         .checkbox-container > li > p,
         .checkbox-container > li > img {
             display:inline-block;

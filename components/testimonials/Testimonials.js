@@ -1,122 +1,86 @@
-import { useEffect, useRef, useState } from 'react'
 import styles from './Testimonials.scss'
+import { useContentfulEntryId } from '../../contentful/contentful-hooks'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import HozSlider from '../hoz-slider/HozSlider'
 
-const mockTest = [
-    {
-        heading: "Munin Data (https://munindata.org/)",
-        content: `"HackYourFuture has been instrumental to growing and nurturing much needed frontend developers into the Danish market. We hired Richard Paredes directly from HackYourFuture. He has been fundamental in developing our frontend capabilities, as well as helping our customers to get the most out of the software solutions."`,
-        author: "- Jorge C. Leitão, Co-Founder, Data Scientist"
-    },
-    {
-        heading: "Munin Data (https://munindata.org/)",
-        content: `"HackYourFuture has been instrumental to growing and nurturing much needed frontend developers into the Danish market. We hired Richard Paredes directly from HackYourFuture. He has been fundamental in developing our frontend capabilities, as well as helping our customers to get the most out of the software solutions."`,
-        author: "- Jorge C. Leitão, Co-Founder, Data Scientist"
-    },
-    {
-        heading: "Munin Data (https://munindata.org/)",
-        content: `"HackYourFuture has been instrumental to growing and nurturing much needed frontend developers into the Danish market. We hired Richard Paredes directly from HackYourFuture. He has been fundamental in developing our frontend capabilities, as well as helping our customers to get the most out of the software solutions."`,
-        author: "- Jorge C. Leitão, Co-Founder, Data Scientist"
-    },
-    {
-        heading: "Munin Data (https://munindata.org/)",
-        content: `"HackYourFuture has been instrumental to growing and nurturing much needed frontend developers into the Danish market. We hired Richard Paredes directly from HackYourFuture. He has been fundamental in developing our frontend capabilities, as well as helping our customers to get the most out of the software solutions."`,
-        author: "- Jorge C. Leitão, Co-Founder, Data Scientist"
-    },
-    {
-        heading: "Munin Data (https://munindata.org/)",
-        content: `"HackYourFuture has been instrumental to growing and nurturing much needed frontend developers into the Danish market. We hired Richard Paredes directly from HackYourFuture. He has been fundamental in developing our frontend capabilities, as well as helping our customers to get the most out of the software solutions."`,
-        author: "- Jorge C. Leitão, Co-Founder, Data Scientist"
-    }
-]
+const testimonialsContentfulId = "3Tdh2M1suz9A0CqC4a9S68"
 export default function Testimonials(props) {
-
-    const slideCount = mockTest.length
-    const slideWidth = typeof window !== "undefined" && window.innerWidth
-    const slideDistance = slideWidth / 1.67
-
-    const [showSlide, setShowSlide] = useState(1)
-
-    const [slideOffset, setSlideOffset] = useState(0)
-
-    useEffect(() => {
-        setSlideOffset(-Math.abs((slideWidth / 2.6)))
-    }, [])
-
-    const slideIt = (direction) => {
-        // If next slide is the last
-        if (showSlide === (slideCount - 1) && direction === "right") {
-            setTimeout(() => setSlideOffset(slideDistance * 0.43), 1)
-            return setShowSlide(0)
-        } // if next slide is before the first
-        else if (showSlide === 0 && direction === "left") {
-            setTimeout(() => setSlideOffset(-Math.abs(((slideDistance * (slideCount - 1) * 0.9)))), 1)
-            return setShowSlide(slideCount - 1)
-        }
-
-        setShowSlide(
-            direction === "left"
-                ? (showSlide - 1)
-                : (showSlide + 1)
-        )
-        setSlideOffset(
-            direction === "left"
-                ? slideOffset + slideDistance
-                : slideOffset - slideDistance
-        )
-
-    }
-    // put the last one first   
-
+    const testimonials = useContentfulEntryId(testimonialsContentfulId).content
+    const entries = testimonials && testimonials.listOfTestimonials
+    if ( ! entries) return null
     return (
         <div className="testimonials-container">
             <h1>Testimonials</h1>
-            <section>
-                <div className="testimonial-navigator">
-                    <div className="arrow arrow-left" onClick={() => slideIt("left")}></div>
-                </div>
-
-                <div className="testimonials-slides" style={{ left: (slideOffset + "px") }}>
-                    {
-                        mockTest.map((testi, i) => (
-                            <article key={i} className={showSlide === i ? "active" : ""}>
-                                <div className="testimonial-content">
-                                    <h3>{testi.heading}</h3>
-                                    <p>{testi.content}</p>
-                                    <h4>{testi.author}</h4>
-                                </div>
-                            </article>
-                        ))
-                    }
-                </div>
-
-                <div className="testimonial-navigator">
-                    <div className="arrow arrow-right" onClick={() => slideIt("right")}></div>
-                </div>
-            </section>
-
-
-            <style jsx>{styles}</style>
-
-        </div>
-    )
-
-    return (
-        <div className="testimonials-container">
-            <h1>Testimonials</h1>
-
-            <section>
-                <article className="testimonial-navigator"><div><div className="arrow arrow-left"></div></div></article>
-                <article>
-                    <div className="testimonial-content">
-                        <h3>{mockTest.heading}</h3>
-                        <p>{mockTest.content}</p>
-                        <h4>{mockTest.author}</h4>
+            <HozSlider
+                elementPercentageWidth={66.66}
+                renderElement={(element) => (
+                    <div className="testimonial-content" style={{backgroundImage:`url(${element.fields.companyLogo.fields.file.url})`}}>
+                        {documentToReactComponents(element.fields.quote)}
+                        <h3>{element.fields.nameAndTitle}</h3>
                     </div>
-                </article>
-                <article className="testimonial-navigator"><div><div className="arrow arrow-right"></div></div></article>
-            </section>
-
+                )}
+                entries={entries}
+                 />
+           
             <style jsx>{styles}</style>
+            <style jsx global>{`
+                    .testimonial-content > p {
+                        font-size: 1rem!important;
+                        line-height: 1.65rem;
+                    }
+                    // .active {
+                    //     transition: 125ms;
+                    //     padding: 0 3em;
+                    // }
+                    div.testimonial-content {
+                        margin: 2em;
+                        background-color:#f9f9f9;
+                        background-size: auto 15.5%;
+                        background-position: center 1em;
+                        background-repeat: no-repeat;
+                        padding: 4em 2em 2em 2em;
+                        text-align:center;
+                    }
+                    div.testimonial-content > h3 {
+                        font-weight: 300;
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                    }
+                    div.testimonial-content > p {
+                        font-family: "Mono Space", monospace;
+                        margin: 1em 0;
+                    }
+                    div.testimonial-content > .testimonial-cover {
+                        height: 100px;
+                        width: 150px;
+                        background-size: contain;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        margin: 0 auto;
+                        margin-top: 2em;
+                    }
+                    div.testimonial-content > img {
+                        max-width: 15%;
+                    }
+                    @media screen and (max-width: 768px) {
+                        // .active {
+                        //     transform:scale(1.15);
+                        // }
+                        .testimonial-content > p {
+                            font-size: 0.8rem!important;
+                            line-height: 1.25rem;
+                        }
+                        .testimonial-content > h3 {
+                            font-size: 0.65rem!important;
+                            line-height: 1rem;
+                        }
+                        .testimonial-content > h4 {
+                            font-size: 1rem!important;
+                            line-height: 1.2rem;
+                        }
+                    }
+                `}</style>
+
         </div>
     )
 }

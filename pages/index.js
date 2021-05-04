@@ -14,6 +14,8 @@ import SplashQuote from '../components/layouts/content/SplashQuote'
 import Classes from '../components/classes/Classes'
 import Testimonials from '../components/testimonials/Testimonials'
 import ThreePictureCard from '../components/layouts/content/ThreePictureCard'
+import SponsorSplit from '../components/layouts/sponsor-split'
+import Sponsors from '../components/sponsors/sponsors'
 
 export default ({ title, content, successStories }) => {
   return (
@@ -32,7 +34,14 @@ export default ({ title, content, successStories }) => {
       <Classes />
       <Graduates />
       <Testimonials />
-      <Partners />
+      {/* <img src="/static/images/hyf-banner.png" /> */}
+      {/* <Partners /> */}
+
+      <SponsorSplit>
+        <Sponsors />
+        <Partners />
+      </SponsorSplit>
+
       <VideoHighlight
         title={successStories.title}
         content={successStories.content}

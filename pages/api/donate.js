@@ -5,16 +5,18 @@ const SITE_DOMAIN = process.env.STRIPE_RETURN_DOMAIN;
 const donationLabels = {
   "one-time": "One time donation to HackYourFuture",
   "monthly": "Monthly donation to HackYourFuture until you stop it",
+  "yearly": "A yearly donation to HackYourFuture until you stop it",
 }
 
 async function createSubscriptionDonation(dontationDetails) {
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
+    metadata:{message:dontationDetails.message},
     line_items: [
       {
         price_data: {
           currency: 'dkk',
-          recurring:{interval:"month"},
+          recurring:{interval:dontationDetails.type === "monthly" ? "month" : "year"},
           product_data: {
             name: donationLabels[dontationDetails.type],
             images: ["https://hackyourfuture.dk/static/logo-dark.svg"],
@@ -34,6 +36,7 @@ async function createSubscriptionDonation(dontationDetails) {
 async function createOneTimeDonation(dontationDetails) {
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
+    metadata:{message:dontationDetails.message},
     line_items: [
       {
         price_data: {
@@ -61,7 +64,7 @@ export default async (req, res) => {
       if (req.body.type === "one-time") {
         donation = await createOneTimeDonation(req.body) 
       }
-      else if (req.body.type === "monthly") {
+      else if (req.body.type === "monthly" || req.body.type === "yearly") {
         donation = await createSubscriptionDonation(req.body) 
       }
       res.setHeader('Content-Type', 'application/json')

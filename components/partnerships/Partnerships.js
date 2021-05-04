@@ -39,7 +39,7 @@ const PartnershipContainer = (props) => {
                 </h2>
             </div>
             <section>
-                <p>{documentToReactComponents(partnership.description)}</p>
+                {/* <p>{documentToReactComponents(partnership.description)}</p> */}
                 <div className="partnership-price join-companies">
                     <h4>Join companies like</h4>
                     <div className="company-item">
@@ -52,7 +52,10 @@ const PartnershipContainer = (props) => {
                 </div>
                 <ul>
                     {partnership.perks.map((perk, i) => (
-                        <li key={i}>{perk.fields.title}</li>
+                        <li key={i}>
+                            <h3>{perk.fields.title}</h3>
+                            <p>We have described this with to add some depth to the perk</p>
+                        </li>
                     ))}
                 </ul>
                 
@@ -60,11 +63,12 @@ const PartnershipContainer = (props) => {
                     <h4>Starting from</h4>
                     <h2>{partnership.priceStarts}</h2>
                 </div>
-                <button onClick={() => setShowContactform(!showContactForm)} className="partnership-cta-btn">{showContactForm ? "Close" : "Contact our staff"}</button>
-
+                <button onClick={() => setShowContactform(!showContactForm)} className="partnership-cta-btn">{showContactForm ? "Close" : "Contact us"}</button>
                 {
                     showContactForm && (
+                        <div className="partnership-cta">
                         <PartnershipContactForm />
+                        </div>
                     )
                 }
             </section>
@@ -75,7 +79,7 @@ const PartnershipContainer = (props) => {
 export default function Partnerships(props) {
 
     return (
-        <div className="partnerships-container" id="partnerships">
+        <div className="partnerships-container">
 
             <style jsx>{styles}</style>
 

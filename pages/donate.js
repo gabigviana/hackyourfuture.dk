@@ -109,7 +109,7 @@ export default ({ title, supportOurWork, becomeCompanyMember }) => (
       {/* <div>{documentToReactComponents(content)}</div> */}
       {/* </CoverContent> */}
       {/* <SplashQuote link="/partnerships" heading={"Become a Company Partner of HackYourFuture!"} content={"Does your company want to support diversity and inclusion in the tech industry? Would you want to get access to a unique pool of talented tech professionals now or in the future?"} /> */}
-        <img src="/static/images/donate_splitter.jpg" />
+        <img src="/static/images/donate_splitter.jpg" id="partnerships" />
 
       <Partnerships>{becomeCompanyMember}</Partnerships>
       

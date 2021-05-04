@@ -42,6 +42,15 @@ export default ({ email }) => {
         <span>Name</span>
       </label>
 
+      <label>
+        <input
+          type='text'
+          name="company"
+        />
+        <span>Company</span>
+      </label>
+
+
       {/*email*/}
       <label>
         <input
@@ -55,6 +64,7 @@ export default ({ email }) => {
       </label>
 
       {/*phone*/}
+     
       <label>
         <input
           type='text'
@@ -66,8 +76,7 @@ export default ({ email }) => {
       {/*message*/}
       <label>
         {/* <input type='text' name="message" required='required' /> */}
-        <textarea name="message"></textarea>
-        <span>message</span>
+        <textarea name="message" placeholder="Write a message"></textarea>
       </label>
 
       <button aria-label="Contact us" type='submit'>
