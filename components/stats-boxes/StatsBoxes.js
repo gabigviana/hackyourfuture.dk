@@ -1,33 +1,21 @@
 import styles from './StatsBoxes.scss'
+import { useContentfulEntryId } from '../../contentful/contentful-hooks'
 
-const mockStats = [
-  {
-    label:"Classes",
-    value:"18"
-  },
-  {
-    label:"Students",
-    value:"270"
-  },
-  {
-    label:"Mentors",
-    value:"150"
-  },
-  {
-    label:"Employment",
-    value:"100"
-  },
-]
+const statsId = "2F1uQB5n1Y4hhQqZBryCZj"
 
 export default function StatsBoxes(props) {
+
+  const statsEntry = useContentfulEntryId(statsId).content
+  const stats = statsEntry && statsEntry.stats
+  if ( ! stats) return null
     return (
       <div className="stats-boxes-container">
           <style jsx>{styles}</style>
        
-          {mockStats.map((stat, i) => (
+          {Object.keys(stats).map((key, i) => (
             <div key={i}>
-              <h1>{stat.value}</h1>
-              <h2>{stat.label}</h2>
+              <h1>{stats[key]}</h1>
+              <h2>{key}</h2>
             </div>
           ))}
 
