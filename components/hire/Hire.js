@@ -124,7 +124,7 @@ class Hire extends React.Component {
           })}
 
           {/*FILTER BY STATUS ---------------- */}
-          <p>
+          {/* <p>
             <strong>Select status</strong>
           </p>
           {uniqueStatuses.map(status => {
@@ -140,7 +140,7 @@ class Hire extends React.Component {
                 {status}
               </button>
             )
-          })}
+          })} */}
         </div>
 
         <div className='team-members hire-section-profiles'>
