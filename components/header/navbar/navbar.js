@@ -3,30 +3,14 @@ import Link from 'next/link'
 import links from '../links.json'
 import uuid from 'uuid/v4'
 import styles from './navbar.scss'
+import noticeStyles from './notice.scss'
 
 function Notice() {
   const [show, setShow] = useState(true)
   return (
     <>
-    <style jsx global>{`
-        .notice {
-          font-family: "Work Sans";
-          font-size: 0.8rem;
-          background-color: #fd9240;
-          padding: 0.5em 2em 0.5em 1em;
-          position: fixed;
-          right: -20%;
-          opacity:0;
-          top: 5em;
-          transition: 400ms;
-        }
-        .notice.shown {
-          top: 5em;
-          right: 0;
-          opacity:1;
-        }
-      `}</style>
-    <div className={show ? "notice shown" : "notice"}>Help us become a charitable association <span>↑</span></div>
+    <style jsx>{noticeStyles}</style>
+    <div className={"notice"}>Help us become a charitable association <span>↑</span></div>
 
     </>
   )
