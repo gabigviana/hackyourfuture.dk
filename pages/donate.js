@@ -62,17 +62,6 @@ export default ({ title, supportOurWork, becomeCompanyMember }) => (
           .donate-cover-end {
             margin-top: 3em;
           }
-          // @media screen and (min-width: 769px) and (max-width: 1099px) {
-          //   #association-member {
-          //     max-width: 100%;
-          //   padding: 8em 0 8em 0;
-          //   }
-          // }
-          // @media screen and (min-width: 1100px) and (max-width: 1350px) {
-          //   #association-member {
-          //     max-width: 80%;
-          //   }
-          // }
           @media screen and (max-width: 768px) {
             #association-member {
               max-width: 100%;
