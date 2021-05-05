@@ -5,9 +5,11 @@
   padding: 0;
   max-width: 100%;
   margin: 0 auto;
+  background: #f3f3f3;
   
   h2 {
     text-align: center;
+    margin: 0;
   }
 
   h4.partner-type-label {
@@ -119,7 +121,6 @@
   .partners {
     padding: 1em;
     max-width: 100%;
-    background: #f3f3f3;
   }
 }
 @media screen and (max-width:668px) {

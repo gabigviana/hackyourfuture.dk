@@ -11,6 +11,9 @@ import { fetchPageContent } from '../contentful/contentful'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import VolunteerIntro from '../components/cover-intro/VolunteerIntro'
 import SplashQuote from '../components/layouts/content/SplashQuote'
+import SponsorSplit from '../components/layouts/sponsor-split'
+import Sponsors from '../components/sponsors/sponsors'
+
 export default ({ content, title }) => (
   <Layout>
     <Head>
@@ -44,11 +47,12 @@ export default ({ content, title }) => (
                 @media screen and (max-width: 768px) {
                     header.curriculum-header {
                         padding: 1em;
-                        margin-top: 0!important;
+                        margin-top: 2em!important;
                         max-width: 100%;
                     }
                     header.curriculum-header > * {
                         width: 100%;
+                        text-align:center;
                     }
                     
                 }
@@ -78,8 +82,10 @@ export default ({ content, title }) => (
     </VolunteerIntro>
 
     <MentorsTeam id='mentors' />
-
-    <Partners />
+    <SponsorSplit>
+        <Sponsors />
+        <Partners />
+      </SponsorSplit>
   </Layout>
 )
 export async function getStaticProps() {

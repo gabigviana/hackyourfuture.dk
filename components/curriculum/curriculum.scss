@@ -20,6 +20,7 @@ h2 {
 clear: both;
 overflow: hidden;
 line-height: initial;
+margin-bottom: 7em;
 // margin-bottom: 2em;
 // padding-top: 2em;
 // margin-top: 2em;
@@ -52,9 +53,13 @@ height: 31vh;
         background-color: darken($base-color, $i * 1.5%);
       }
     }
-    &:nth-child(11n+9) {
-      > h2 {
-        margin-bottom: -1.2em;
+    @media screen and (min-width: 1000px) and (max-width: 1300px) {
+      &:nth-child(11n+9) {
+        > h2 {
+          margin-bottom: -1.2em;
+        }
+      }
+      &:last-child {
       }
     }
 
@@ -234,6 +239,7 @@ height: 31vh;
   .curriculum {
     border-top:none;
     margin-top:0!important;
+    margin-bottom:0!important;
     padding-top:0!important;
     > h2 {
       margin-bottom: 1em;
@@ -246,24 +252,25 @@ height: 31vh;
         position: initial!important;
         top:initial!important;
         height:initial!important;
-        transform: scale(0.99);
+        // transform: scale(0.99);
 
         &:hover {
-          transform:scale(0.99);
+          // transform:scale(0.97);
         }
 
         &:last-child {
           width: 100%;
-          padding-top: 2em!important;
-          padding-bottom:3em!important;
+          padding-top: 2.5em!important;
+          padding-bottom:5em!important;
         }
         > h2 {
+          margin-top:0.2em;
           font-size: 7.5rem;
           line-height: 7.5rem;
           margin-bottom: -0.6em;
         }
         > h3 {
-          font-size: 1rem;
+          font-size: 1.25rem;
         }
       }
     }

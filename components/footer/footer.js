@@ -9,14 +9,14 @@ import Link from 'next/link'
 // Styling
 const useStyles = makeStyles(theme => ({
   callToAction:{
-    backgroundColor:"#fff",
+    backgroundColor:"#f3f3f3",
     padding: "10px",
     marginTop:"3em"
   },
   callToActionContainer: {
-    backgroundColor:"#efefef",
+    backgroundColor:"#fff",
     margin: "10px",
-    padding: "20px",
+    padding: "0.5em 1em",
     minHeight: "215px",
     '@media (max-width:780px)':{
       minHeight:"initial",
@@ -33,11 +33,15 @@ const useStyles = makeStyles(theme => ({
       padding: "0 10px",
       fontWeight: 300,
       background: "#293a7d",
-      marginTop: "-2.8em",
+      marginTop: "-3em",
       fontSize: "1rem",
       width: "11em",
       textAlign: "center",
-      cursor:"pointer"
+      cursor:"pointer",
+      '@media (max-width:780px)':{
+        marginTop:"-1em",
+        transform:"scale(1.1)"
+      },
     // margin: "0 0 20px 0",
     // border: "1px solid #ccc",
     // display: "inline-block",
@@ -52,7 +56,7 @@ const useStyles = makeStyles(theme => ({
   },
   footer: {
     backgroundColor: '#293a7d',
-    paddingTop: '5px'
+    padding: '1em'
   },
   info: {
     fontSize: '0.8rem',

@@ -10,9 +10,9 @@ export default function SplashQuote(props) {
           ? (
             <Link href={props.link}><h4>{props.heading}</h4></Link>
           )
-          : (
+          : props.heading ? (
             <h4>{props.heading}</h4>
-          )
+          ) : null
         }
         <style jsx>{styles}</style>
       </div>

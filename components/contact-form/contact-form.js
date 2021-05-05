@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useForm, ValidationError } from '@formspree/react';
 import Icon from '@mdi/react'
 import { mdiSend } from '@mdi/js'
 import styles from './contact-form.scss'
@@ -24,45 +25,53 @@ export function ContactformContainer(props) {
   )
 }
 
-export default ({ email }) => {
-  const [inputEmail, setInputEmail] = useState('')
+const formspreeContactFormId = "xnqljonp"
 
+export default ({ email }) => {
+  const [state, handleSubmit] = useForm(formspreeContactFormId);
+  // const [inputEmail, setInputEmail] = useState('')
+
+  if (state.succeeded) {
+      return (
+        <h2>Thank you for your message</h2>
+      );
+  }
   return (
-    <form
-      action={`https://formspree.io/${email}`}
-      className='contact-form'
-      method='POST'
-      autoComplete='off'
-    >
+      <form onSubmit={handleSubmit} className='contact-form'>
       <style jsx>{styles}</style>
 
-      {/*name*/}
       <label>
-        <input type='text' name="name" required='required' />
+        <input type='text' id="name" name="name" required='required' />
         <span>Name</span>
       </label>
 
-      {/*email*/}
+
+      <ValidationError 
+        prefix="Name" 
+        field="name"
+        errors={state.errors}
+      />
+
       <label>
-        <input
-          className={inputEmail.length > 0 && 'hasText'}
-          onChange={event => setInputEmail(event.target.value)}
-          type='email'
-          required='required'
-          name="email"
-        />
+        <input type='email' id="email" name="email" required='required' />
         <span>Email</span>
       </label>
 
-      {/*message*/}
+      <ValidationError 
+        prefix="Email" 
+        field="email"
+        errors={state.errors}
+      />
+
       <label>
-        <input type='text' name="message" required='required' />
+        <input type='text' id="message" name="message" />
         <span>Message</span>
       </label>
 
-      <button aria-label="Contact us" type='submit'>
-        <Icon color='white' size={1} path={mdiSend} /> <span>SEND</span>
+  
+      <button type="submit" disabled={state.submitting}>
+      <Icon color='white' size={1} path={mdiSend} /> <span>SEND</span>
       </button>
     </form>
-  )
+  );
 }

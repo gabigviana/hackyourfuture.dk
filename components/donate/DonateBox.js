@@ -61,7 +61,7 @@ function donationAmountDescription(amount) {
 
 function StripeDonation(props) {
 
-    const [acceptTerms, setAcceptTerms] = useState(false)
+    const [showTerms, setShowTerms] = useState(false)
 
     const [donationType, setDonationType] = useState("yearly")
     const [donationAmount, setDonationAmount] = useState(250)
@@ -134,27 +134,20 @@ function StripeDonation(props) {
                 )
             }
 
-            {(() => {
-                if (acceptTerms === true) {
-                    return (
-                        <>
-                            <DonationTerms />
-                            {
-                                isSubmitting ? (
-                                    <button className="donation-button">One moment...</button>
-                                ) : (
-                                    <button className="donation-button" onClick={createDonation}>Accept and donate</button>
-                                )
-                            }
-                        </>
-                    )
-                }
-                else if (acceptTerms === false) {
-                    return (
-                        <button className="donation-button" onClick={() => setAcceptTerms(true)}>Donate</button>
-                    )
-                }
-            })()}
+            {
+                isSubmitting ? (
+                    <button className="donation-button">One moment...</button>
+                ) : (
+                    <button className="donation-button" onClick={createDonation}>Donate</button>
+                )
+            }
+            <div className="donation-terms-show" onClick={() => setShowTerms( ! showTerms)}>Our privacy policy and terms</div>
+
+            {
+                showTerms && (
+                    <DonationTerms />
+                )
+            }
 
         </div>
     )
