@@ -21,23 +21,24 @@ clear: both;
 overflow: hidden;
 line-height: initial;
 margin-bottom: 7em;
+padding: 2em;
 // margin-bottom: 2em;
 // padding-top: 2em;
 // margin-top: 2em;
 // margin-bottom: 4em;
-// transform: scale(0.95);
 // border-top: 3px solid #efefef;
 ul {
   position: relative;
   margin-right: 17%;
   > li {
+    transform: scale(0.99);
     background-color: #293a7d;
     // border: 2px solid #293a7d;
     display: inline-block;
     vertical-align: top;
     width: calc(20% - 0.10em);
     text-align: center;
-    padding: 1.5em 0 5em 0;
+    padding: 1.75em 0 5em 0;
     // border-top: 2px solid #293a7d;
     // border-left: 2px solid #293a7d;
     // margin: 0.05em;
@@ -47,10 +48,11 @@ ul {
 height: 31vh;
 
     $base-color: #293a7d;
+    $bxase-color: #394fa7;
 
     @for $i from 1 through 11 {
       &:nth-child(11n + #{$i}) {
-        background-color: darken($base-color, $i * 1.5%);
+        background-color: lighten($base-color, $i * 1%);
       }
     }
     @media screen and (min-width: 1000px) and (max-width: 1300px) {
@@ -95,9 +97,9 @@ height: 31vh;
 
     > h2 {
       opacity: 0.09;
-      font-size: 6rem;
+      font-size: 8rem;
       line-height: 9rem;
-      margin-bottom: -1em;
+      margin-bottom: -0.75em;
       color:#fff;
     transition: 375ms;
 
