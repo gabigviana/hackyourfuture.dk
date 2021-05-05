@@ -32,7 +32,7 @@ export default ({
     </Head>
     <style global jsx>{`
       #learning {
-        background-color:#eee;}
+        background-color:#f3f3f3;}
       #final-apply > article {padding: 2em;}
       button.apply-now {
         background: #293a7d;
@@ -46,7 +46,6 @@ export default ({
         padding: 6em 2em 2em 2em;
       }
       p > b {
-        font-family:"Space Mono";
       }
       #headstart > article {
         width: 50%;
@@ -129,7 +128,9 @@ export default ({
       >
       <Link href="/application"><button className="apply-now">Apply now</button></Link>
     </ApplySection>
+
     </CoverContent>
+    <ApplicationDeadline />
 
  </Layout>
 )
