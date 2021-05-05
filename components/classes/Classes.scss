@@ -1,6 +1,6 @@
 .classes {
     // padding: 4em 1em;
-    margin: -2em 0 5em 0;
+    margin: 0em;
     font-family: "Mono Space", monospace;
 
     > h2 {
@@ -62,7 +62,7 @@
     }
 
     .class-track.next-class-track {
-        background-color: #DCE0F1;
+        background-color: #f2f2f2;
         color: #293a7d;
     }
     .class-track:not(.next-class-track) {
