@@ -92,7 +92,6 @@ export default function Partnerships(props) {
                     margin: 0;
                 }
                 header.partnership-header > h2 {
-                    font-family: "Work Sans";
                     text-decoration: underline;
                     text-decoration-thickness: 4px;
                     font-size: 2rem;

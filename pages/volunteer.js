@@ -40,7 +40,6 @@ export default ({ content, title }) => (
                 header.curriculum-header > h1 {
                   text-decoration: underline;
                   text-decoration-thickness: 4px;
-                  font-family: "Work Sans";
                   font-size: 2.66rem;
                   line-height: 3.5rem;
               }

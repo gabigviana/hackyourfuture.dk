@@ -14,6 +14,7 @@ export default ({ children }) => {
           -webkit-text-size-adjust: 100%;
         }
         body {
+          font-family: "Work Sans", sans-serif;
           margin: 0;
         }
         h1 {
