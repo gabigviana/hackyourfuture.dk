@@ -50,14 +50,14 @@ const PartnershipContainer = (props) => {
                         ))}
                     </div>
                 </div>
-                <ul>
+                {/* <ul>
                     {partnership.perks.map((perk, i) => (
                         <li key={i}>
                             <h3>{perk.fields.title}</h3>
                             <p>We have described this with to add some depth to the perk</p>
                         </li>
                     ))}
-                </ul>
+                </ul> */}
                 
                 <div className="partnership-price">
                     <h4>Starting from</h4>
