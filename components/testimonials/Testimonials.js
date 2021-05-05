@@ -14,7 +14,8 @@ export default function Testimonials(props) {
             <HozSlider
                 elementPercentageWidth={66.66}
                 renderElement={(element) => (
-                    <div className="testimonial-content" style={{backgroundImage:`url(${element.fields.companyLogo.fields.file.url})`}}>
+                    <div className="testimonial-content">
+                        <a href={element.fields.website} target="_blank"><img src={element.fields.companyLogo.fields.file.url} /></a>
                         {documentToReactComponents(element.fields.quote)}
                         <h3>{element.fields.nameAndTitle}</h3>
                     </div>
@@ -38,7 +39,7 @@ export default function Testimonials(props) {
                         background-size: auto 15.5%;
                         background-position: center 1em;
                         background-repeat: no-repeat;
-                        padding: 4em 2em 2em 2em;
+                        padding: 2em 2em 2em 2em;
                         text-align:center;
                     }
                     div.testimonial-content > h3 {
@@ -59,7 +60,7 @@ export default function Testimonials(props) {
                         margin: 0 auto;
                         margin-top: 2em;
                     }
-                    div.testimonial-content > img {
+                    div.testimonial-content > a > img {
                         max-width: 15%;
                     }
                     @media screen and (max-width: 768px) {
