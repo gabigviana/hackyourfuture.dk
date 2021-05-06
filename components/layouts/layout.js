@@ -313,7 +313,7 @@ export default ({ children }) => {
       <Header />
       <main>{children}</main>
       <Footer />
-      <script
+      {/* <script
         async
         src='https://www.googletagmanager.com/gtag/js?id=UA-159689438-1'
       />
@@ -328,7 +328,7 @@ export default ({ children }) => {
             gtag('config', 'UA-159689438-1');
           `
         }}
-      />
+      /> */}
     </div>
   )
 }
