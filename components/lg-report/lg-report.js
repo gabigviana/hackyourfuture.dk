@@ -47,7 +47,7 @@ export default function LGReport(props) {
             }
             .lg-report-container > div > a {
                 font-family: "Space Mono", monospace;
-                margin-right: 1.5em;
+                margin-right: 1em;
                 color: #293a7d;
             }
 

@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  min-height: 80vh;
   align-items: center;
   justify-content: center;
   z-index: -1;
@@ -53,6 +53,7 @@
   }
 
   @media (min-width: 769px) and (max-width:1000px) {
+    
     section.hero-copy-container {
       > div {
         width: 100%;
@@ -70,15 +71,15 @@
     background-size: 150%;
     background-position: 60% 0%;
     h1 {
-      font-size: 2.66rem;
+      font-size: 2.46rem;
       line-height: 2.6rem;
-      margin-top: 4.5em;
+      margin-top: 2.5em;
     }
     h3 {
       padding: 2.5em!important;
     }
     section.hero-copy-container {
-      padding: 2.5em 0;
+      padding: 2.5em 0 0 0;
       box-sizing: border-box;
       position: initial;
       // bottom: -210px;

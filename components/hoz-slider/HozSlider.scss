@@ -69,6 +69,20 @@
             margin-top:-0.45em;
         }
     }
+    @media (max-width: 768px) {
+        .hoz-slider-navigator {
+            max-width: 100%;
+            position: relative;
+            margin-bottom: 0em;
+            .hoz-slider-heading {
+                max-width: 100%!important;
+                width: 100%!important;
+            }
+            .hoz-slider-heading > h2 {
+                font-size: 1.35rem;
+            }
+        }
+    }
     .arrow {
        
         // position: absolute;
@@ -95,8 +109,9 @@
     }
     @media (max-width: 768px) {
         .arrow {
-        display: none;
-
+        // display: none;
+        position: absolute;
+        top:1em;
         }
         // height: 100vh;
         > section > div.hoz-slider-slides {

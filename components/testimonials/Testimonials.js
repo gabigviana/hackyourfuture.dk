@@ -13,6 +13,7 @@ export default function Testimonials(props) {
             {/* <h1>Testimonials</h1> */}
             <HozSlider
                 heading="Testimonials"
+                offsetMultiplier={1}
                 elementPercentageWidth={66.66}
                 renderElement={(element) => (
                     <div className="testimonial-content">
@@ -68,6 +69,14 @@ export default function Testimonials(props) {
                         // .active {
                         //     transform:scale(1.15);
                         // }
+                        div.testimonial-content {
+                            margin: 0.25em;
+                            padding: 1.5em;
+                            text-align: left;
+                        }
+                        div.testimonial-content > a > img {
+                            max-width: 50%;
+                        }
                         .testimonial-content > p {
                             font-size: 0.8rem!important;
                             line-height: 1.25rem;
