@@ -20,7 +20,7 @@
         vertical-align: top;
     }
     > div.partnership-icon {
-        width: 30%;
+        width: 28%;
         height: 260px;
         border-radius: 1em;
         text-align: center;
@@ -99,10 +99,16 @@
             min-height: 70px;
             background-position: center center;
             background-repeat: no-repeat;
-            background-size: 80%;
+            background-size: 90%;
             > img {
                 opacity: 0;
             }
+        }
+        div.company-item.gold > * {
+            width: calc(30% - 1em);
+            min-height: 100px;
+            background-size: 100%;
+
         }
     }
     @media screen and (max-width:768px) {

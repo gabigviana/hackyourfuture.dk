@@ -19,7 +19,7 @@ const PartnershipType = (props) => {
     const randomPartners = partners &&
     partners.partners.filter(partner => partner.fields.type === props.type)
 
-    return React.cloneElement(props.children, {partners:randomPartners})
+    return React.cloneElement(props.children, {type:props.type,partners:randomPartners})
 }
 
 const PartnershipContainer = (props) => {
@@ -42,7 +42,7 @@ const PartnershipContainer = (props) => {
                 {/* <p>{documentToReactComponents(partnership.description)}</p> */}
                 <div className="partnership-price join-companies">
                     <h4>Join companies like</h4>
-                    <div className="company-item">
+                    <div className={"company-item " + props.type}>
                     {props.partners && props.partners.map(partner => (
                         <a target='_blank' href={partner.fields.link} style={{backgroundImage:`url(${partner.fields.logo.fields.file.url})`}}>
                        
@@ -87,6 +87,7 @@ export default function Partnerships(props) {
                 header.partnership-header > * {
                     width: 50%;
                     display: inline-block;
+                    box-sizing:border-box;
                     vertical-align: top;
                     text-align: left;
                     margin: 0;
@@ -95,6 +96,7 @@ export default function Partnerships(props) {
                     text-decoration: underline;
                     text-decoration-thickness: 4px;
                     font-size: 2rem;
+                    padding-right: 1em;
                 }
                 header.partnership-header > p {
                     margin-top: 2em;
