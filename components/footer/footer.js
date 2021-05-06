@@ -6,6 +6,9 @@ import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import MULink from '@material-ui/core/Link'
 import Link from 'next/link'
+import { useContentfulEntryId } from '../../contentful/contentful-hooks'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+
 // Styling
 const useStyles = makeStyles(theme => ({
   callToAction:{
@@ -69,26 +72,12 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const mockCallToAction = [
-  {
-    label:"Donate",
-    url:"/donate",
-    description:"HackYourFuture is a non-profit organization and our course is entirely free for the students. Support our work with a donation."
-  },
-  {
-    label:"Volunteer",
-    url:"/volunteer",
-    description:"Our teachers and mentors are professional web-developers with a passion for technology and a wish to share their knowledge and skill."
-  },
-  {
-    label:"Partnership",
-    url:"/donate#partnerships",
-    description:"Does your company want to support diversity and inclusion in the tech industry? Consider becoming a partner and find out more here."
-  },
-]
+const footerContentfulId = "668uX6oSTZYb4y4ZBStavy"
 
 export default () => {
   const classes = useStyles()
+  const footer = useContentfulEntryId(footerContentfulId).content
+  const callToActionBoxes = footer && footer.callToActionBoxes
   return (
     <>
     <Grid
@@ -98,11 +87,11 @@ export default () => {
       alignItems='baseline'
       className={classes.callToAction}
     >
-      {mockCallToAction.map((cta,i) => (
+      {callToActionBoxes && callToActionBoxes.map((cta,i) => (
         <Grid item lg={4} md={4} sm={12}>
           <div className={classes.callToActionContainer}>
-            <Link href={cta.url}><h2 className={classes.callToActionLabel}>{cta.label}</h2></Link>
-            <p className={classes.callToActionDescription}>{cta.description}</p>
+            <Link href={cta.fields.link}><h2 className={classes.callToActionLabel}>{cta.fields.label}</h2></Link>
+            <p className={classes.callToActionDescription}>{documentToReactComponents(cta.fields.description)}</p>
           </div>
         </Grid>
       ))}

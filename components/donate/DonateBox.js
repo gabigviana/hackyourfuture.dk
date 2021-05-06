@@ -141,13 +141,13 @@ function StripeDonation(props) {
                     <button className="donation-button" onClick={createDonation}>Donate</button>
                 )
             }
-            <div className="donation-terms-show" onClick={() => setShowTerms( ! showTerms)}>Our privacy policy and terms</div>
+            {/* <div className="donation-terms-show" onClick={() => setShowTerms( ! showTerms)}>Our privacy policy and terms</div>
 
             {
                 showTerms && (
                     <DonationTerms />
                 )
-            }
+            } */}
 
         </div>
     )

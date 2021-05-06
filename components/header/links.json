@@ -2,19 +2,7 @@
   {
     "id": 1,
     "title": "APPLY",
-    "url": "/apply",
-    "dropdown": [
-      {
-        "id": 1,
-        "title": "Apply for class",
-        "url": "/apply#apply-for-class"
-      },
-      {
-        "id": 3,
-        "title": "Learn",
-        "url": "/apply#learn"
-      }
-    ]
+    "url": "/apply"
   },
   {
     "id": 2,
