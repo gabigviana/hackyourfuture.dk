@@ -10,8 +10,9 @@ export default function Testimonials(props) {
     if ( ! entries) return null
     return (
         <div className="testimonials-container">
-            <h1>Testimonials</h1>
+            {/* <h1>Testimonials</h1> */}
             <HozSlider
+                heading="Testimonials"
                 elementPercentageWidth={66.66}
                 renderElement={(element) => (
                     <div className="testimonial-content">

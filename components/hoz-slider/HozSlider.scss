@@ -44,15 +44,30 @@
     }
     
     .hoz-slider-navigator {
-        margin-top: -5em;
-        padding-left: 30%;
-        margin-bottom: 2em;
+        // margin-top: -3.5em;
+        // padding-left: 30%;
+        // margin-bottom: 2em;
+        max-width: 66.66%;
+        margin: 0 auto 2em auto;
     }
     > .hoz-slider-navigator > * {
-        width: 50%;
+        width: 20%;
         display: inline-block;
-        margin: 10px 0;
+        // margin: 0 18em;
         text-align: center;
+        vertical-align: top;
+        // &:first-child > * {
+        //     float: right;
+        // }
+        &.hoz-slider-heading {
+            max-width: 60%;
+            width: 60%;
+        }
+        &.hoz-slider-heading > h2 {
+            margin:0;
+            font-size: 2rem;
+            margin-top:-0.45em;
+        }
     }
     .arrow {
        
@@ -63,13 +78,10 @@
         height: 15px;
         transform: rotate(45deg);
         transition: 225ms;
-        padding: 1em;
-        &:hover {
-            width: 25px;
-            height: 25px;
-            opacity: 1;
-
-        }
+        padding: 0.66em;
+        cursor: pointer;
+        margin: 0 auto;
+        
         &.arrow-left {
             border-left: 2px dotted #293a7d;
             border-bottom: 2px dotted #293a7d;
