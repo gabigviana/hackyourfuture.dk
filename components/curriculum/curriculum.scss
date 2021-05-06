@@ -29,14 +29,14 @@ ul {
   position: relative;
   margin-right: 16%;
   > li {
-    transform: scale(0.99);
+    transform: scale(0.98);
     background-color: #293a7d;
     // border: 2px solid #293a7d;
     display: inline-block;
     vertical-align: top;
     width: calc(20% - 0.10em);
     text-align: center;
-    padding: 2.66em 0 5em 0;
+    padding: 2.25em 0 5em 0;
     // border-top: 2px solid #293a7d;
     // border-left: 2px solid #293a7d;
     // margin: 0.05em;
@@ -80,7 +80,7 @@ font-size: initial;
       position: absolute;
       top:-2px;
       height: 60.5vh;
-      padding-top: 10em;
+      padding-top: 8.66em;
       // border-left: 2px solid #293a7d;
       // border-right: 2px solid #293a7d;
     }
