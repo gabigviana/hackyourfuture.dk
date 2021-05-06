@@ -26,10 +26,6 @@ function ClassTrack(props) {
           </div>
         ) : (
           <div className="class-track-action class-application-deadline">
-            <div className="class-application-deadline-countdown">
-              {/* <Timer date={hasDeadline} /> */}
-              Deadline
-            </div>
             <Link href="/apply"><button>Apply</button></Link>
           </div>
         )
