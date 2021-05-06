@@ -43,7 +43,7 @@ export default ({
         font-family:"Space Mono";
       }
       #apply-cover > article {
-        padding: 2em 2em 2em 2em;
+        padding: 3em;
       }
       p > b {
       }
