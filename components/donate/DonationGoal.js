@@ -33,8 +33,14 @@ export default function DonationGoal(props) {
                     <h1>Help us become a charitable association</h1>
                 )
             }
-            <p>Becoming an official charitable association allows us easier access to municipal locations and enable us to offer <a href="https://skat.dk/skat.aspx?oid=2234905" target="_blank">tax breaks</a> on donations under 16.300 kr.</p>
-            <p className="small-text">We need to gather 300 individual donations of atleast 250 kr for the HackYourFuture Association.<br />You can use "Support our work" above to become a member.</p>
+            {
+              props.description !== false && (
+                <>
+                <p>Becoming an official charitable association allows us easier access to municipal locations and enable us to offer <a href="https://skat.dk/skat.aspx?oid=2234905" target="_blank">tax breaks</a> on donations under 16.300 kr.</p>
+                <p className="small-text">We need to gather 300 individual donations of atleast 250 kr for the HackYourFuture Association.<br />You can use "Support our work" above to become a member.</p>
+                </>
+              )
+            }
             <div className="donation-bar">
                 <div className="donation-indicator" style={{width:goalReached+"%"}}>{memberCount}</div>
                 <h2>{GOAL} members</h2>

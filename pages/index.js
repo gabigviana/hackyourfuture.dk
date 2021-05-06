@@ -32,6 +32,7 @@ export default ({ title, content, successStories }) => {
       {/* <Content inContextOf="frontpage">{documentToReactComponents(content)}</Content> */}
       <SplashQuote />
       <Classes />
+      <div style={{height:"4em"}} />
       <Graduates />
       <Testimonials />
       {/* <img src="/static/images/hyf-banner.png" /> */}

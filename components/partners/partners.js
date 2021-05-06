@@ -34,7 +34,7 @@ export default () => {
       <style jsx>{styles}</style>
       {partners && (
         <section className='partners'>
-          <h2>{partners.title}</h2>
+          {/* <h2>{partners.title}</h2> */}
           <ul className="gold-partners">
            
             {goldPartners.map(partner => (

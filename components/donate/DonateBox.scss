@@ -92,6 +92,7 @@ ul.donation-amount {
         transition: 225ms;
         vertical-align: top;
         text-align: center;
+        min-height: 70px;
 
         > label > span {
             font-size: 0.8rem;
@@ -132,7 +133,7 @@ ul.donation-amount {
     @media screen and (max-width:768px) {
         max-width: 100%;
         > li {
-            padding: 1em;
+            padding: 1em 0;
         }
     }
 }

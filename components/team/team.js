@@ -24,9 +24,10 @@ function WrapHozSlider(props) {
         // }
       `}</style>
       <ResponsiveHozSlider><HozSlider
-        elementPercentageWidth={18}
-        mobileElementPercentageWidth={40}
-        offsetMultiplier={4}
+        heading={props.heading}
+        elementPercentageWidth={22}
+        mobileElementPercentageWidth={50}
+        offsetMultiplier={4.5}
         offsetDefault={0}
         renderElement={(element) => (
           <ItemCard item={element} key={element.id} showHiredOverlay={false} />
@@ -78,9 +79,9 @@ export const MentorsTeam = () => {
   return (
     <>
       <style jsx>{styles}</style>
-      <h2 className='title'>Our Mentors</h2>
+      {/* <h1 className='title'>Our Mentors</h1> */}
       <div className='team-members mentors'>
-        <WrapHozSlider entries={mentors} />
+        <WrapHozSlider heading="Meet our Mentors" entries={mentors} />
       </div>
     </>
   )
@@ -118,9 +119,9 @@ export const Graduates = () => {
   return (
     <>
       <style jsx>{styles}</style>
-      <h2 className='title'>Meet our Graduates</h2>
+      {/* <h1 className='title'>Meet our Graduates</h1> */}
       <div className='team-members employed-alumni'>
-      <WrapHozSlider entries={highlightedAlumniInCompany} />
+      <WrapHozSlider heading="Meet our Graduates" entries={highlightedAlumniInCompany} />
         
       </div>
     </>

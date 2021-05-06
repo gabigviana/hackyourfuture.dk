@@ -2,13 +2,30 @@
   // display: flex;
   // align-items: center;
   // flex-direction: column;
-  padding: 1rem 4rem 3rem 4rem;
+  background: #293a7d;
+color: #fff;
+  padding: 1em 1em 0.1em 1em;
   max-width: 100%;
   // max-width: 900px;
-  margin: 2em auto;
+  margin: 2em auto 0 auto;
   h2 {
     text-align: center;
-    margin-bottom: 2em;
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 1em 0 1.25em 0;
+    opacity: 0.5;
+  }
+  h3 {
+    min-height: 3em;
+    color: #fff;
+    font-size: 2.25rem;
+line-height: 2.75rem;
+  }
+  h3:not(.field-0) {
+    padding-top: 0.66em;
+  }
+  p {
+    opacity: 0.8;
   }
   ul {
     // display: flex;
@@ -29,8 +46,9 @@
     }
   }
   @media screen and (max-width:768px) {
-    padding: 0!important;
+    padding: 1em 0 0 0!important;
     > ul {
+      margin-bottom: 0!important;
       > li {
         width: 100%!important;
       }

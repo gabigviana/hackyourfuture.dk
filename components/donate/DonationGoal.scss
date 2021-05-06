@@ -2,10 +2,14 @@
     max-width: 80%;
     margin: 2em auto;
     font-family: "Space mono";
-    padding: 3em;
+    padding: 2em 0em;
+
+    h1 {
+        font-size: 2rem;
+    }
 
     p {
-        max-width: 80%;
+        max-width: 90%;
      }
 
     .donation-bar {

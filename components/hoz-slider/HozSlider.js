@@ -78,6 +78,25 @@ export default function HozSlider(props) {
         }
     }
 
+    const onClickSlide = (direction) => {
+       
+        const newOffset = direction === "left"
+            ? slideOffset - (elementWidth * ((isMobile ? 1 : props.offsetMultiplier) || 1))
+            : slideOffset + (elementWidth * ((isMobile ? 1 : props.offsetMultiplier) || 1))
+
+        if (newOffset < -50 || (newOffset > (elementWidth * props.entries.length) - 50)) {
+            return false
+        }
+
+        setShowSlide(
+            direction === "left"
+                ? (showSlide - 1)
+                : (showSlide + 1)
+        )
+
+        setSlideOffset(newOffset)
+    }
+
     const slidesStyle = {
         width: ((elementWidth * props.entries.length) + "vw"),
         marginLeft: (-slideOffset + "vw")
@@ -85,6 +104,11 @@ export default function HozSlider(props) {
 
     return (
         <div className="hoz-slider-container">
+            <div className="hoz-slider-navigator">
+                <section onClick={() => onClickSlide("left")}><div className="arrow arrow-left"></div></section>
+                <section className="hoz-slider-heading"><h2>{props.heading}</h2></section>
+                <section onClick={() => onClickSlide("right")}><div className="arrow arrow-right"></div></section>
+            </div>
             <section>
                 <div className="hoz-slider-slides"  {...handlers} style={slidesStyle}>
                     {

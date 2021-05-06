@@ -13,9 +13,9 @@ export default () => {
         <section className='partners'>
           <h2>{values && values.title}</h2>
           <ul>
-            {values.values.map(({ fields }) => (
+            {values.values.map(({ fields },i) => (
               <li>
-                <h3>{fields.title}</h3>
+                <h3 className={"field-"+i}>{fields.title}</h3>
                 <p>{fields.content}</p>
               </li>
             ))}
