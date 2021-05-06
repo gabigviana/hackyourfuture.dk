@@ -7,7 +7,7 @@ h2 {
   background-color: #fff;
   z-index: 9999;
   
-  padding: 0 12em;
+  padding: 0 13em;
   box-sizing: border-box;
 
   > .next-module {
@@ -20,16 +20,14 @@ h2 {
 clear: both;
 overflow: hidden;
 line-height: initial;
-margin-bottom: 7em;
+margin-bottom: 1em;
 padding: 2em;
-// margin-bottom: 2em;
-// padding-top: 2em;
-// margin-top: 2em;
-// margin-bottom: 4em;
-// border-top: 3px solid #efefef;
+@media screen and (min-width: 800px) and (max-width: 1300px) {
+  padding: 0.5em;
+}
 ul {
   position: relative;
-  margin-right: 17%;
+  margin-right: 16%;
   > li {
     transform: scale(0.99);
     background-color: #293a7d;
@@ -38,15 +36,15 @@ ul {
     vertical-align: top;
     width: calc(20% - 0.10em);
     text-align: center;
-    padding: 1.75em 0 5em 0;
+    padding: 2.66em 0 5em 0;
     // border-top: 2px solid #293a7d;
     // border-left: 2px solid #293a7d;
     // margin: 0.05em;
     transition: 375ms;
     cursor: pointer;
     overflow: hidden;
-height: 31vh;
-
+height: 30vh;
+font-size: initial;
     $base-color: #293a7d;
     $bxase-color: #394fa7;
 
@@ -56,11 +54,11 @@ height: 31vh;
       }
     }
     @media screen and (min-width: 1000px) and (max-width: 1300px) {
-      &:nth-child(11n+9) {
-        > h2 {
-          margin-bottom: -1.2em;
-        }
-      }
+      // &:nth-child(11n+9) {
+      //   > h2 {
+      //     margin-bottom: -1.2em;
+      //   }
+      // }
       &:last-child {
       }
     }
@@ -80,20 +78,20 @@ height: 31vh;
 
     &:last-child {
       position: absolute;
-      top:0;
-      height: 62vh;
-      padding-top: 8em;
+      top:-2px;
+      height: 60.5vh;
+      padding-top: 10em;
       // border-left: 2px solid #293a7d;
       // border-right: 2px solid #293a7d;
     }
-    @media screen and (max-width: 900px) {
-      &:last-child {
-        padding-bottom: 8em;
-        height: 35vh;
-        // border-left: 2px solid #293a7d;
-        // border-right: 2px solid #293a7d;
-      }
-    }
+    // @media screen and (max-width: 900px) {
+    //   &:last-child {
+    //     padding-bottom: 8em;
+    //     height: 35vh;
+    //     // border-left: 2px solid #293a7d;
+    //     // border-right: 2px solid #293a7d;
+    //   }
+    // }
 
     > h2 {
       opacity: 0.09;
@@ -119,6 +117,7 @@ height: 31vh;
     }
    
     @media screen and (max-width: 900px) {
+      
       > h3 {
         font-size: 1rem;
       }
