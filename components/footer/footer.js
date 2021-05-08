@@ -88,10 +88,10 @@ export default () => {
       className={classes.callToAction}
     >
       {callToActionBoxes && callToActionBoxes.map((cta,i) => (
-        <Grid item lg={4} md={4} sm={12}>
+        <Grid item lg={4} md={4} sm={12} key={i}>
           <div className={classes.callToActionContainer}>
             <Link href={cta.fields.link}><h2 className={classes.callToActionLabel}>{cta.fields.label}</h2></Link>
-            <p className={classes.callToActionDescription}>{documentToReactComponents(cta.fields.description)}</p>
+            <div className={classes.callToActionDescription}>{documentToReactComponents(cta.fields.description)}</div>
           </div>
         </Grid>
       ))}

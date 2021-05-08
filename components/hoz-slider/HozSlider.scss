@@ -95,15 +95,15 @@
         padding: 0.66em;
         cursor: pointer;
         margin: 0 auto;
-        
+        border-radius: 1px;
         &.arrow-left {
-            border-left: 2px dotted #293a7d;
-            border-bottom: 2px dotted #293a7d;
+            border-left: 4px solid #293a7d;
+            border-bottom: 4px solid #293a7d;
             left: 3%;
         }
         &.arrow-right {
-            border-right: 2px dotted #293a7d;
-            border-top: 2px dotted #293a7d;
+            border-right: 4px solid #293a7d;
+            border-top: 4px solid #293a7d;
             right: 3%;
         }
     }

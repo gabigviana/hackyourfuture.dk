@@ -5,10 +5,15 @@
         max-width: 66.66%;
         margin: 2em auto;
     }
-    @media screen and (max-width: 768px) {
-    .partnership-header {
-        max-width: 100%;
+    @media screen and (min-width:769px) and (max-width:1100px) {
+        .partnership-header {
+            max-width: 90%;
+        }
     }
+    @media screen and (max-width: 768px) {
+        .partnership-header {
+            max-width: 100%;
+        }
     }
 }
 .partnership-model {
@@ -32,6 +37,15 @@
             font-size: 2.7rem;
             margin-top: 2.3em;
             margin-bottom: 0;
+        }
+    }
+    @media screen and (min-width:769px) and (max-width:1100px) {
+        max-width: 90%;
+        > div.partnership-icon {
+            height: 230px;
+            > h2 {
+                margin-top: 2em;
+            }
         }
     }
     > section {
@@ -94,8 +108,8 @@
     .join-companies {
         div.company-item > * {
             display: inline-block;
-            width: calc(25% - 1em);
-            margin-right: 1em;
+            width: calc(20% - 1em);
+            margin-right: 0.5em;
             min-height: 70px;
             background-position: center center;
             background-repeat: no-repeat;

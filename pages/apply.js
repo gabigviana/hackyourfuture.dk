@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Layout from '../components/layouts/layout'
 import Content from '../components/layouts/content/content'
 import CoverContent from '../components/layouts/cover-content/CoverContent'
-import WufooForm from 'react-wufoo-embed'
 import FAQ from '../components/faq/faq'
 import ApplySection from '../components/apply-section/apply-section'
 import Learning from '../components/learning-section/learning'
@@ -14,9 +13,6 @@ import VolunteerIntro from '../components/cover-intro/VolunteerIntro'
 import { fetchPageContent } from '../contentful/contentful'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import getEntryData from './../utils/utils'
-
-import ApplyIntro from '../components/cover-intro/ApplyIntro'
-
 
 export default ({
   applyChecks,
@@ -68,20 +64,17 @@ export default ({
       }
     `}</style>
     <CoverContent id="apply-cover" background={"/static/images/apply_cover.jpg"}>
-   
-    <ApplySection
+
+      <ApplySection
         applyChecks={applyChecks}
         content={content}
         pointingImage={pointingImage}
       >
-      <Link href="/application"><button className="apply-now">Apply now</button></Link>
+        <Link href="/application"><button className="apply-now">Apply now</button></Link>
       </ApplySection>
-   </CoverContent>
+    </CoverContent>
     <ApplicationDeadline />
 
-    {/* <Content id='apply'>
-      
-    </Content> */}
     <Content id="learning">
       <Learning
         title={whatYouWillLearn.title}
@@ -89,50 +82,28 @@ export default ({
         skills={whatYouWillLearn.skills}
       />
     </Content>
-    {/* <Content id='apply-for-class'>
-      <h2>Application Form</h2>
-      <p>
-        We are recruiting for the next class of HackYourFuture Copenhagen.
-        We are right now updating our application process and we might need you
-        to re-apply at a later point, but we will inform you about this and your
-        application is registered once you have filled out this form.
-      </p>
-      <WufooForm
-        userName='cphhackyourfuture'
-        formHash='m1d0ru6z1qxggcq'
-        header='hide'
-      />
-    </Content> */}
-
-      {/* <Content inContextOf="apply">{documentToReactComponents(getAHeadStart)}</Content> */}
-      <CoverContent id="headstart" background={"/static/images/hyf_volunteer.jpg"}>
+    <CoverContent id="headstart" background={"/static/images/hyf_volunteer.jpg"}>
       <div>{documentToReactComponents(getAHeadStart.getAHeadstart)}</div>
     </CoverContent>
-    {/* <Content id='learn'>
-      <div>{documentToReactComponents(getAHeadStart.getAHeadstart)}</div>
-    </Content> */}
-    {/* <Content> */}
+
     <VolunteerIntro inContextOf="faq">
       <FAQ />
     </VolunteerIntro>
-      
-    {/* </Content> */}
+
     <Curriculum />
 
     <CoverContent id="final-apply" background={"/static/images/apply_cover_1.jpg"}>
-    <ApplySection
+      <ApplySection
         applyChecks={applyChecks}
         heading="Apply now"
-        // content={content}
-        // pointingImage={pointingImage}
       >
-      <Link href="/application"><button className="apply-now">Apply now</button></Link>
-    </ApplySection>
+        <Link href="/application"><button className="apply-now">Apply now</button></Link>
+      </ApplySection>
 
     </CoverContent>
     <ApplicationDeadline />
 
- </Layout>
+  </Layout>
 )
 
 export async function getStaticProps() {

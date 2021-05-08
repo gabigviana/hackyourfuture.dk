@@ -1,13 +1,10 @@
 .partners {
-  // display: flex;
-  // align-items: center;
-  // flex-direction: column;
   padding: 0;
   max-width: 100%;
   margin: 0 auto;
   background: #f3f3f3;
   padding-top: 2em;
-  
+
   h2 {
     text-align: center;
     margin: 0;
@@ -16,48 +13,48 @@
   h4.partner-type-label {
     margin-top: 1.5em;
     margin-bottom: 2em;
-    color: #CC994C;
+    color: #cc994c;
   }
 
   ul {
-    // display: flex;
-    // justify-content: space-around;
     width: 100%;
     vertical-align: top;
     padding: 1em 0 0 0;
     text-align: center;
 
     &::before {
-      content:"Gold partners";
+      content: "Gold partners";
       font-family: "Space Mono", monospace;
       display: block;
       color: #bb955b;
       margin: 0em 0 0.5em 0;
       font-weight: 800;
-      
     }
 
     li {
       box-sizing: border-box;
-      width: 20%;
-      padding: 1em 0 1em 0;
+      width: 25%;
+      height: 70px;
       text-align: center;
       display: inline-block;
       transition: 225ms;
+      margin: 1em 1em 0.5em 1em;
       &:hover {
         transform: scale(1.05);
       }
-
-       > a > img {
-         max-width: 66.66%;
-         margin: 0 auto;
-       }
+      > a {
+        height: inherit;
+        display: block;
+      }
+      > a > div {
+        margin: 0 auto;
+        height: inherit;
+      }
     }
 
     &.gold-partners {
-
       li {
-        width: 40%;
+        width: 30%;
       }
     }
 
@@ -66,96 +63,62 @@
       margin: 0 auto;
 
       &::before {
-        content:"Silver partners";
-        margin-top:2em;
+        content: "Silver partners";
+        margin-top: 2em;
         color: #999;
-
       }
     }
-
-    //   > li {
-    //     // width: calc(50% - 1em);
-    //     display: inline-block;
-    //     vertical-align: top;
-    //     border-color: silver;
-    //     &:nth-child(odd) {
-    //       margin-right: 2em;
-    //     }
-    //   }
-    // }
     &.bronze-partners {
       max-width: 70%;
       margin: 0 auto 0 auto;
       padding-bottom: 4em;
 
       &::before {
-        content:"Bronze partners";
-        margin-top:2em;
+        content: "Bronze partners";
+        margin-top: 2em;
         color: #7d563a;
       }
+      transform: scale(0.75);
+      > li {
+        margin: 0.5em 1em;
+      }
     }
-
-    //   > li {
-    //     border-color: #cd803283;
-    //   }
-    //   > li > a > img {
-    //       // max-width: 45%;
-    //   }
-
-    // }
-    
-    // li {
-    //   box-sizing: border-box;
-    //   border: 3px solid #000;
-    //   &.gold {
-    //     max-width: 250px;
-    //   }
-    //   &.silver {
-    //     max-width: 150px;
-    //   }
-    //   &.bronze {
-    //     max-width: 100px;
-    //   }
-    //   img {
-    //     width: 100%;
-    //   }
-    // }
   }
 }
-@media screen and (min-width: 669px) and (max-width:1340px) {
+@media screen and (min-width: 669px) and (max-width: 1340px) {
   .partners {
-    padding: 2em 0 4em 0!important;
+    padding: 2em 0 4em 0 !important;
     max-width: 100%;
   }
 }
-@media screen and (max-width:668px) {
-    .partners {
-      padding: 1em;
-      max-width: 100%;
-      background-color: #fff;
+@media screen and (max-width: 668px) {
+  .partners {
+    padding: 1em;
+    max-width: 100%;
+    background-color: #fff;
+  }
+  ul {
+    width: 100% !important;
+    padding: 3em 0 6em 0 !important;
+
+    > li {
+      width: 100% !important;
     }
-    ul {
-      width: 100%!important;
-      padding: 3em 0 6em 0!important;
-      
+
+    ::before {
+      margin-top: 0 !important;
+      text-align: center;
+    }
+    &.silver-partners,
+    &.bronze-partners {
       > li {
-        width: 100%!important;
-      }
-      
-      ::before {
-        margin-top: 0!important;
-        text-align: center;
-      }
-      &.silver-partners,
-      &.bronze-partners {
-        > li {
-          width: 66.66%;
-          display: inline-block;
-          vertical-align: top;
-          &:nth-child(odd) {
-            margin-right: 2em;
-          }
+        width: 66.66%;
+        display: inline-block;
+        vertical-align: top;
+        &:nth-child(odd) {
+          margin-right: 2em;
         }
+      }
     }
-}
+  }
 }

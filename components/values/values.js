@@ -14,7 +14,7 @@ export default () => {
           <h2>{values && values.title}</h2>
           <ul>
             {values.values.map(({ fields },i) => (
-              <li>
+              <li key={i}>
                 <h3 className={"field-"+i}>{fields.title}</h3>
                 <p>{fields.content}</p>
               </li>

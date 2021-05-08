@@ -22,7 +22,7 @@ export default function ThreeCardLayout(props) {
                         </div>
                         <article>
                             <h1 className={contentBox.fields.heading.length > 30 ? "long-title" : ""}>{contentBox.fields.heading}</h1>
-                            <p>{documentToReactComponents(contentBox.fields.content)}</p>
+                            {documentToReactComponents(contentBox.fields.content)}
                         </article>
                     </section>
                 ))
