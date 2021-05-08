@@ -50,6 +50,11 @@ export default function LGReport(props) {
                 margin-right: 1em;
                 color: #293a7d;
             }
+            @media screen and (min-width:769px) and (max-width:1025px) {
+                .lg-report-container {
+                    max-width: 100%;
+                }
+            }
 
             @media screen and (max-width: 768px) {
                 .lg-report-container {
