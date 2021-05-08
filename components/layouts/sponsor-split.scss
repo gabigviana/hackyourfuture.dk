@@ -1,9 +1,7 @@
 .sponsor-split {
     margin-top: 2em;
-    // background-image: url("http://images.ctfassets.net/ljpkryr3szrz/4b3zr1p3XSmpKTwbuydew9/1d2db6112cb0464c63b2a8c4521d0356/frontpage_3.jpg");
     background-image: url("/static/images/about_sponsor.jpg");
     background-position: top left;
-    // background-position: -50vw center;
     background-size: 55%;
     background-repeat: no-repeat; 
     padding-left: 30%;
@@ -21,8 +19,8 @@
         }
     }
 
-    @media screen and (min-width:769px) and (max-width:880px) {
-        background-size: 80%;
+    @media screen and (min-width:769px) and (max-width:1025px) {
+        background-size: 80%!important;
     }
 
     @media screen and (max-width:768px) {
