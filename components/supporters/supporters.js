@@ -13,8 +13,8 @@ export default () => {
         <section className='supporters'>
           <h2>{supporters.title}</h2>
           <ul>
-            {supporters.images.map(supporterImages => (
-              <li>
+            {supporters.images.map((supporterImages, i) => (
+              <li key={i}>
                 <a target='_blank' href={supporterImages.fields.link}>
                   <img
                     src={supporterImages.fields.image.fields.file.url}
