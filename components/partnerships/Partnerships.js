@@ -111,7 +111,7 @@ export default function Partnerships(props) {
                     }
                 }
                 .join-companies > div {
-                    padding: 1em 0;
+                    padding: 0;
                 }
                 .join-companies > div > * {
                     display: inline-block;
