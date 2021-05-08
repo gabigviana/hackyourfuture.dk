@@ -96,11 +96,11 @@ function StripeDonation(props) {
 
             <form className="donation-type">
                 <div>
-                    <input type="radio" name="donation-type" value="yearly" onClick={() => setDonationType("yearly")} />
+                    <input type="radio" name="donation-type" checked={donationType === "yearly" ? true : false} value="yearly" onClick={() => setDonationType("yearly")} />
                     <label> Yearly</label>
                 </div>
                 <div>
-                    <input type="radio" name="donation-type" value="monthly" onClick={() => setDonationType("monthly")} />
+                    <input type="radio" name="donation-type" checked={donationType === "monthly" ? true : false} value="monthly" onClick={() => setDonationType("monthly")} />
                     <label> Monthly</label>
                 </div>
                 <div>
