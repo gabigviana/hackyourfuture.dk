@@ -1,0 +1,54 @@
+.donation-goal {
+    max-width: 80%;
+    margin: 2em auto;
+    font-family: "Space mono";
+    padding: 2em 0em;
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        max-width: 90%;
+     }
+
+    .donation-bar {
+        margin: 2em 0;
+        position: relative;
+        background-color: #F2F2F2;
+        > h2 {
+            position: absolute;
+            right: 0;
+            top:0;
+            margin: 0.66em;
+        }
+        > .donation-indicator {
+            background-color: #fd9240;
+            text-align: right;
+            color: #fff;
+            padding: 2em;
+            box-sizing: border-box;
+            transition: 225ms;
+        }
+    }
+    .small-text {
+        font-size: 0.8rem;
+        opacity: 0.6;
+        margin-top: 0.5em;
+    }
+    @media screen and (max-width: 768px) {
+        padding: 0em;
+        max-width: 90%;
+
+        > p {
+            max-width: 100%;
+        }
+
+        .donation-bar {
+            > h2 {
+                font-size: 1rem;
+                top: 0.8em;
+            }
+        }
+    }
+}

@@ -56,7 +56,7 @@ export default function learning({ title, content, skills }) {
       >
         {skills.map(topic => {
           return (
-            <Grid item key={topic.fields.title} lg={4}>
+            <Grid item key={topic.fields.title} md={4} lg={4}>
               <Avatar
                 alt={topic.fields.image.fields.title}
                 src={topic.fields.image.fields.file.url}

@@ -8,6 +8,8 @@ import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
 
+import styles from './deadline.scss'
+
 // styling
 const useStyles = makeStyles({
   deadline: {
@@ -46,6 +48,40 @@ const useStyles = makeStyles({
   }
 })
 
+export function ProvideDeadline(props) {
+  const { data, error } = useSWR('/api/deadline-data', fetcher)
+  if (error) {
+    console.log('Failed to fetch deadline data', { error })
+  }
+
+  let newClassNumber
+  if (data && data.data[1][0]) {
+    newClassNumber = data.data[1][0]
+  }
+
+  let applicationDeadline
+  if (data && data.data[1][1]) {
+    applicationDeadline = data.data[1][1]
+  }
+
+  let newClassStart
+  if (data && data.data[1][2]) {
+    newClassStart = data.data[1][2]
+  }
+
+  const applicationEndDate = new Date(applicationDeadline).toLocaleString(
+    'en',
+    {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    }
+  )
+  return React.cloneElement(props.children, Object.assign({}, props, {
+    deadline: applicationEndDate
+  }))
+}
+
 // Link to the sheet: https://docs.google.com/spreadsheets/d/1KD6Dr9z5fxEzx-jxs84e0tBfpohTkup8GE4r3CC3qZA/edit#gid=0
 export default function Deadline() {
   const classes = useStyles()
@@ -82,6 +118,16 @@ export default function Deadline() {
   if (!applicationDeadline) {
     return null
   } else {
+    return (
+      <div className="next-class-deadline">
+        <style jsx>{styles}</style>
+        <div className="class-details">
+        <div className="class-number"> Class {newClassNumber}</div>
+        <div className="class-deadline"> Application Deadline:  <span>{applicationEndDate}</span></div>
+        </div>
+        <Timer date={applicationEndDate} />
+      </div>
+    )
     return (
       <Content>
         <Box className={classes.deadline}>

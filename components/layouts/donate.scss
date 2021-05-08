@@ -1,0 +1,12 @@
+.donate-header {
+    background-image: url("/static/images/donate_cover.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 20%;
+    width: 100%;
+    @media screen and (max-width:768px) {
+        background-size: 100%;
+        background-position: 0 2em;
+    }
+}

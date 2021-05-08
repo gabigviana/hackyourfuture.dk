@@ -1,0 +1,132 @@
+.partnerships-container {
+    padding-top: 2em;
+    .partnership-header {
+        text-align: center;
+        max-width: 66.66%;
+        margin: 2em auto;
+    }
+    @media screen and (max-width: 768px) {
+    .partnership-header {
+        max-width: 100%;
+    }
+    }
+}
+.partnership-model {
+    max-width: 75%;
+    margin: 6em auto 1em auto;
+    background-color: #f3f3f3;
+    > * {
+        display: inline-block;
+        vertical-align: top;
+    }
+    > div.partnership-icon {
+        width: 28%;
+        height: 260px;
+        border-radius: 1em;
+        text-align: center;
+        margin: -1em 0 0 -1em;
+        background-size: cover;
+        > * {
+            font-family: "Space Mono";
+            color: #fff;
+            font-size: 2.7rem;
+            margin-top: 2.3em;
+            margin-bottom: 0;
+        }
+    }
+    > section {
+        width: 70%;
+        padding: 2em 2em 2em 2em;
+
+        > ul {
+            max-width: 100%;
+            margin-top: 1em;
+            font-family: "Space Mono";
+            font-size: 0.8rem;
+            line-height: 1.5rem;
+            > li {
+                background-color: #fff;
+                border-radius: 2px;
+                padding: 2em;
+                border: 1px solid #ccc;
+                margin-bottom: 1em;
+                display: block;
+                > h3 {
+                    font-size: 1.25rem;
+                    margin-bottom: 0.5em;
+                }
+                > p {
+                    font-size: 16px;
+                    opacity: 0.6;
+                }
+                transition: 175ms;
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+    .partnership-cta-btn {
+        background-color: #293a7d;
+        color: #fff;
+        margin-top: 0.66em;
+        padding: 0.66em 1em;
+        font-family: "Space Mono";
+        border:none;
+    }
+    .partnership-price {
+        margin-top: 1em;
+        > h4 {
+            color: #000;
+            opacity: 0.5;
+        }
+        > h2 {
+            margin: 0;
+        }
+    }
+    .partnership-cta {
+        // background-color: #fff;
+        padding: 0 0 0 0;
+        border-left: 1px solid #293a7d25;
+        padding-top: 1px;
+        margin-top: 1em;
+    }
+    .join-companies {
+        div.company-item > * {
+            display: inline-block;
+            width: calc(25% - 1em);
+            margin-right: 1em;
+            min-height: 70px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 90%;
+            > img {
+                opacity: 0;
+            }
+        }
+        div.company-item.gold > * {
+            width: calc(30% - 1em);
+            min-height: 100px;
+            background-size: 100%;
+
+        }
+    }
+    @media screen and (max-width:768px) {
+        max-width: 100%;
+        margin: 0;
+
+    > div.partnership-icon {
+        width: 66.66%;
+    }
+    > section {
+        width: 100%;
+        margin-bottom: 2em;
+        padding: 1em;
+
+        > ul {
+            max-width: 100%;
+            margin-top:0;
+        }
+    }
+    }
+}

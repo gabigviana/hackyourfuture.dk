@@ -8,12 +8,15 @@ export default ({ children }) => {
     <div>
       {/*language=CSS*/}
       <style jsx global>{`
+        /*@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;700&display=swap')*/
+
         /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
         html {
           line-height: 1.15;
           -webkit-text-size-adjust: 100%;
         }
         body {
+          font-family: "Work Sans", sans-serif;
           margin: 0;
         }
         h1 {
@@ -152,8 +155,6 @@ export default ({ children }) => {
         [hidden] {
           display: none;
         }
-        /*# sourceMappingURL=normalize.min.css.map */
-        @import url('https://fonts.googleapis.com/css?family=Space+Mono|Work+Sans');
 
         body {
           font-size: 1.2rem;
@@ -215,6 +216,8 @@ export default ({ children }) => {
           h1,
           h2 {
             font-size: 24px;
+            line-height: 34px;
+            margin-bottom: 0.5em;
           }
         }
 
@@ -223,6 +226,8 @@ export default ({ children }) => {
           font-size: 18px;
           line-height: 1.8rem;
           margin: 0;
+          margin-bottom: 0.5em;
+          white-space: pre-wrap;
         }
 
         .hyf-title {
@@ -308,7 +313,7 @@ export default ({ children }) => {
       <Header />
       <main>{children}</main>
       <Footer />
-      <script
+      {/* <script
         async
         src='https://www.googletagmanager.com/gtag/js?id=UA-159689438-1'
       />
@@ -323,7 +328,7 @@ export default ({ children }) => {
             gtag('config', 'UA-159689438-1');
           `
         }}
-      />
+      /> */}
     </div>
   )
 }

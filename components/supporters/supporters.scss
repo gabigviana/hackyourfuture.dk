@@ -1,11 +1,13 @@
 section.supporters {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  // display: flex;
+  // align-items: center;
+  // flex-direction: column;
   padding: 1rem 4rem 3rem 4rem;
   max-width: 900px;
   margin: 0 auto;
-
+  h2 {
+    text-align: center;
+  }
   ul {
     display: flex;
     justify-content: space-around;
@@ -13,6 +15,21 @@ section.supporters {
 
     li img {
       max-width: 100px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  section.supporters {
+    h2 {
+      margin-top: 2em;
+      margin-bottom: 1em;
+    }
+    max-width: 100%!important;
+    ul {
+      display: initial!important;
+      > li {
+        text-align: center;
+      }
     }
   }
 }

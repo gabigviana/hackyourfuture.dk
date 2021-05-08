@@ -24,7 +24,15 @@ export default function faq() {
 
   return (
     <React.Fragment>
-      <h2>Frequently Asked Questions</h2>
+      <style jsx>{`
+      @media screen and (max-width: 768px) {
+        .faq-heading {
+          text-align: center;
+          margin-bottom: 1.5em;
+        }
+      }
+      `}</style>
+      <h2 className="faq-heading">Frequently Asked Questions</h2>
       {questions &&
         <Container>
           {questions.map(faq => (

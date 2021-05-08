@@ -3,14 +3,28 @@ import Link from 'next/link'
 import links from '../links.json'
 import uuid from 'uuid/v4'
 import styles from './navbar.scss'
+import noticeStyles from './notice.scss'
+
+function Notice() {
+  const [show, setShow] = useState(true)
+  return (
+    <>
+    <style jsx>{noticeStyles}</style>
+    <div className={"notice"}>Help us become a charitable association <span>↑</span></div>
+
+    </>
+  )
+}
 
 export default () => {
   const [pathName, setPathName] = useState('')
   useEffect(() => setPathName(window.location.pathname), [pathName])
 
   return (
+    <>
     <nav className='items'>
       <style jsx>{styles}</style>
+      
       <ul>
         {/*loop json links*/}
         {links.map(({ id, title, url }) => (
@@ -23,6 +37,8 @@ export default () => {
           </li>
         ))}
       </ul>
+        <Notice />
     </nav>
+    </>
   )
 }

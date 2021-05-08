@@ -1,7 +1,8 @@
 import styles from './content.scss'
 import React from 'react'
+import PictureContentContainer from './ContentWithPicture'
 
-export default ({ children, id = '' }) => {
+export default ({ inContextOf, children, id = '' }) => {
   return (
     <div className='content' id={id}>
       <style jsx global>{`
@@ -10,7 +11,25 @@ export default ({ children, id = '' }) => {
         }
       `}</style>
       <style jsx>{styles}</style>
-      {children}
+      {
+        inContextOf === "about"
+        && (
+          <PictureContentContainer contentBoxesId={"UUqAW92t1ZX5bQwWGg7Dp"} />
+        )
+      }
+      {
+        inContextOf === "volunteer"
+        && (
+          <PictureContentContainer contentBoxesId={"5cd4lNgsvWNRjSjBP6mIBS"} />
+        )
+      }
+      {
+        inContextOf === "apply"
+        && (
+          <PictureContentContainer contentBoxesId={"5cd4lNgsvWNRjSjBP6mIBS"} />
+        )
+      }
+      {inContextOf !== "volunteer" && children}
     </div>
   )
 }

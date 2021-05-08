@@ -18,14 +18,14 @@ const useStyles = makeStyles(theme => ({
     margin: 'auto'
   },
   question: {
-    fontFamily: 'Work Sans, sans-serif',
+    fontFamily: 'Work Sans',
     fontSize: '1.1rem',
     color: 'black'
   },
   answer: {
-    fontFamily: 'Work Sans, sans-serif',
-    color: 'black',
-    fontWeight: 'bold'
+    fontFamily: 'Work Sans',
+    color: '#293a7d',
+    fontWeight: '300'
   },
   card: {
     marginBottom: '10px',
@@ -54,7 +54,7 @@ export default function Questioning(props) {
   return (
     <Card className={classes.card}>
       <CardContent>
-        <Box display='flex'>
+        <Box display='flex' onClick={handleExpandClick}>
           <Box flexGrow={1} className={classes.box}>
             <Typography className={classes.question}>
               {props.question}

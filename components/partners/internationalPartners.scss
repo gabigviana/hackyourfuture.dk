@@ -1,0 +1,74 @@
+.international-partners {
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: right center;
+
+    h2 {
+        margin-top: 2em;
+        text-align: center;
+    }
+
+    .partner-list {
+        // max-width: 40%;
+        width: 440px;
+        background-color: #fff;
+        margin-left: 20%;
+        margin-left: 4em;
+        padding: 2.5% 0 5% 0;
+        
+
+        > div {
+            background-color: #f3f3f3;
+            margin-bottom: 0.5em;
+            article, img {
+                display: inline-block;
+                vertical-align: top;
+                
+            }
+            article {
+                width: 70%;
+                // text-align: right;
+                padding: 1em;
+
+                > h3 {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 0.8rem;
+                }
+                > a {
+                    font-size: 0.8rem;
+                    font-family: "Space Mono", monospace;
+                }
+            }
+            img {
+                width: 30%;
+                // margin: -1em 0 0 -1em;
+            }
+        }
+    }
+    @media screen and (max-width:768px) {
+        background-position: center 10%;
+        background-size: cover;
+        padding-top:2em;
+        box-shadow: inset -1000px -1000px rgba(255,255,255,0.5);
+
+        h2 {
+            margin: 2em 0;
+        }
+        .partner-list {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 0.5em;
+            background:transparent;
+            > div {
+                background-color: #eeeeeee8;
+            }
+        }
+        img {
+            margin: 0!important;
+        }
+        article {
+            padding-right: 1em!important;
+        }
+    }
+}

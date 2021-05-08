@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../content/_apply'
 import { sectionTitle, contentOne, contentTwo } from '../content/_apply'
 
@@ -40,30 +40,48 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 //   }
 // })
 
-export default function applySection({ content, applyChecks, pointingImage }) {
+export default function applySection({ heading, children, content, applyChecks, pointingImage }) {
   // const classes = useStyles()
+  const [checked, setChecked] = useState([])
   return (
     <React.Fragment>
       <div>
-        {/* <style jsx global>
-          {`
-            #apply p {
-              font-size: 1rem;
-            }
-          `}
-        </style> */}
         {documentToReactComponents(content)}
-        <aside className="checkbox-image" style={{backgroundImage:`url("${pointingImage.src}")`}}>
+        {heading && (
+          <h2 className="apply-heading">{heading}</h2>
+        )}
+        {/* <aside className="checkbox-image" style={{backgroundImage:`url("${pointingImage.src}")`}}>
           
-        </aside>
+        </aside> */}
         {/* <img className="checkbox-image" alt={pointingImage.alt} src={pointingImage.src} /> */}
         <ul className="checkbox-container">
           {applyChecks.map((check, i) => (
-          <li key={i}><img src="/static/icon_checkbox.svg" /><p>{check}</p></li>
+          <li key={i} onClick={() => checked.includes(i) ? setChecked(checked.filter((index) => i !== index)) : setChecked([...checked, i])}><img style={checked.includes(i) ? {opacity:1} : {opacity:0.25}} src="/static/icon_checkbox.svg" /><p>{check}</p></li>
           ))}
         </ul>
       </div>
+        {
+          checked.length === applyChecks.length
+          ? children
+          : (
+            <div className="needs-checked"><p>To apply click on each of the checkboxes above</p></div>
+          )
+        }
       <style jsx>{`
+       h2.apply-heading {
+        margin:0 0 1em 0;
+      }
+      .needs-checked {
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        display: inline-block;
+        padding: 0.5em 1em;
+        background: #fff;
+      }
+      .needs-checked > p {
+        font-size: 0.8rem;
+        margin-bottom: 0;
+      }
       #apply p {
         font-size: 1rem;
       }
@@ -79,14 +97,19 @@ export default function applySection({ content, applyChecks, pointingImage }) {
         background-repeat: no-repeat;
       }
       .checkbox-container {
-        width: 66.66%;
-        padding: 2em;
+        width: 80%;
+        padding: 0em;
         box-sizing:border-box;
         display:inline-block;
       }
       .checkbox-container > li {
-        margin-bottom: 1em;
-    }
+        margin-bottom: 1em; 
+        transition:175ms;
+        cursor:pointer; 
+      }
+      .checkbox-container > li:hover {
+        transform:scale(1.025);
+      }
         .checkbox-container > li > p,
         .checkbox-container > li > img {
             display:inline-block;

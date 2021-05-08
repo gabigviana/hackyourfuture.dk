@@ -1,0 +1,152 @@
+.cover-intro-container {
+    height: 60vh;
+    box-sizing: border-box;
+    background-color: #efefef;
+    
+    .cover, .content {
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .cover {
+        background-image: url("http://images.ctfassets.net/ljpkryr3szrz/6ukUbbNrYh7lucemUINfg1/78cc2303edd398f9ee82b3c1c88c81f2/frontpage_1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+        height: inherit;
+        margin-top: 1.5em;
+    }
+
+    .content {
+        padding: 6% 6% 2em 5%;
+        h4 {
+            // font-family: "Space Mono", monospace;
+            // font-weight: 300;
+            // line-height: 1.75rem;
+            // font-size: 1rem;
+            // margin-bottom: 1em;
+            // color: #000;
+            // opacity: 0.77;
+            font-family: "Work Sans";
+            font-weight: 400;
+            line-height: 1.75rem;
+            font-size: 1.15rem;
+            margin-bottom: 1em;
+            color: #000;
+            opacity: 0.8;
+        }
+    }
+  @media screen and (max-width:768px) {
+        // margin-top: 4em;
+      height: initial;
+    .cover, .content {
+        width: 100%;
+    }
+    .content {
+        padding: 2em;
+        margin-top:16em;
+        margin-left:0;
+    }
+    .cover {
+        position: absolute;
+        top:0;
+        left:0;
+        height: 200px;
+        margin-top:4em;
+    }
+    }
+}
+.cover-intro-container.volunteer-intro {
+    height: initial;
+    background-image: url("/static/images/hyf_2019-02-17-02398.jpg");
+    background-size: auto 120%;
+    background-repeat: no-repeat;
+    .content {
+        width: 66.66%;
+        margin-left:33.33%;
+        display: inline-block;
+        background-color: #efefef;
+        vertical-align: top;
+    }
+}
+@media screen and (max-width:768px) {
+.cover-intro-container.volunteer-intro {
+    background-size: contain;
+    padding-top: 7em;
+    .content {
+        width:100%;
+        margin-left: 0;
+        background: #fff;
+    }
+}
+}
+
+
+.cover-intro-container.volunteer-intro.volunteer-faq {
+    background-image: url("/static/images/hyf_volunteer_faq.jpg");
+    background-size: auto 140%;
+    background-position: left center;
+    background-repeat: no-repeat;
+    margin-bottom: 6em;
+    overflow: hidden;
+    .content {
+        width: 68%;
+        margin-left:35%;
+        padding: 0 4em 3em 2em;
+        box-sizing: border-box;
+        background-color: #efefef;
+    }
+    
+}
+@media screen and (max-width:768px) {
+    .cover-intro-container.volunteer-intro.volunteer-faq {
+        background-size: contain;
+        background-position: top center;
+        padding-top: 12em;
+        margin-bottom: 2em!important;
+        .content {
+            width:100%!important;
+            padding: 1em;
+            margin-left: 0;
+            background: #fff;
+        }
+    }
+}
+.cover-intro-container.volunteer-intro.apply-faq {
+    background-image: url("/static/images/faq_apply.jpg");
+    background-size: auto 140%;
+    background-position: left center;
+    background-repeat: no-repeat;
+    margin-bottom: 2em;
+    overflow: hidden;
+    .content {
+        width: 68%;
+        margin-left:35%;
+        padding: 0 4em 3em 2em;
+        box-sizing: border-box;
+        background-color: #efefef;
+    }
+    
+}
+@media screen and (max-width:768px) {
+    .cover-intro-container.volunteer-intro.apply-faq {
+        background-image: url("/static/images/faq_apply.jpg");
+        background-size: contain;
+        background-position: top center;
+        background-repeat: no-repeat;
+        margin-bottom: 6em;
+        overflow: hidden;
+        .content {
+            width: 100%;
+            margin-left:0%;
+            padding: 0 0 1em 0em;
+            box-sizing: border-box;
+            background-color: #efefef;
+            > h2 {
+                text-align: center;
+            }
+        }
+        
+    }
+}

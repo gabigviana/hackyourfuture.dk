@@ -5,6 +5,8 @@ $primary-color: #293a7d;
   align-items: center;
   justify-content: center;
 
+  
+
   @media (max-width: 768px) {
     display: none;
   }
@@ -19,21 +21,33 @@ $primary-color: #293a7d;
       padding: 0 0.5rem;
 
       a {
-        color: $primary-color;
-        font-weight: bold !important;
+        // color: $primary-color;
+        color: #000;
+        opacity: 0.66;
+        // color: #fff;
+        // font-weight: bold !important;
         font-size: 1rem !important;
-        font-family: 'Work Sans', sans-serif !important;
+        // font-family: 'Work Sans', sans-serif !important;
         text-decoration: none;
+
+        font-family: "Space Mono";
+        letter-spacing: 0.2em;
+        font-weight: 800;
+        transition: 500ms;
 
         &:hover,
         &:active {
-          opacity: 0.9;
+          opacity: 1;
+          color: $primary-color;
           text-decoration: underline;
         }
         &.donate {
           background-color: $primary-color;
-          color: white;
-          padding: 0.7rem;
+          // background-color: #fd9240;
+          // color:  $primary-color;
+          color:  #fff;
+          padding: 0.7rem 2em;
+          opacity: 1;
         }
       }
       &.active > a {

@@ -30,7 +30,7 @@ class Hire extends React.Component {
     let skills = []
     let statuses = []
 
-    alumniList.forEach(alumni => {
+    filteredByDateAlumni.forEach(alumni => {
       skills = [...skills, ...alumni.skills]
       statuses = [...statuses, alumni.status]
     })
@@ -100,7 +100,7 @@ class Hire extends React.Component {
       selectedStatus
     } = this.state
     return (
-      <section className='hire'>
+      <>
         <style jsx>{styles}</style>
         <div className='filters'>
           {/*FILTER BY SKILLS ---------------- */}
@@ -124,7 +124,7 @@ class Hire extends React.Component {
           })}
 
           {/*FILTER BY STATUS ---------------- */}
-          <p>
+          {/* <p>
             <strong>Select status</strong>
           </p>
           {uniqueStatuses.map(status => {
@@ -140,10 +140,10 @@ class Hire extends React.Component {
                 {status}
               </button>
             )
-          })}
+          })} */}
         </div>
 
-        <div className='team-members'>
+        <div className='team-members hire-section-profiles'>
           {alumniList.length > 0 ? (
             alumniList
               .sort((a, b) => a.name.localeCompare(b.name))
@@ -161,7 +161,7 @@ class Hire extends React.Component {
             </div>
           )}
         </div>
-      </section>
+      </>
     )
   }
 }

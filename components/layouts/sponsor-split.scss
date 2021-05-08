@@ -1,0 +1,33 @@
+.sponsor-split {
+    margin-top: 2em;
+    // background-image: url("http://images.ctfassets.net/ljpkryr3szrz/4b3zr1p3XSmpKTwbuydew9/1d2db6112cb0464c63b2a8c4521d0356/frontpage_3.jpg");
+    background-image: url("/static/images/about_sponsor.jpg");
+    background-position: top left;
+    // background-position: -50vw center;
+    background-size: 55%;
+    background-repeat: no-repeat; 
+    padding-left: 30%;
+    background-color: #f3f3f3;
+
+    > section {
+        background: #f3f3f3;
+
+        &.partners {
+            padding: 0;
+            max-width: 100%;
+            > ul {
+                max-width: 100%;
+            }
+        }
+    }
+
+    @media screen and (min-width:769px) and (max-width:880px) {
+        background-size: 80%;
+    }
+
+    @media screen and (max-width:768px) {
+        padding: 18em 0 0 0;
+        background-size: 100%;
+        background-position: center top;
+    }
+}
