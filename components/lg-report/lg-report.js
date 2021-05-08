@@ -21,7 +21,7 @@ export default function LGReport(props) {
             .lg-report-container {
                 margin: 0 auto;
                 padding: 1rem 0 3rem 0;
-                max-width: 80%;
+                max-width: 90%;
                 text-align: center;
             }
             .lg-report-container > div,
@@ -65,16 +65,6 @@ export default function LGReport(props) {
                 }
             }
         `}</style>
-            <img src="/static/lg-insight/lg-insight-logo.png" />
-            <div>
-            <h3>LG Insight Evaluation report</h3>
-            <p>The report about HackYourFuture in Danish</p>
-            <a href="/static/lg-insight/Evalueringsrapport_HYF_LG Insight_22_03_21.pdf" target="_blank">Read the report</a>
-            <hr />
-            <p>English summary</p>
-            <a href="/static/lg-insight/EN_HYF_LG Insight_07042021.pdf" target="_blank">Read the summary</a>
-            </div>
-        
         </div>
     )
 }
