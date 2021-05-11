@@ -7,6 +7,7 @@ import Content from '../../layouts/content/content'
 import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
+import { useContentfulEntryId } from '../../../contentful/contentful-hooks'
 
 import styles from './deadline.scss'
 
@@ -84,29 +85,34 @@ export function ProvideDeadline(props) {
 
 // Link to the sheet: https://docs.google.com/spreadsheets/d/1KD6Dr9z5fxEzx-jxs84e0tBfpohTkup8GE4r3CC3qZA/edit#gid=0
 export default function Deadline() {
-  const classes = useStyles()
+  // const classes = useStyles()
 
-  const { data, error } = useSWR('/api/deadline-data', fetcher)
-  if (error) {
-    console.log('Failed to fetch deadline data', { error })
-  }
+  // const { data, error } = useSWR('/api/deadline-data', fetcher)
+  // if (error) {
+  //   console.log('Failed to fetch deadline data', { error })
+  // }
 
-  let newClassNumber
-  if (data && data.data[1][0]) {
-    newClassNumber = data.data[1][0]
-  }
+  // let newClassNumber
+  // if (data && data.data[1][0]) {
+  //   newClassNumber = data.data[1][0]
+  // }
 
-  let applicationDeadline
-  if (data && data.data[1][1]) {
-    applicationDeadline = data.data[1][1]
-  }
+  // let applicationDeadline
+  // if (data && data.data[1][1]) {
+  //   applicationDeadline = data.data[1][1]
+  // }
 
-  let newClassStart
-  if (data && data.data[1][2]) {
-    newClassStart = data.data[1][2]
-  }
+  // let newClassStart
+  // if (data && data.data[1][2]) {
+  //   newClassStart = data.data[1][2]
+  // }
 
-  const applicationEndDate = new Date(applicationDeadline).toLocaleString(
+  const classDeadlineEntryId = 'BlGRwiiDBmhfwUXWIJukB'
+  const classDeadlineEntry = useContentfulEntryId(classDeadlineEntryId).content
+  if ( ! classDeadlineEntry) return null
+  const {classNumber, deadline} = classDeadlineEntry
+  console.log(classNumber, deadline)
+  const applicationEndDate = new Date(deadline).toLocaleString(
     'en',
     {
       day: 'numeric',
@@ -115,35 +121,18 @@ export default function Deadline() {
     }
   )
 
-  if (!applicationDeadline) {
+  if ( ! classDeadlineEntry) {
     return null
   } else {
     return (
       <div className="next-class-deadline">
         <style jsx>{styles}</style>
         <div className="class-details">
-        <div className="class-number"> Class {newClassNumber}</div>
+        <div className="class-number">{classNumber}</div>
         <div className="class-deadline"> Application Deadline:  <span>{applicationEndDate}</span></div>
         </div>
         <Timer date={applicationEndDate} />
       </div>
-    )
-    return (
-      <Content>
-        <Box className={classes.deadline}>
-          <Typography className={classes.newClassNumber}>
-            Class {newClassNumber}
-          </Typography>
-          <Typography className={classes.event}>
-            {' '}
-            Application Deadline:{' '}
-            <span className={classes.dateOfEvent}>{applicationEndDate}</span>
-          </Typography>
-        </Box>
-        <Container>
-          <Timer date={applicationEndDate} />
-        </Container>
-      </Content>
     )
   }
 }
