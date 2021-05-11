@@ -1,7 +1,6 @@
 import styles from './Classes.scss'
 import Link from 'next/link'
 import {ProvideDeadline} from '../apply-section/deadline/deadline'
-import Timer from '../apply-section/deadline/timer'
 
 function Deadline(props) {
   if ( ! props.deadline) return null

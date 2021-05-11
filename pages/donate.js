@@ -1,13 +1,9 @@
 import Head from 'next/head'
 import styles from '../components/layouts/donate.scss'
 import Layout from '../components/layouts/layout'
-import Content from '../components/layouts/content/content'
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { fetchPageContent } from '../contentful/contentful'
 import DonateBox from '../components/donate/DonateBox'
 import DonationGoal from '../components/donate/DonationGoal'
-import CoverContent from '../components/layouts/cover-content/CoverContent'
-import SplashQuote from '../components/layouts/content/SplashQuote'
 import Partnerships from '../components/partnerships/Partnerships'
 export default ({ title, supportOurWork, becomeCompanyMember }) => (
   <Layout>
@@ -15,7 +11,7 @@ export default ({ title, supportOurWork, becomeCompanyMember }) => (
       <title>{title}</title>
     </Head>
     <style global jsx>
-        {`
+      {`
           .donate li {
             font-size: 18px;
             list-style: inside;
@@ -76,38 +72,22 @@ export default ({ title, supportOurWork, becomeCompanyMember }) => (
             }
           }
         `}
-      </style>
-      <style jsx>{styles}</style>
-      <section className="donate-header">
-        <div className="donate-cover">
-      
+    </style>
+    <style jsx>{styles}</style>
+    <section className="donate-header">
+      <div className="donate-cover">
+
         <DonateBox>
-        {supportOurWork}
+          {supportOurWork}
         </DonateBox>
 
       </div>
-      </section>
+    </section>
+    <DonationGoal />
+    <img src="/static/images/donate_splitter.jpg" id="partnerships" />
+    <Partnerships>{becomeCompanyMember}</Partnerships>
+    <img src="/static/images/donate_endcover.jpg" className="donate-cover-end" />
 
-
-    
-
-      <DonationGoal />
-
-      {/* <CoverContent id="association-member" background={"/static/images/private_memberships.png"}> */}
-     
-      {/* <div>{documentToReactComponents(content)}</div> */}
-      {/* </CoverContent> */}
-      {/* <SplashQuote link="/partnerships" heading={"Become a Company Partner of HackYourFuture!"} content={"Does your company want to support diversity and inclusion in the tech industry? Would you want to get access to a unique pool of talented tech professionals now or in the future?"} /> */}
-        <img src="/static/images/donate_splitter.jpg" id="partnerships" />
-
-      <Partnerships>{becomeCompanyMember}</Partnerships>
-      
-      <img src="/static/images/donate_endcover.jpg" className="donate-cover-end" />
-      
-      {/* <div className='donate'>{documentToReactComponents(supportOurWork)}</div> */}
-      {/* <div className='donate'>
-        {documentToReactComponents(becomeCompanyMember)}
-      </div> */}
   </Layout>
 )
 
