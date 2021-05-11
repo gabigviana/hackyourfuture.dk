@@ -114,7 +114,7 @@ function StripeDonation(props) {
                     <li key={i} className={donationAmount == amount ? "selected-amount" : ""} onClick={() => setDonationAmount(amount)}><label>{amount} <span>dkk</span></label></li>
                 ))}
                 <li className="input-amount">
-                    <input type="number" onChange={(e) => setDonationAmount(e.target.value)} placeholder="Other amount" name="donation-type" value={donationAmount || ""} />
+                    <input type="number" onChange={(e) => setDonationAmount(e.target.value)} placeholder="Other amount" name="donation-type" value={donationAmount === 250 ? "" : donationAmount} />
                 </li>
             </ul>
 
