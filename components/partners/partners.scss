@@ -39,6 +39,12 @@
       display: inline-block;
       transition: 225ms;
       margin: 1em 1em 0.5em 1em;
+      @media screen and (max-width: 768px) {
+        & {
+          margin:0;
+          height: 130px;
+        }
+      }
       &:hover {
         transform: scale(1.05);
       }
@@ -80,7 +86,7 @@
       }
       transform: scale(0.75);
       > li {
-        margin: 0.5em 1em;
+        margin: 1em 0;
       }
     }
   }
