@@ -15,7 +15,7 @@ export default function LGReport(props) {
             </div>
 
             <div>
-                <img src="/static/images/DSJC_Member.png" width="280" className="dsjc-logo" />
+                <img src="/static/images/hyf-badges.png" width="280" className="dsjc-logo" />
             </div>
             <style jsx>{`
             .lg-report-container {

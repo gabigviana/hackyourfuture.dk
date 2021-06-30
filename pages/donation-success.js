@@ -47,7 +47,7 @@ export default ({ title, supportOurWork, becomeCompanyMember }) => (
       </div>
       </section>
 
-      <DonationGoal label={"👍 Thank you for helping us become a chertiable association"} description={false} />
+      <DonationGoal label={"👍 Thank you for helping us become a charitable association"} description={false} />
 
   </Layout>
 )
