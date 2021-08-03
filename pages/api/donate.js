@@ -3,9 +3,9 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const SITE_DOMAIN = process.env.STRIPE_RETURN_DOMAIN;
 
 const donationLabels = {
-  "one-time": "One time donation to HackYourFuture",
-  "monthly": "Monthly donation to HackYourFuture until you stop it",
-  "yearly": "A yearly donation to HackYourFuture until you stop it",
+  "one-time": "One time support to HackYourFuture",
+  "monthly": "Monthly support to HackYourFuture until you stop it",
+  "yearly": "A yearly support to HackYourFuture until you stop it",
 }
 
 async function createSubscriptionDonation(dontationDetails) {
