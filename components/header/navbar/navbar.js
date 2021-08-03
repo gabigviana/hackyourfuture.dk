@@ -30,7 +30,7 @@ export default () => {
         {links.map(({ id, title, url }) => (
           <li className={url === pathName && 'active'} key={uuid()}>
             <Link href={url}>
-              <a rel='noopener' className={title === 'DONATE' && 'donate'}>
+              <a rel='noopener' className={title === 'SUPPORT' && 'support'}>
                 {title}
               </a>
             </Link>

@@ -41,6 +41,7 @@ $primary-color: #293a7d;
           color: $primary-color;
           text-decoration: underline;
         }
+        &.support,
         &.donate {
           background-color: $primary-color;
           // background-color: #fd9240;
