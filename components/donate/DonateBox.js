@@ -138,7 +138,7 @@ function StripeDonation(props) {
                 isSubmitting ? (
                     <button className="donation-button">One moment...</button>
                 ) : (
-                    <button className="donation-button" onClick={createDonation}>Donate</button>
+                    <button className="donation-button" onClick={createDonation}>Support</button>
                 )
             }
             {/* <div className="donation-terms-show" onClick={() => setShowTerms( ! showTerms)}>Our privacy policy and terms</div>
@@ -179,7 +179,8 @@ export default function DonateBox(props) {
                 <section>
                     <h2 id="heading">Support our work</h2>
                     <div className="amount-description auto-member">
-                        <p>When you donate 250 dkk or more, you automatically become a member of the HackYourFuture association for one year and you will be invited to the annual General Assembly</p>
+                        <p>Support us with 250 dkk or more and you automatically become a member of the HackYourFuture association for one year and you will be invited to the annual General Assembly</p>
+                        {/* <p>When you donate 250 dkk or more, you automatically become a member of the HackYourFuture association for one year and you will be invited to the annual General Assembly</p> */}
                     </div>
                     <ResolveStripe>
                         <StripeDonation />
