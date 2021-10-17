@@ -29,12 +29,6 @@ export default ({
     <Content id='apply-for-class'>
       <div style={{height:"50px"}}></div>
       <h2>Application Form</h2>
-      <p>
-        We are recruiting for the next class of HackYourFuture Copenhagen.
-        We are right now updating our application process and we might need you
-        to re-apply at a later point, but we will inform you about this and your
-        application is registered once you have filled out this form.
-      </p>
       <WufooForm
         userName='cphhackyourfuture'
         formHash='m956dho04idykw'
