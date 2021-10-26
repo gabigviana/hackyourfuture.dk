@@ -39,13 +39,8 @@
     ]
   },
   {
-    "id": 4,
-    "title": "HIRE",
-    "url": "/hire"
-  },
-  {
     "id": 5,
     "title": "SUPPORT",
-    "url": "/donate"
+    "url": "/support"
   }
 ]

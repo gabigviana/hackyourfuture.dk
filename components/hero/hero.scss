@@ -8,7 +8,7 @@
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.4)),
     url("/static/hero.jpg") center no-repeat;
   background-size: cover;
-  position: relative;
+  // position: relative;
   margin-bottom: 6em;
   h1 {
     color: #fff;
@@ -27,7 +27,8 @@
     padding: 2.5em 0;
     box-sizing: border-box;
     position: absolute;
-    bottom: -100px;
+    // bottom: -100px;
+    top:65vh;
     left: 0;
     > div {
       border: 1px solid #fff;
