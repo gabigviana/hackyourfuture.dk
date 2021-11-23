@@ -333,7 +333,7 @@
     "roles": ["boardmember"],
     "photo": "/static/team/marta.jpg",
     "roleDescription": "mentor representative",
-    "company": "DTU Biosustain",
+    "company": "Optimum Voyage",
     "linkedin": "https://www.linkedin.com/in/marta-matos-829a7050/"
   },
   {
@@ -342,7 +342,7 @@
     "roles": ["boardmember"],
     "photo": "/static/alumni/photos/svetlana.jpeg",
     "roleDescription": "student representative",
-    "company": "Green Mobility",
+    "company": "AP Møller - Maersk",
     "linkedin": "https://www.linkedin.com/in/cecastosic/",
     "github": "https://github.com/cecastosic"
   },
