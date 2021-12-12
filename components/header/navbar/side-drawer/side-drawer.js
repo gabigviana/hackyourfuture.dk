@@ -23,7 +23,7 @@ export default ({ show, onGoBackClick }) => {
         {links.map(({ title, url, dropdown }) => (
           <li className={url === path && 'active'} key={uuid()}>
             <Link href={url}>
-              <a rel='noopener' className={title === 'DONATE' && 'donate'}>
+              <a rel='noopener' className={title === 'SUPPORT' && 'donate'}>
                 {title}
               </a>
             </Link>

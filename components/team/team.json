@@ -28,26 +28,6 @@
     "email": "daniel@hackyourfuture.dk"
   },
   {
-    "id": 3332,
-    "name": "Ditlev Tøjner",
-    "roles": ["core"],
-    "roleDescription": "Education Manager",
-    "photo": "/static/team/ditlev.jpg",
-    "linkedin": "https://www.linkedin.com/in/ditlev-t%C3%B8jner-145317158/",
-    "github": "https://github.com/ditlevHYF",
-    "email": "ditlev@hackyourfuture.dk"
-  },
-  {
-    "id": 3331,
-    "name": "Charlotte Garnier",
-    "roles": ["core"],
-    "roleDescription": "Project Assistant",
-    "photo": "/static/team/charlotte.png",
-    "linkedin": "https://www.linkedin.com/in/charlottegarnier/",
-    "github": "https://github.com/Charlotte-2905",
-    "email": "charlotte@hackyourfuture.dk"
-  },
-  {
     "id": 4,
     "name": "Alicia Gonzales",
     "roles": ["mentor"],
@@ -353,7 +333,7 @@
     "roles": ["boardmember"],
     "photo": "/static/team/marta.jpg",
     "roleDescription": "mentor representative",
-    "company": "DTU Biosustain",
+    "company": "Optimum Voyage",
     "linkedin": "https://www.linkedin.com/in/marta-matos-829a7050/"
   },
   {
@@ -362,7 +342,7 @@
     "roles": ["boardmember"],
     "photo": "/static/alumni/photos/svetlana.jpeg",
     "roleDescription": "student representative",
-    "company": "Green Mobility",
+    "company": "AP Møller - Maersk",
     "linkedin": "https://www.linkedin.com/in/cecastosic/",
     "github": "https://github.com/cecastosic"
   },

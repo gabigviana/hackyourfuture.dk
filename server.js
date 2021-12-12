@@ -48,6 +48,11 @@ app.prepare().then(() => {
     });
   }
 
+  // For now, server the donate page when asking /support
+  server.get("/support", (req,res) => {
+    return app.render(req,res,"/donate")
+  })
+
 
   server.get('*', (req, res) => {
     return handle(req, res)
