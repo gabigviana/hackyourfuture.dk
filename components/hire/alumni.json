@@ -86,7 +86,7 @@
       "Node.js"
     ],
     "status": "employed",
-    "company": "SocialTechProject",
+    "company": "Merkle Danmark",
     "graduationDate": "02-06-2018",
     "lastUpdateDate": "01-09-2020"
   },
@@ -100,7 +100,7 @@
     "linkedin": "https://www.linkedin.com/in/yana-khuchuieva-3a771a159/",
     "skills": ["JS", "Express.js", "MySQL", "React", "HTML", "CSS", "Node.js"],
     "status": "employed",
-    "company": "Peytz & Co",
+    "company": "AP Møller - Maersk",
     "graduationDate": "25-11-2018",
     "lastUpdateDate": "01-09-2020"
   },
@@ -447,7 +447,7 @@
     "name": "Abdulrahman Ramadan",
     "roles": ["alumni"],
     "status": "employed",
-    "company": "Worthmore",
+    "company": "DFDS",
     "photo": "/static/team/abdulrahman.jpg",
     "linkedin": "https://www.linkedin.com/in/ramadan46/",
     "skills": ["JS", "MySQL", "React", "HTML", "CSS", "Node.js"],
@@ -851,7 +851,7 @@
     "id": 38,
     "roles": ["alumni"],
     "name": "Svetlana Stosic Milosavljevic",
-    "company": "GreenMobility",
+    "company": "AP Møller - Maersk",
     "email": "cecastosic@gmail.com",
     "photo": "/static/alumni/photos/svetlana.jpeg",
     "github": "https://github.com/cecastosic",
