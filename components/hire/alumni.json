@@ -1024,5 +1024,29 @@
     "status": "looking for jobs",
     "graduationDate": "06-01-2021",
     "lastUpdateDate": "20-02-2021"
+  },
+  {
+    "id": 43,
+    "roles": ["alumni"],
+    "name": "Gizem Candemir",
+    "company": "Trustpilot",
+    "email": "gizemc@gmail.com",
+    "photo": "/static/alumni/photos/gizem.png",
+    "github": "https://github.com/gizemcandemir",
+    "linkedin": "https://www.linkedin.com/in/gizemcandemir/",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JS",
+      "React",
+      "Storybook",
+      "UX design",
+      "Figma",
+      "MySQL",
+      "Git"
+    ],
+    "status": "employed",
+    "graduationDate": "29-04-2020",
+    "lastUpdateDate": "25-05-2022"
   }
 ]
