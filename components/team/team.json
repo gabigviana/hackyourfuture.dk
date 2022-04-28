@@ -28,6 +28,15 @@
     "email": "daniel@hackyourfuture.dk"
   },
   {
+    "id": 52,
+    "name": "Gabrielle Viana",
+    "roles": ["core"],
+    "roleDescription": "Student Assistant",
+    "photo": "/static/team/daniel.jpg",
+    "email": "gabi@hackyourfuture.dk"
+    "linkedin": "https://www.linkedin.com/in/gabriellegviana/"
+  },
+  {
     "id": 4,
     "name": "Alicia Gonzales",
     "roles": ["mentor"],
