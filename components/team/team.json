@@ -33,8 +33,9 @@
     "roles": ["core"],
     "roleDescription": "Student Assistant",
     "photo": "/static/team/gabi.jpeg",
+    "linkedin": "https://www.linkedin.com/in/gabriellegviana/",
+    "github": "https://github.com/gabigviana",
     "email": "gabi@hackyourfuture.dk"
-    "linkedin": "https://www.linkedin.com/in/gabriellegviana/"
   },
   {
     "id": 4,
