@@ -38,7 +38,7 @@ function ClassTrack(props) {
 const mockClasses = [
   // next class
   {
-    number: "Class 20",
+    number: "Class 23 and 24",
     description: "Application Deadline: ",
     nextClass:true
   },
